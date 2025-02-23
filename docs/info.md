@@ -30,6 +30,12 @@ https://github.com/flasgger/flasgger
 https://pythonru.com/uroki/18-autentifikacija-vo-flask
 
 
+#### Фоновые задачи
+Необходимо для настройки планировщика, который раз в какое-то время будет собирать информацию с сайтов
+
+Ознакомительная статья - https://habr.com/ru/companies/otus/articles/796413/
+Самый популярный вариант на Python - [Celery](https://docs.celeryq.dev/en/stable/)
+
 #### БД
 
 - Основы SQL

@@ -41,9 +41,14 @@ https://pythonru.com/uroki/18-autentifikacija-vo-flask
 
 Основы JS - https://www.youtube.com/watch?v=CxgOKJh4zWE (в курсе рассказывается про функцию fetch)
 DOM - https://www.youtube.com/playlist?list=PLA0M1Bcd0w8zri9wWiDFmOukXhguEYBBO
-[ALAX](https://developer.mozilla.org/en-US/docs/Glossary/AJAX) запросы на бэкенд (функция [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) или [Axios](https://axios-http.com/ru/docs/intro))
+[AJAX](https://developer.mozilla.org/en-US/docs/Glossary/AJAX) запросы на бэкенд (функция [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) или [Axios](https://axios-http.com/ru/docs/intro))
 React JS - https://www.youtube.com/watch?v=GNrdg3PzpJQ
 
+
+### Верстка
+
+Основы HTML - https://www.youtube.com/watch?v=W4MIiV4nZDY
+Основы СSS - https://www.youtube.com/watch?v=WpridlBQmdk
 
 ### Дизайн
 

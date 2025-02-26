@@ -28,6 +28,7 @@ REST - архитектурный стиль для создания API
 - Для ручного тестирования Api - [Postman](https://www.postman.com/)
 - Что такое CORS - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 - Настройка запросов только для фронта - https://pypi.org/project/Flask-Cors/
+- Расширение flask для RestAPI - https://flask-restx.readthedocs.io/en/latest/
 
 
 #### Документация

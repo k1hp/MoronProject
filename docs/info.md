@@ -74,7 +74,10 @@ DOM - https://www.youtube.com/playlist?list=PLA0M1Bcd0w8zri9wWiDFmOukXhguEYBBO
 
 [AJAX](https://developer.mozilla.org/en-US/docs/Glossary/AJAX) запросы на бэкенд (функция [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) или [Axios](https://axios-http.com/ru/docs/intro))
 
+Что такое CORS - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
 React JS - https://www.youtube.com/watch?v=GNrdg3PzpJQ
+
 
 
 ### Верстка

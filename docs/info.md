@@ -16,6 +16,9 @@
 
 тестирование flask - [pytest](https://flask.palletsprojects.com/en/stable/testing/)
 
+marshmallow - https://flask-marshmallow.readthedocs.io/en/latest/
+нужно для де и сериализации данных, а также валидация данных
+
 
 #### RestAPI
 

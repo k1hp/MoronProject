@@ -65,7 +65,7 @@ https://pythonru.com/uroki/18-autentifikacija-vo-flask
 - Основы SQL
 - Взаимодействие с базой данных через python (например, [sqlite3](https://docs.python.org/3/library/sqlite3.html))
 - Для взаимодействия с базой данных через синтаксис python [ORM sqlalchemy](https://docs.sqlalchemy.org/en/20/)
-
+- alembic python sqlalchemy - для изменения бд
 
 ### Фронтенд
 

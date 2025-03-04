@@ -73,6 +73,20 @@ https://pythonru.com/uroki/18-autentifikacija-vo-flask
 - [какие ивенты есть](https://docs.sqlalchemy.org/en/20/orm/events.html)
 
 ### Фронтенд
+---
+### Верстка
+
+---
+
+Основы HTML - https://www.youtube.com/watch?v=W4MIiV4nZDY
+
+Основы СSS - https://www.youtube.com/watch?v=WpridlBQmdk
+
+Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+---
+
+- Сверстать сайт с помощью html и css (Найдите готовые шаблоны сайтов в фигме и с них пробуйте написать html и css код)
 
 ---
 
@@ -87,16 +101,6 @@ DOM - https://www.youtube.com/playlist?list=PLA0M1Bcd0w8zri9wWiDFmOukXhguEYBBO
 React JS - https://www.youtube.com/watch?v=GNrdg3PzpJQ
 
 
-
-### Верстка
-
----
-
-Основы HTML - https://www.youtube.com/watch?v=W4MIiV4nZDY
-
-Основы СSS - https://www.youtube.com/watch?v=WpridlBQmdk
-
-Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
 ### Дизайн
 

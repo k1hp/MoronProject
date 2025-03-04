@@ -95,6 +95,7 @@ React JS - https://www.youtube.com/watch?v=GNrdg3PzpJQ
 Основы HTML - https://www.youtube.com/watch?v=W4MIiV4nZDY
 
 Основы СSS - https://www.youtube.com/watch?v=WpridlBQmdk
+Bootstrap - https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
 ### Дизайн
 

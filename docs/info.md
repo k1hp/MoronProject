@@ -66,11 +66,12 @@ https://pythonru.com/uroki/18-autentifikacija-vo-flask
 - Взаимодействие с базой данных через python (например, [sqlite3](https://docs.python.org/3/library/sqlite3.html))
 ### sqlalchemy
 - Для взаимодействия с базой данных через синтаксис python [ORM sqlalchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy), только ORM без Core
-- alembic python sqlalchemy - для изменения бд
 - [гибридные атрибуты](https://docs.sqlalchemy.org/en/14/orm/extensions/hybrid.html)
 #### events
 - [как их подключать](https://docs.sqlalchemy.org/en/20/core/event.html)
 - [какие ивенты есть](https://docs.sqlalchemy.org/en/20/orm/events.html)
+#### alembic
+- alembic python sqlalchemy - для изменения бд
 
 ### Фронтенд
 ---

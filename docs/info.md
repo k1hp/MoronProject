@@ -66,7 +66,7 @@ https://pythonru.com/uroki/18-autentifikacija-vo-flask
 - Взаимодействие с базой данных через python (например, [sqlite3](https://docs.python.org/3/library/sqlite3.html))
 ### sqlalchemy
 - Для взаимодействия с базой данных через синтаксис python [ORM sqlalchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy), только ORM без Core
-- [гибридные атрибуты](https://docs.sqlalchemy.org/en/14/orm/extensions/hybrid.html)
+- [гибридные атрибуты](https://django.fun/docs/sqlalchemy/2.0/orm/extensions/hybrid/?ysclid=m7ys602s3b456924373)
 #### events
 - [как их подключать](https://docs.sqlalchemy.org/en/20/core/event.html)
 - [какие ивенты есть](https://docs.sqlalchemy.org/en/20/orm/events.html)

@@ -51,5 +51,12 @@ class UserResource(Resource):
 
         return success_response, 201  # Возвращаем сериализованные данные пользователя
 
+
+class Tester:
+    def print_ok(self):
+        print("OK")
+    def print_bad(self):
+        print("NO")
+
 if __name__ == '__main__':
     app.run(debug=True)

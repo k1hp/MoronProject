@@ -2,8 +2,22 @@ from flask import Flask, request
 from flask_restx import Api, Resource, fields
 from marshmallow import Schema, fields as ma_fields, ValidationError
 
+from database.creation import db
+from settings import DB_CONNECTION
+from flask_app.apis.test_bp import api as ns1
+
 app = Flask(__name__)
 api = Api(app)
+api.add_namespace(ns1, path="/burger")
+
+app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION
+# initialize the app with the extension
+db.init_app(app)
+
+# with app.app_context():
+#     db.create_all()
+
+
 
 # Определяем модель для Swagger
 user_model = api.model('User', {
@@ -50,6 +64,18 @@ class UserResource(Resource):
             return bad_response, 400  # Возвращаем ошибки валидации
 
         return success_response, 201  # Возвращаем сериализованные данные пользователя
+
+
+class Authorization(Resource):
+    def post(self):
+        json_data = request.json
+        try:
+            user_data = user_schema.load(json_data)  # Валидация данных
+        except ValidationError as err:
+            return bad_response, 400  # Возвращаем ошибки валидации
+
+        return success_response, 201
+
 
 
 class Tester:

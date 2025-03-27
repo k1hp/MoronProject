@@ -41,6 +41,7 @@ def parser(url,re_shablon):
         # Проходимся по карточкам товаров
         for product in products:
             try:
+
                 # Находим название и цену товара внутри текущей карточки
                 name_element = product.find_element(By.CSS_SELECTOR, "div.catalog-product__name-wrapper")
                 price_element = product.find_element(By.CSS_SELECTOR, "div.product-buy__price")

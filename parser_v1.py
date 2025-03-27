@@ -7,11 +7,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import re
 
 # передаем в настройки браузера юзер дату с куки
-
 options_chrome = webdriver.ChromeOptions()
 options_chrome.add_argument(r'user-data-dir=C:\Users\remge\AppData\Local\Google\Chrome\User Data')
-
-
 
 urls = [
     "https://www.dns-shop.ru/catalog/17a899cd16404e77/processory/?stock=now-today-tomorrow-later",
@@ -58,7 +55,7 @@ def parser(url,re_shablon):
 
             if match is None:
                 continue
-            # Выводим название и цену товара
+
 
             print(f"Название: {match.group(1)} Характеристики:{match.group(2)} Цена: {price}")
 
@@ -68,7 +65,6 @@ def parser(url,re_shablon):
             next_button = driver.find_element(By.CSS_SELECTOR,"a.pagination-widget__page-link.pagination-widget__page-link_next")
             next_button.click() # Кликаем на кнопку "Следующая страница"
 
-            #  Необязательно: Добавляем небольшую задержку
             time.sleep(5)
 
             page_number += 1

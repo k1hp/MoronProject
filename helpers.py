@@ -51,8 +51,6 @@ class Password:
         return self.__password_hash
 
 
-class AddUser:
-    ...
 
 
 if __name__ == "__main__":

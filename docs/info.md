@@ -16,7 +16,7 @@
 
 тестирование flask - [pytest](https://flask.palletsprojects.com/en/stable/testing/)
 
-marshmallow - https://flask-marshmallow.readthedocs.io/en/latest/
+marshmallow - https://marshmallow.readthedocs.io/en/3.x-line/quickstart.html
 нужно для де и сериализации данных, а также валидация данных
 
 

@@ -2,7 +2,7 @@ li {
   list-style: none;
 }
 .body {
-  background-image: url("/ex/Photo/scren.jpg.png");
+  background-image: url("ссылка на фоновое изображение");
   background-size: cover; /* Масштабирует изображение, чтобы оно покрывало всю область */
   background-position: center; /* Центрирует изображение */
   background-repeat: no-repeat; /* Запрещает повторение изображения */

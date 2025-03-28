@@ -1,4 +1,4 @@
-from marshmallow import Schema, fields as ma_fields, ValidationError
+import marshmallow as ma
 
 
 
@@ -13,15 +13,24 @@ class User:
 
 
 # Схема Marshmallow
-class UserSchema(Schema):
-    login = ma_fields.Str(required=True)
-    email = ma_fields.Email(required=True)
-    password = ma_fields.Str(required=True)
+class UserSchema(ma.Schema):
+    login = ma.fields.Str(required=True)
+    email = ma.fields.Email(required=True)
+    password = ma.fields.Str(required=True)
 
 
-class ResponseSchema(Schema):
-    status = ma_fields.Str(required=True)
-    comment = ma_fields.Str(required=True)
+class LoginEmailSchema(ma.Schema):
+    email = ma.fields.Email(required=True)
+    password = ma.fields.Str(required=True)
+
+class LoginUsernameSchema(ma.Schema):
+    login = ma.fields.Str(required=True)
+    password = ma.fields.Str(required=True)
+
+
+class ResponseSchema(ma.Schema):
+    status = ma.fields.Str(required=True)
+    comment = ma.fields.Str(required=True)
 
 
 response_schema = ResponseSchema()

@@ -23,13 +23,13 @@ class User(db.Model):
 
     tokens: Mapped[List["Token"]] = relationship("Token", back_populates="user")
 
-class Token(db.Model):  # удаленные токены потом в планировщике будем удалять, а так статус revoked True ставим
+class Token(db.Model):  # удаленные токены потом в планировщике будем удалять, а так статус revoked false ставим
     __tablename__ = "tokens"
     id: Mapped[int] = mapped_column(autoincrement=True, primary_key=True, nullable=False)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
-    device: Mapped[str] = mapped_column(String(50), unique=True)
-    access_token: Mapped[str] = mapped_column(String(100), unique=True, nullable=False, index=True)
-    refresh_token: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
+    device: Mapped[str] = mapped_column(String(60), unique=True)
+    access_token: Mapped[str] = mapped_column(String(60), unique=True, nullable=False, index=True)
+    refresh_token: Mapped[str] = mapped_column(String(130), unique=True, nullable=False)
     revoked: Mapped[bool] = mapped_column(nullable=False, index=True, default=False)
     created_at: Mapped[date] = mapped_column(nullable=False, index=True, default=lambda: date.today())
 

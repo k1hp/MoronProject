@@ -1,11 +1,11 @@
-from flask import Flask, request
-from flask_restx import Api, Resource, fields
-from marshmallow import Schema, fields as ma_fields, ValidationError
+from flask import Flask
+from flask_restx import Api
 
 from database.creation import db
-from settings import DB_CONNECTION
+from others.settings import DB_CONNECTION
 from flask_app.apis.authorization import api as ns1
-from database.managers import DatabaseAdder
+from database.managers import DatabaseAdder, DatabaseSelector
+from others.helpers import AccessToken, RefreshToken, Password
 
 app = Flask(__name__)
 api = Api(app)
@@ -16,8 +16,25 @@ app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION
 db.init_app(app)
 
 with app.app_context():
+    db.drop_all()
+
+with app.app_context():
     db.create_all()
 
+with app.app_context():
+    adder = DatabaseAdder()
+    access_token = AccessToken().hash
+    adder.add_user("nigger", "<EMAIL>", Password("<PASSWORD>").hash)
+    adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
+    try:
+        adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
+    except ValueError as e:
+        print(e)
+
+with app.app_context():
+    selector = DatabaseSelector()
+    hash = Password("<PASSWORD>").hash
+    print(selector.select_user(login="nigger", password_hash=hash))
 
 # Определяем модель для Swagger
 # user_model = api.model('User', {

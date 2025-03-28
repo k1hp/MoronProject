@@ -21,15 +21,15 @@
 
     <!-- LOGO -->
     <nav class="navbar bg-body-tertiary">
-      <div class="container ">
+      <div class="container">
         <!-- На случай если лого будет окрывать гланую страницу сайтика -->
-        <a class="navbar-brand vertical-align-middle " href="#">
+        
+        <a class="navbar-brand vertical-align-middle" href="#">
           <img
             src="ссылка на картинку логотипа"
             alt="empty"
             width="50"
             height="50"
-
           />
         </a>
         <div class="row">
@@ -74,7 +74,138 @@
       </div>
     </nav>
     
+    <!-- Основная часть -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Боковая панель -->
+        <div class="col-md-3">
+          <div class="sidebar bg-white p-3 rounded shadow-sm">
+            <!-- Процессор -->
+            <div class="dropdown mb-2">
+              <button
+                class="btn btn-light category-title dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Процессор
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li>
+                  <a class="dropdown-item" href="#">Intel Core i9-13900K</a>
+                </li>
+                <li><a class="dropdown-item" href="#">AMD Ryzen 9 7950X</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Intel Core i7-13700K</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">AMD Ryzen 7 7800X3D</a>
+                </li>
+              </ul>
+            </div>
 
+            <!-- Видеокарта -->
+            <div class="dropdown mb-2">
+              <button
+                class="btn btn-light category-title dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Видеокарта
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li><a class="dropdown-item" href="#">NVIDIA RTX 4090</a></li>
+                <li><a class="dropdown-item" href="#">AMD RX 7900 XTX</a></li>
+                <li><a class="dropdown-item" href="#">NVIDIA RTX 4080</a></li>
+                <li><a class="dropdown-item" href="#">AMD RX 7900 XT</a></li>
+              </ul>
+            </div>
 
+            <!-- Материнская плата -->
+            <div class="dropdown mb-2">
+              <button
+                class="btn btn-light category-title dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Материнская плата
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li>
+                  <a class="dropdown-item" href="#">ASUS ROG Maximus Z790</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Gigabyte X670E AORUS</a>
+                </li>
+                <li><a class="dropdown-item" href="#">MSI MPG B650</a></li>
+              </ul>
+            </div>
+
+            <!-- Оперативная память -->
+            <div class="dropdown mb-2">
+              <button
+                class="btn btn-light category-title dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Оперативная память
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li><a class="dropdown-item" href="#">DDR5 32GB 6000MHz</a></li>
+                <li><a class="dropdown-item" href="#">DDR5 64GB 5600MHz</a></li>
+                <li><a class="dropdown-item" href="#">DDR4 32GB 3600MHz</a></li>
+              </ul>
+            </div>
+
+            <!-- Блок питания -->
+            <div class="dropdown mb-2">
+              <button
+                class="btn btn-light category-title dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Блок питания
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li>
+                  <a class="dropdown-item" href="#">1000W 80+ Platinum</a>
+                </li>
+                <li><a class="dropdown-item" href="#">850W 80+ Gold</a></li>
+                <li><a class="dropdown-item" href="#">750W 80+ Bronze</a></li>
+              </ul>
+            </div>
+
+            <!-- Накопитель -->
+            <div class="dropdown mb-2">
+              <button
+                class="btn btn-light  dropdown-toggle category-title"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Накопитель
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li><a class="dropdown-item" href="#">SSD NVMe 2TB</a></li>
+                <li><a class="dropdown-item" href="#">SSD SATA 1TB</a></li>
+                <li><a class="dropdown-item" href="#">HDD 4TB 7200RPM</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Основное содержимое -->
+        <div class="col-md-9">
+          <div class="bg-white p-4 rounded shadow-sm">
+            <div class="price-display mb-4">
+              ТУТ БУДЕТ ВЫВОДИТСЯ СТОИМОСТЬ И ХАРАКТЕРИСТИКА СОБИРАЕМОГО
+              КОМПЬЮТЕРА
+            </div>
+
+            <button class="btn btn-success w-100 py-2">
+              ✔ Перейти к производительности ✔
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

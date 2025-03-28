@@ -1,7 +1,10 @@
+from xmlrpc.client import Boolean
+
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import String, ForeignKey
 from typing import List
+from datetime import date
 
 
 class Base(DeclarativeBase):
@@ -24,10 +27,12 @@ class Token(db.Model):  # удаленные токены потом в план
     __tablename__ = "tokens"
     id: Mapped[int] = mapped_column(autoincrement=True, primary_key=True, nullable=False)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
-    device_id: Mapped[str] = mapped_column(String(40), unique=True)
-    access_token: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
+    device: Mapped[str] = mapped_column(String(50), unique=True)
+    access_token: Mapped[str] = mapped_column(String(100), unique=True, nullable=False, index=True)
     refresh_token: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
-    revoked: Mapped[bool] = mapped_column(nullable=False)
+    revoked: Mapped[bool] = mapped_column(nullable=False, index=True, default=False)
+    created_at: Mapped[date] = mapped_column(nullable=False, index=True, default=lambda: date.today())
+
 
     user: Mapped[User] = relationship("User", back_populates="tokens")
 

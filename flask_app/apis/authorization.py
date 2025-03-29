@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, make_response
 from flask_restx import Resource, Namespace, fields
 from marshmallow import ValidationError
 
@@ -13,7 +13,7 @@ from database.managers import DatabaseAdder
 from others.helpers import Password, AccessToken
 from others.middlewares import validate_data, check_login_data
 
-api = Namespace("authorization", description="Nice dick, not your dick")
+api = Namespace("authorization", description="Authorization to you nice")
 
 user_model = api.model(
     "User",
@@ -75,20 +75,17 @@ class UsernameTokenGetter(Resource):
         return {"token": AccessToken().hash}, 200
 
 
-@api.route("/token/auth/email", methods=["POST"])
-class EmailTokenGetter(Resource):
-    @api.expect(email_login_model)
-    def post(self):
-        json_data = request.json
-        email_schema = LoginEmailSchema()
-        if not validate_data(email_schema, json_data):
-            return bad_response, 400
-        user_id = check_login_data(json_data)
-        if user_id is None:
-            # нет такого пользователя либо пароль неверный
-            return bad_response, 400
+def email_post(request):
+    json_data = request.json
+    email_schema = LoginEmailSchema()
+    if not validate_data(email_schema, json_data):
+        return bad_response, 400
+    user_id = check_login_data(json_data)
+    if user_id is None:
+        # нет такого пользователя либо пароль неверный
+        return bad_response, 400
 
-        return {"token": AccessToken().hash}, 200
+    return success_response, 200
 
     # можно сериализировать сразу класс токена и тп
 

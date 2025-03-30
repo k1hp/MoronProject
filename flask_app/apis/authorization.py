@@ -113,6 +113,19 @@ class EmailTempToken(Resource):
         return response
 
 
+@api.route("/token/logout", methods=["POST"])
+class EmailTempToken(Resource):
+    @api.expect(email_login_model)
+    def post(self):
+        return bad_response, 400
+
+
+@api.route("/token/refresh", methods=["POST"])
+class EmailTempToken(Resource):
+    @api.expect(email_login_model)
+    def post(self):
+        return bad_response, 400
+
 def set_response(result: tuple, set_age: Optional[bool] = None) -> Response:
     if set_age is True:
         age = 60 * 60 * 24 * 20

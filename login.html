@@ -17,18 +17,20 @@
   <body
     style="
       background: url('/images/c635fef25823cda91e91ef75cd713baa.jpg');
-      /* делаем изображение размытым */
-      backdrop-filter: blur(5px);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      display: flex; /* Flexbox имба */
+      justify-content: center; /* Центрирование по горизонтали */
+      align-items: center; /* Центрирование по вертикали */
+      min-height: 100vh; /* Минимальная высота - весь экран */
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
     "
   >
-    <div style="padding-top: 120px; margin-left: 400px">
+    <div>
       <div
         class="container"
         style="
-          background-color: #343131;
+          background-color: rgba(60, 59, 59, 0.9);
           display: inline-flex;
           flex-direction: column;
           justify-content: center;
@@ -37,13 +39,15 @@
           border: 1px solid #343131;
           border-radius: 30px;
           padding: 15px 25px;
-          margin-top: 20px;
           max-width: 400px;
         "
       >
         <form>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
+            <label
+              for="exampleInputEmail1"
+              class="form-label"
+              style="color: #fbfbfb"
               >Email или логин</label
             >
             <input
@@ -51,17 +55,24 @@
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              style="color: rgba(118, 113, 113, 0.861)"
             />
-            <div id="emailHelp" class="form-text">
+            <div id="emailHelp" class="form-text" style="color: #918d8d">
               Мы никогда не передадим вашу электронную почту кому-либо еще.
             </div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Пароль</label>
+            <label
+              for="exampleInputPassword1"
+              class="form-label"
+              style="color: #fbfbfb"
+              >Пароль</label
+            >
             <input
               type="password"
               class="form-control"
               id="exampleInputPassword1"
+              style="color: rgba(118, 113, 113, 0.861)"
             />
           </div>
           <div class="mb-3 form-check">
@@ -70,7 +81,10 @@
               class="form-check-input"
               id="exampleCheck1"
             />
-            <label class="form-check-label" for="exampleCheck1"
+            <label
+              class="form-check-label"
+              for="exampleCheck1"
+              style="color: #fbfbfb"
               >Запомнить меня</label
             >
           </div>
@@ -79,7 +93,7 @@
             class="btn btn-primary"
             style="margin-left: 280px"
           >
-            Войти 
+            Войти
           </button>
         </form>
       </div>

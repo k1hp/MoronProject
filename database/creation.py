@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import String, ForeignKey
 from typing import List
-from datetime import date
+from datetime import date, datetime
 
 
 class Base(DeclarativeBase):
@@ -34,17 +34,12 @@ class Token(
         autoincrement=True, primary_key=True, nullable=False
     )
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
-    device: Mapped[str] = mapped_column(String(60), unique=True)
-    access_token: Mapped[str] = mapped_column(
-        String(60), unique=True, nullable=False, index=True
+    device: Mapped[str] = mapped_column(String(60), unique=True, nullable=False)
+    token: Mapped[str] = mapped_column(
+        String(130), unique=True, nullable=False, index=True
     )
-    access_created: Mapped[date] = mapped_column(
-        nullable=False, index=True, default=lambda: date.today()
-    )
-    refresh_token: Mapped[str] = mapped_column(String(130), unique=True, nullable=False)
-    refresh_created: Mapped[date] = mapped_column(
-        nullable=False, index=True, default=lambda: date.today()
-    )
+    created_at: Mapped[datetime] = mapped_column(nullable=False, default=datetime.now())
+    updated_at: Mapped[datetime] = mapped_column(nullable=False, default=datetime.now())
     revoked: Mapped[bool] = mapped_column(nullable=False, index=True, default=False)
 
     user: Mapped[User] = relationship("User", back_populates="tokens")

@@ -23,12 +23,11 @@ class DatabaseAdder:
         db.session.commit()
 
     @integrity_check
-    def add_tokens(
+    def add_token(
         self,
         user_id: int,
         device: str,
-        access_token: str,
-        refresh_token: str,
+        token: str,
         revoked: Optional[bool] = None,
     ):
         if revoked is None:
@@ -36,8 +35,7 @@ class DatabaseAdder:
         note = Token(
             user_id=user_id,
             device=device,
-            access_token=access_token,
-            refresh_token=refresh_token,
+            token=token,
             revoked=revoked,
         )
         db.session.add(note)

@@ -24,6 +24,7 @@ from others.settings import TOKEN_SECRET
 #
 # print("Максимальная: ", max(longs))
 
+
 class HashedData(ABC):
     @abstractmethod
     def _hash_data(self):
@@ -41,7 +42,7 @@ class HashedData(ABC):
 class Password(HashedData):
     def __init__(self, password_string: str):
         self.__attempts = 5
-        self.__salt = b'$2b$12$IfWmvy0xVWeuRZ/6tobhe.'
+        self.__salt = b"$2b$12$IfWmvy0xVWeuRZ/6tobhe."
         self.__password_string = password_string.encode()
         self.__password_hash = self._hash_data()
 
@@ -53,7 +54,7 @@ class Password(HashedData):
         print("Итог:", perf_counter() - start)
         return password.decode()
 
-    def __eq__(self, other: Union[str, 'Password']) -> bool:
+    def __eq__(self, other: Union[str, "Password"]) -> bool:
         if isinstance(other, Password):
             return self.hash == other.hash
         if isinstance(other, str):
@@ -75,7 +76,7 @@ class Token(HashedData):
     def _hash_data(self):
         pass
 
-    def __eq__(self, other: Union[str, 'Token']) -> bool:
+    def __eq__(self, other: Union[str, "Token"]) -> bool:
         if isinstance(other, Token):
             return self.hash == other.hash
         if isinstance(other, str):
@@ -87,8 +88,7 @@ class Token(HashedData):
         return self._token_hash
 
 
-
-class AccessToken(Token):
+class RefreshToken(Token):
     def __init__(self):
         super().__init__()
 
@@ -100,7 +100,7 @@ class AccessToken(Token):
         return result.decode()
 
 
-class RefreshToken(Token):
+class AccessToken(Token):
     def __init__(self):
         super().__init__()
 
@@ -108,14 +108,13 @@ class RefreshToken(Token):
         result = self._string
         start = perf_counter()
         result = bcrypt.hashpw(self._secret, result)
-        result = result.decode() + "."+ bcrypt.hashpw(self._secret, result).decode()
+        result = result.decode() + "." + bcrypt.hashpw(self._secret, result).decode()
         print("Итог:", perf_counter() - start)
         return result
 
 
 # class Device(HashedData):
 #     ...
-
 
 
 if __name__ == "__main__":
@@ -129,6 +128,3 @@ if __name__ == "__main__":
     token_2 = AccessToken()
     print(f"Access: {token_2.hash, len(token_2.hash)}")
     print(f"Refresh: {token.hash, len(token.hash)}")
-
-
-

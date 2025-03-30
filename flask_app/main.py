@@ -3,7 +3,7 @@ from flask_restx import Api, Resource
 
 from database.creation import db
 from others.settings import DB_CONNECTION
-from flask_app.apis.authorization import api as ns1, email_post, email_login_model
+from flask_app.apis.authorization import api as ns1, email_login_model
 from database.managers import DatabaseAdder, DatabaseSelector
 from others.helpers import AccessToken, RefreshToken, Password
 
@@ -94,41 +94,6 @@ with app.app_context():
 #
 #         return success_response, 201
 #
-@api.route("/token/auth/email", methods=["POST"])
-class EmailToken(Resource):
-    @api.expect(email_login_model)
-    def post(self):
-        result = email_post(request)
-        if result[-1] == 400:
-            return result
-        response = api.make_response({"another token": AccessToken().hash}, 201)
-        response.set_cookie(
-            key="token",
-            value=AccessToken().hash,
-            httponly=True,
-            secure=True,
-            samesite="lax",
-            max_age=60 * 60 * 24 * 20,
-        )
-        return response
-
-
-@api.route("/token/auth/tempemail", methods=["POST"])
-class EmailTempToken(Resource):
-    @api.expect(email_login_model)
-    def post(self):
-        result = email_post(request)
-        if result[-1] == 400:
-            return result
-        response = api.make_response({"another token": AccessToken().hash}, 201)
-        response.set_cookie(
-            key="token",
-            value=AccessToken().hash,
-            httponly=True,
-            secure=True,
-            samesite="lax",
-        )
-        return response
 
 
 if __name__ == "__main__":

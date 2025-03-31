@@ -4,7 +4,8 @@ from flask import Request
 
 from database.managers import DatabaseSelector
 from others.helpers import Password
-from flask_app.models.test_models import LoginEmailSchema, LoginUsernameSchema
+from flask_app.models.input_models import LoginEmailSchema, LoginUsernameSchema
+
 
 def generate_correct_data(data: dict) -> dict:
     result_data = {"password": data["password"]}
@@ -17,14 +18,13 @@ def generate_correct_data(data: dict) -> dict:
     return result_data
 
 
-
-
 def check_token_presence(request: Request) -> bool:
     cookies = dict(request.cookies)
     print("Куки:", cookies.keys())
     if "token" not in cookies.keys():
         return False
     return True
+
 
 def check_login_data(json_data: dict) -> Optional[int]:
     selector = DatabaseSelector()
@@ -40,6 +40,7 @@ def validate_data(schema, data) -> bool:  # pydentic и перенести вс�
     except ValidationError as err:
         return False
     return True
+
 
 def verify_token(token: str) -> bool:
     print(token)

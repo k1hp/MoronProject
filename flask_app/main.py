@@ -6,6 +6,7 @@ from others.settings import DB_CONNECTION
 from flask_app.apis.authorization import api as ns1
 from database.managers import DatabaseAdder, DatabaseSelector
 from others.helpers import AccessToken, RefreshToken, Password
+from others.responses import CommentResponse
 
 app = Flask(__name__)
 api = Api(app)
@@ -36,12 +37,8 @@ with app.app_context():
 #     hash = Password("<PASSWORD>").hash
 #     print(selector.select_user(login="nigger", password_hash=hash))
 
-# Определяем модель для Swagger
-# user_model = api.model('User', {
-#     'username': fields.String(required=True, description='Username of the user'),
-#     'email': fields.String(required=True, description='Email of the user')
-# })
-
+with app.app_context():
+    print(CommentResponse().success_response())
 
 # Пример модели
 # class User:

@@ -3,15 +3,16 @@ from typing import Optional
 from flask import request, make_response, Response, Request
 from flask_restx import Resource, Namespace, fields
 
-from flask_app.models.test_models import (
-    UserSchema,
-    bad_response,
-    success_response
-)
+from flask_app.models.input_models import UserSchema, bad_response, success_response
 from database.managers import DatabaseAdder, DatabaseSelector, DatabaseUpdater
 from others.helpers import Password, AccessToken, Token
-from others.middlewares import verify_token, validate_data, check_login_data, generate_correct_data, \
-    check_token_presence
+from others.middlewares import (
+    verify_token,
+    validate_data,
+    check_login_data,
+    generate_correct_data,
+    check_token_presence,
+)
 from others.exceptions import ReIntegrityError
 
 api = Namespace("authorization", description="Authorization to you nice")
@@ -59,7 +60,9 @@ class LoginToken(Resource):
         result = full_check_post(request)
         if result["code"] == 400:
             return result
-        response = set_response((result, result["code"]), user_id=result["user_id"], set_age=True)
+        response = set_response(
+            (result, result["code"]), user_id=result["user_id"], set_age=True
+        )
         print(response)
         return response
 
@@ -71,7 +74,9 @@ class LoginTempToken(Resource):
         result = full_check_post(request)
         if result["code"] == 400:
             return result
-        response = set_response((result, result["code"]), user_id=result["user_id"], set_age=False)
+        response = set_response(
+            (result, result["code"]), user_id=result["user_id"], set_age=False
+        )
         print(response)
         return response
 
@@ -90,7 +95,11 @@ class TokenRefresher(Resource):
         user_id = selector.select_token(token=token).user_id
         updater.update_token(user_id=user_id, new_token=AccessToken().hash)
         # то есть мы обновим и потом оно вернет что токен есть в бд
-        response = set_response(({"status": "success", "comment": "token refreshed"}, 200), user_id=user_id, set_age=True)
+        response = set_response(
+            ({"status": "success", "comment": "token refreshed"}, 200),
+            user_id=user_id,
+            set_age=True,
+        )
         return response
 
 
@@ -99,17 +108,18 @@ class Logout(Resource):
     def delete(self):
         if not check_token_presence(request=request):
             return {"status": "error", "comment": "you have not token"}, 400
-        response = make_response({"status": "success", "comment": "token deleted!"}, 200)
-        response.set_cookie(key="token",
-                            value="",
-                            httponly=True,
-                            secure=True,
-                            samesite="lax",
-                            max_age=0)
+        response = make_response(
+            {"status": "success", "comment": "token deleted!"}, 200
+        )
+        response.set_cookie(
+            key="token", value="", httponly=True, secure=True, samesite="lax", max_age=0
+        )
         return response
 
 
-def set_response(result: tuple, user_id: int, set_age: Optional[bool] = None) -> Response:
+def set_response(
+    result: tuple, user_id: int, set_age: Optional[bool] = None
+) -> Response:
     if set_age is True:
         age = 60 * 60 * 24 * 20
     else:

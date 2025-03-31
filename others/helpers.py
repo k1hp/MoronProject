@@ -113,9 +113,6 @@ class AccessToken(Token):
         return result
 
 
-# class Device(HashedData):
-#     ...
-
 
 if __name__ == "__main__":
     password = Password("12345689893432")

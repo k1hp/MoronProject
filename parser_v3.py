@@ -1,11 +1,13 @@
 import undetected_chromedriver as UC
-import time
 from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from Utils.CustomDriver import OurDriver
+import time
 import re
+
 
 urls = [
     "https://www.dns-shop.ru/catalog/17a899cd16404e77/processory/?stock=now-today-tomorrow-later&f[1zs]=cln9-1p2j-agnc-68te-gfw3&f[13]=bn-bo-bq-1ox-1oz-1qs-br-234&f[1b]=d4w-68vs",
@@ -19,13 +21,15 @@ re_shablon = [r"(.+)\s\[(.+)\]", r"(.+)\s\[.+\]\s\[(.+)\]", r"(.+)\s\[(.+)\]",
               r"(.+)\s\[.+\]\s.+\s\[(.+)\]", r"(.+)\s\[.+\]\s.+\s\[(.+)\]", r"(.+)\s\[.+\]\s\[(.+)\]"]
 
 # Функция самого парсера
-def parser(url, re_shablon):
+def parser(url, re_shablon, driver):
     # Передаем нужную url в драйвер
     driver.get(url)
+
     # Задержка чтобы первая страница успела прогрузится
     time.sleep(10)
 
     page_number = 1
+
     while True:
         # Задержка для прогрузки текущей страницы
         time.sleep(10)
@@ -36,10 +40,8 @@ def parser(url, re_shablon):
         for product in products:
             try:
                 # Находим название и цену товара внутри текущей карточки
-                name_element = WebDriverWait(product, 10).until(
-                    EC.presence_of_element_located((By.CLASS_NAME, "catalog-product__name-wrapper")))
-                price_element = WebDriverWait(product, 10).until(
-                    EC.presence_of_element_located((By.CLASS_NAME, "product-buy__price")))
+                name_element = product.find_element(By.CLASS_NAME, "catalog-product__name-wrapper")
+                price_element = product.find_element(By.CLASS_NAME, "product-buy__price")
             # Ловим ошибку, если вдруг не находим карточку, название или цену
             except NoSuchElementException:
                 continue
@@ -54,14 +56,12 @@ def parser(url, re_shablon):
             # Проверям получили ли название карточки, и соответствует ли оно шаблону
             if match is None:
                 continue
-
             # Выводим название и цену товара
             print(f"Название: {match.group(1)} Характеристики:{match.group(2)} Цена: {price}")
 
         try:
             # Ищем кнопку "Следующая страница"
-            next_button = driver.find_element(By.CSS_SELECTOR,
-                                              "a.pagination-widget__page-link.pagination-widget__page-link_next")
+            next_button = driver.find_element(By.CSS_SELECTOR,"a.pagination-widget__page-link.pagination-widget__page-link_next")
             # Кликаем на кнопку "Следующая страница"
             next_button.click()
 
@@ -84,6 +84,7 @@ def choise_category():
         user_category = []
         # Если пользователю нужны все 6 категорий, то заполняем ими список
         if quantity_category == 6:
+            print("Вы выбрали все категории")
             user_category = [x for x in range(6)]
             return user_category
             break
@@ -93,6 +94,8 @@ def choise_category():
             continue
 
         else:
+            print("Список категорий с номерами:\n1 - Процессоры\n2 - Видеокарты\n3 - Материнские платы\n"
+                  "4 - Оперативная память\n5 - Блоки питания\n6 - ССД_M2")
             while True:
 
                 try:
@@ -114,26 +117,24 @@ def choise_category():
                     break
 
         return user_category
-        break
 # Функция старта парсера (бета)
 def start_parser():
-    # Делаем driver глобальной переменной чтобы его было видно
-    global driver
     # Создаем список категорий с помощью функции choise_category
     category = choise_category()
 
     print("Запуск парсера...")
-    time.sleep(1)
+    time.sleep(2)
     # Запускаем сам драйвер
-    driver = UC.Chrome()
-    # Проходимся по нужным пользователю категориям
-    for i in range(len(category)):
-        parser(urls[category[i]], re_shablon[category[i]])
 
+    driver = OurDriver()
+
+    # Проходимся по нужным пользователю категориям
     try:
-        driver.close()
-    except Exception:
-        print("Парсинг завершен")
+        for i in range(len(category)):
+            parser(urls[category[i]], re_shablon[category[i]], driver)
+
+    except Exception as e:
+        print("Парсинг завершен",e)
     finally:
         print("Парсинг завершен")
 

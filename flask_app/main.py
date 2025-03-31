@@ -3,7 +3,7 @@ from flask_restx import Api, Resource
 
 from database.creation import db
 from others.settings import DB_CONNECTION
-from flask_app.apis.authorization import api as ns1, email_login_model
+from flask_app.apis.authorization import api as ns1
 from database.managers import DatabaseAdder, DatabaseSelector
 from others.helpers import AccessToken, RefreshToken, Password
 

@@ -104,7 +104,7 @@ class AccessToken(Token):
     def __init__(self):
         super().__init__()
 
-    def _hash_data(self):
+    def _hash_data(self):  # переделать потомучто фигню возвращает
         result = self._string
         start = perf_counter()
         result = bcrypt.hashpw(self._secret, result)
@@ -128,3 +128,4 @@ if __name__ == "__main__":
     token_2 = AccessToken()
     print(f"Access: {token_2.hash, len(token_2.hash)}")
     print(f"Refresh: {token.hash, len(token.hash)}")
+    print(token_2 == '$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu.$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu')

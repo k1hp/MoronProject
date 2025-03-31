@@ -1,19 +1,18 @@
 from typing import Optional
 
-from flask import request, make_response, Response
+from flask import request, make_response, Response, Request
 from flask_restx import Resource, Namespace, fields
-from marshmallow import ValidationError
 
 from flask_app.models.test_models import (
     UserSchema,
     bad_response,
-    success_response,
-    LoginEmailSchema,
-    LoginUsernameSchema,
+    success_response
 )
-from database.managers import DatabaseAdder
+from database.managers import DatabaseAdder, DatabaseSelector, DatabaseUpdater
 from others.helpers import Password, AccessToken, Token
-from others.middlewares import validate_data, check_login_data
+from others.middlewares import verify_token, validate_data, check_login_data, generate_correct_data, \
+    check_token_presence
+from others.exceptions import ReIntegrityError
 
 api = Namespace("authorization", description="Authorization to you nice")
 
@@ -26,18 +25,10 @@ user_model = api.model(
     },
 )
 
-username_login_model = api.model(
+login_model = api.model(
     "Login/Username",
     {
         "login": fields.String(required=True, description="Login of the user"),
-        "password": fields.String(required=True, description="Password of the user"),
-    },
-)
-
-email_login_model = api.model(
-    "Login/Email",
-    {
-        "email": fields.String(required=True, description="Email of the user"),
         "password": fields.String(required=True, description="Password of the user"),
     },
 )
@@ -61,78 +52,69 @@ class Registration(Resource):
         return success_response, 201
 
 
-@api.route("/token/auth/username", methods=["POST"])
-class UsernameToken(Resource):
-    @api.expect(username_login_model)
+@api.route("/token/auth", methods=["POST"])
+class LoginToken(Resource):
+    @api.expect(login_model)
     def post(self):
-        schema = LoginUsernameSchema()
-        result = full_check_post(request, schema)
-        if result[-1] == 400:
+        result = full_check_post(request)
+        if result["code"] == 400:
             return result
-        response = set_response(result, set_age=True)
+        response = set_response((result, result["code"]), user_id=result["user_id"], set_age=True)
         print(response)
         return response
 
 
-@api.route("/token/auth/temp_username", methods=["POST"])
-class UsernameTempToken(Resource):
-    @api.expect(username_login_model)
+@api.route("/token/auth/temporary", methods=["POST"])
+class LoginTempToken(Resource):
+    @api.expect(login_model)
     def post(self):
-        schema = LoginUsernameSchema()
-        result = full_check_post(request, schema)
-        if result[-1] == 400:
+        result = full_check_post(request)
+        if result["code"] == 400:
             return result
-        response = set_response(result, set_age=False)
+        response = set_response((result, result["code"]), user_id=result["user_id"], set_age=False)
         print(response)
         return response
 
 
-@api.route("/token/auth/email", methods=["POST"])
-class EmailToken(Resource):
-    @api.expect(email_login_model)
-    def post(self):
-        schema = LoginEmailSchema()
-        result = full_check_post(request, schema)
-        if result[-1] == 400:
-            return result
-        response = set_response(result, set_age=True)
-        print(response)
+@api.route("/token/refresh", methods=["PUT"])
+class TokenRefresher(Resource):
+    def put(self):
+        if not check_token_presence(request=request):
+            return {"status": "error", "comment": "you have not token"}, 403
+        cookies = dict(request.cookies)
+        token = cookies["token"]
+        if not verify_token(token):
+            return {"status": "error", "comment": "your token does not exists"}, 400
+        selector = DatabaseSelector()
+        updater = DatabaseUpdater()
+        user_id = selector.select_token(token=token).user_id
+        updater.update_token(user_id=user_id, new_token=AccessToken().hash)
+        # то есть мы обновим и потом оно вернет что токен есть в бд
+        response = set_response(({"status": "success", "comment": "token refreshed"}, 200), user_id=user_id, set_age=True)
         return response
 
 
-@api.route("/token/auth/temp_email", methods=["POST"])
-class EmailTempToken(Resource):
-    @api.expect(email_login_model)
-    def post(self):
-        schema = LoginEmailSchema()
-        result = full_check_post(request, schema)
-        if result[-1] == 400:
-            return result
-        response = set_response(result, set_age=False)
-        print(response)
+@api.route("/token/logout", methods=["DELETE"])
+class Logout(Resource):
+    def delete(self):
+        if not check_token_presence(request=request):
+            return {"status": "error", "comment": "you have not token"}, 400
+        response = make_response({"status": "success", "comment": "token deleted!"}, 200)
+        response.set_cookie(key="token",
+                            value="",
+                            httponly=True,
+                            secure=True,
+                            samesite="lax",
+                            max_age=0)
         return response
 
 
-@api.route("/token/logout", methods=["POST"])
-class EmailTempToken(Resource):
-    @api.expect(email_login_model)
-    def post(self):
-        return bad_response, 400
-
-
-@api.route("/token/refresh", methods=["POST"])
-class EmailTempToken(Resource):
-    @api.expect(email_login_model)
-    def post(self):
-        return bad_response, 400
-
-def set_response(result: tuple, set_age: Optional[bool] = None) -> Response:
+def set_response(result: tuple, user_id: int, set_age: Optional[bool] = None) -> Response:
     if set_age is True:
         age = 60 * 60 * 24 * 20
     else:
         age = None
 
-    user_id = result[0]["user_id"]
     print(*result)
     response = make_response(*result)
     print(response)
@@ -147,37 +129,28 @@ def set_response(result: tuple, set_age: Optional[bool] = None) -> Response:
     return response
 
 
-def full_check_post(request, schema):
-    json_data = request.json
+def full_check_post(request: Request) -> dict:
+    json_data = generate_correct_data(request.json)
     # email_schema = LoginEmailSchema()
-    if not validate_data(schema, json_data):
-        return bad_response, 400
+    # if not validate_data(schema, json_data):
+    #     return bad_response, 400
     user = check_login_data(json_data)
     if user is None:
         # нет такого пользователя либо пароль неверный
-        return bad_response, 400
+        return {"response": "success", "code": 400}
 
     user_id = user.id
-    return {"user_id": user_id}, 200
+    return {"response": "success", "user_id": user_id, "code": 200}
 
 
 def create_token(token: Token, user_id: int) -> str:
+    selector = DatabaseSelector()
+    result = selector.select_token(user_id)
+    if result is not None:  # возвращается токен если он уже есть в бд
+        return result.token
     result = token.hash
-    device = "parfenov"
     print(user_id)
     adder = DatabaseAdder()
-    adder.add_token(user_id=user_id, token=result, device=device)
+    adder.add_token(user_id=user_id, token=result)
+
     return result
-
-
-# def get_success_token():
-
-
-# def get_bad_token():
-
-#
-#     # можно сериализировать сразу класс токена и тп
-
-
-@api.route("/token/refresh", methods=["POST"])
-class TokenRefresher(Resource): ...

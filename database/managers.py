@@ -1,8 +1,10 @@
 from sqlalchemy import and_
+from datetime import datetime, timedelta
 
 from database.creation import db, Base, User, Token
 from typing import Optional, List
 from others.decorators import integrity_check
+from others.exceptions import ParameterError
 
 
 class DatabaseManager:
@@ -24,17 +26,15 @@ class DatabaseAdder:
 
     @integrity_check
     def add_token(
-        self,
-        user_id: int,
-        device: str,
-        token: str,
-        revoked: Optional[bool] = None,
+            self,
+            user_id: int,
+            token: str,
+            revoked: Optional[bool] = None,
     ):
         if revoked is None:
             revoked = 0
         note = Token(
             user_id=user_id,
-            device=device,
             token=token,
             revoked=revoked,
         )
@@ -42,16 +42,14 @@ class DatabaseAdder:
         db.session.commit()
 
 
-class DatabaseUpdater:
-    def update_access_token(self): ...
 
 
 class DatabaseSelector:
     def select_user(
-        self,
-        login: Optional[str] = None,
-        email: Optional[str] = None,
-        password_hash: Optional[str] = None,
+            self,
+            login: Optional[str] = None,
+            email: Optional[str] = None,
+            password_hash: Optional[str] = None,
     ) -> Optional[User]:
         result = None
         if login is None:
@@ -70,8 +68,25 @@ class DatabaseSelector:
             )
         return result
 
+    def select_token(self, user_id: Optional[int] = None, token: Optional[str] = None) -> Token:
+        if token is None and user_id is not None:
+            return db.session.query(Token).filter(Token.user_id == user_id).first()
+        elif user_id is None and token is not None:
+            print(token)
+            return db.session.query(Token).filter(Token.token == token).first()
+        else:
+            raise ParameterError
+
+
+class DatabaseUpdater(DatabaseSelector):
+    def update_token(self, user_id: int, new_token: str) -> None:
+        data = self.select_token(user_id=user_id)
+        data.token = new_token
+        data.created_at = datetime.now()
+        data.expired_at = data.created_at + timedelta(days=15)
+        db.session.commit()
 
 if __name__ == "__main__":
     adder = DatabaseAdder()
     adder.add_user("nigger", "<EMAIL>", "<PASSWORD>")
-    adder.add_tokens(1, "d", "ds", "fdsf")
+    # adder.add_tokens(1, "d", "ds", "fdsf")

@@ -20,7 +20,7 @@ class UserSchema(ma.Schema):
 
 
 class LoginEmailSchema(ma.Schema):
-    email = ma.fields.Email(required=True)
+    login = ma.fields.Email(required=True)
     password = ma.fields.Str(required=True)
 
 class LoginUsernameSchema(ma.Schema):

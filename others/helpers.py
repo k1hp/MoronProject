@@ -2,6 +2,7 @@ import bcrypt
 from abc import abstractmethod, ABC
 from time import perf_counter
 from typing import Union
+import random
 
 from others.settings import TOKEN_SECRET
 
@@ -68,12 +69,13 @@ class Password(HashedData):
 
 class Token(HashedData):
     def __init__(self):
-        self._string = bcrypt.gensalt()
-        self._secret = TOKEN_SECRET.encode()
+        self._salt = bcrypt.gensalt()
+        self._string = str(random.randint(1, 1000000)).encode()
         self._token_hash = self._hash_data()
+        # self._secret = TOKEN_SECRET.encode()
 
     @abstractmethod
-    def _hash_data(self):
+    def _hash_data(self) -> str:
         pass
 
     def __eq__(self, other: Union[str, "Token"]) -> bool:
@@ -92,10 +94,10 @@ class RefreshToken(Token):
     def __init__(self):
         super().__init__()
 
-    def _hash_data(self):
-        result = self._string
+    def _hash_data(self) -> str:
+        result = self._salt
         start = perf_counter()
-        result = bcrypt.hashpw(self._secret, result)
+        result = bcrypt.hashpw(self._salt, result)
         print("Итог:", perf_counter() - start)
         return result.decode()
 
@@ -104,14 +106,19 @@ class AccessToken(Token):
     def __init__(self):
         super().__init__()
 
-    def _hash_data(self):  # переделать потомучто фигню возвращает
-        result = self._string
+    def _hash_data(self) -> str:  # переделать потомучто фигню возвращает
         start = perf_counter()
-        result = bcrypt.hashpw(self._secret, result)
-        result = result.decode() + "." + bcrypt.hashpw(self._secret, result).decode()
+        buffer_result = bcrypt.hashpw(self._string, self._salt)
+        buffer_salt = bcrypt.gensalt()
+        result = (
+            bcrypt.hashpw(buffer_result, self._salt).decode()
+            + bcrypt.hashpw(
+                ("findfs" + self._salt.decode() + self._string.decode()).encode(),
+                buffer_salt,
+            ).decode()
+        )
         print("Итог:", perf_counter() - start)
         return result
-
 
 
 if __name__ == "__main__":
@@ -125,4 +132,7 @@ if __name__ == "__main__":
     token_2 = AccessToken()
     print(f"Access: {token_2.hash, len(token_2.hash)}")
     print(f"Refresh: {token.hash, len(token.hash)}")
-    print(token_2 == '$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu.$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu')
+    print(
+        token_2
+        == "$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu.$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu"
+    )

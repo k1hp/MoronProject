@@ -86,4 +86,7 @@ class CustomCommentResponse(Response):
         return self.__response
 
 
+class CookieResponse(Response): ...
+
+
 # отдельный класс для генерации с куками, мы сможем выбирать куки сами

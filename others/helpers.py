@@ -4,7 +4,7 @@ from time import perf_counter
 from typing import Union
 import random
 
-from others.settings import TOKEN_SECRET
+from others.settings import PASSWORD_SECRET
 
 
 # Declaring our password
@@ -43,7 +43,7 @@ class HashedData(ABC):
 class Password(HashedData):
     def __init__(self, password_string: str):
         self.__attempts = 5
-        self.__salt = b"$2b$12$IfWmvy0xVWeuRZ/6tobhe."
+        self.__salt = PASSWORD_SECRET.encode()
         self.__password_string = password_string.encode()
         self.__password_hash = self._hash_data()
 
@@ -106,7 +106,7 @@ class AccessToken(Token):
     def __init__(self):
         super().__init__()
 
-    def _hash_data(self) -> str:  # переделать потомучто фигню возвращает
+    def _hash_data(self) -> str:
         start = perf_counter()
         buffer_result = bcrypt.hashpw(self._string, self._salt)
         buffer_salt = bcrypt.gensalt()

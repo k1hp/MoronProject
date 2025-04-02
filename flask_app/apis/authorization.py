@@ -125,7 +125,7 @@ class Logout(Resource):
 #     response: MyResponse, user_id: int, set_age: Optional[bool] = None
 # ) -> Response:
 def set_response(
-        result: tuple, user_id: int, set_age: Optional[bool] = None
+    result: tuple, user_id: int, set_age: Optional[bool] = None
 ) -> Response:
     if set_age is True:
         age = 60 * 60 * 24 * 20

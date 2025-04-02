@@ -1,3 +1,4 @@
+import code
 from abc import ABC, abstractmethod
 import marshmallow as ma
 from flask import Response as FlResponse, make_response
@@ -8,23 +9,23 @@ from others.constants import Status, Comment, StatusCode
 
 
 class Response(ABC):
-    def __init__(self, model):
-        self._model = model
+    def __init__(self, model_class: ma.Schema):
+        self._model = model_class()
 
     @abstractmethod
-    def _generate_response(self, status: str, comment: str, code: int):
+    def _generate_response(self):
         pass
 
 
 class CommentResponse(Response):
     def __init__(
         self,
-        model: ma.Schema = CommentResponseSchema(),
+        model_class: ma.Schema = CommentResponseSchema,
         statuses=Status,
         codes=StatusCode,
         comments=Comment,
     ):
-        super().__init__(model)
+        super().__init__(model_class)
         self._status = statuses
         self._codes = codes
         self._comments = comments
@@ -71,9 +72,9 @@ class CustomCommentResponse(Response):
         status: str,
         comment: str,
         code: int,
-        model: ma.Schema = CommentResponseSchema(),
+        model_class: ma.Schema = CommentResponseSchema,
     ):
-        super().__init__(model)
+        super().__init__(model_class)
         self.__response = self._generate_response(status, comment, code)
 
     def _generate_response(self, status: str, comment: str, code: int) -> FlResponse:
@@ -86,7 +87,35 @@ class CustomCommentResponse(Response):
         return self.__response
 
 
-class CookieResponse(Response): ...
+class CookieResponse(Response):
+    def __init__(self, model_class: ma.Schema, data: dict, code: int):
+        super().__init__(model_class)
+        self.__data = data
+        self.__code = code
+        self.__response = self._generate_response()
+
+    def _generate_response(self) -> FlResponse:
+        data = self._model.dump(self.__data)
+        response = make_response(data, code)
+        return response
+
+    def set_cookie(
+        self, key: str, value: str, httponly: bool = False, age: Optional[int] = None
+    ) -> None:
+        if age:
+            age = 60 * 60 * 24 * age
+        self.__response.set_cookie(
+            key=key,
+            value=value,
+            httponly=httponly,
+            secure=True,
+            samesite="Lax",
+            max_age=age,
+        )
+
+    @property
+    def response(self):
+        return self.__response
 
 
 # отдельный класс для генерации с куками, мы сможем выбирать куки сами

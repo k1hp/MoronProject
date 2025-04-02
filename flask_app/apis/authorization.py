@@ -12,8 +12,10 @@ from others.middlewares import (
     check_login_data,
     generate_correct_data,
     check_token_presence,
+    check_cookies,
 )
 from others.exceptions import ReIntegrityError
+from others.responses import CommentResponse, Response as MyResponse
 
 api = Namespace("authorization", description="Authorization to you nice")
 
@@ -41,22 +43,24 @@ login_model = api.model(
 class Registration(Resource):
     @api.expect(user_model)
     def post(self):
+        response = CommentResponse()
         db_adder = DatabaseAdder()
         json_data = request.json
         user_schema = UserSchema()
         if not validate_data(user_schema, json_data):
-            return bad_response, 400
+            return response.failure_response()
 
         password = Password(json_data["password"])
         db_adder.add_user(json_data["login"], json_data["email"], password.hash)
 
-        return success_response, 201
+        return response.success_response()
 
 
 @api.route("/token/auth", methods=["POST"])
 class LoginToken(Resource):
     @api.expect(login_model)
     def post(self):
+        check_cookies(request)
         result = full_check_post(request)
         if result["code"] == 400:
             return result
@@ -84,12 +88,13 @@ class LoginTempToken(Resource):
 @api.route("/token/refresh", methods=["PUT"])
 class TokenRefresher(Resource):
     def put(self):
+        response = CommentResponse()
         if not check_token_presence(request=request):
-            return {"status": "error", "comment": "you have not token"}, 403
+            return response.access_denied(comment="You have not token")
         cookies = dict(request.cookies)
         token = cookies["token"]
         if not verify_token(token):
-            return {"status": "error", "comment": "your token does not exists"}, 400
+            return response.failure_response(comment="Your token does not exists")
         selector = DatabaseSelector()
         updater = DatabaseUpdater()
         user_id = selector.select_token(token=token).user_id
@@ -106,19 +111,21 @@ class TokenRefresher(Resource):
 @api.route("/token/logout", methods=["DELETE"])
 class Logout(Resource):
     def delete(self):
+        response = CommentResponse()
         if not check_token_presence(request=request):
-            return {"status": "error", "comment": "you have not token"}, 400
-        response = make_response(
-            {"status": "success", "comment": "token deleted!"}, 200
-        )
+            return response.access_denied(comment="You have not token")
+        response = response.success_response(comment="Token has been deleted!")
         response.set_cookie(
             key="token", value="", httponly=True, secure=True, samesite="lax", max_age=0
         )
         return response
 
 
+# def set_response(
+#     response: MyResponse, user_id: int, set_age: Optional[bool] = None
+# ) -> Response:
 def set_response(
-    result: tuple, user_id: int, set_age: Optional[bool] = None
+        result: tuple, user_id: int, set_age: Optional[bool] = None
 ) -> Response:
     if set_age is True:
         age = 60 * 60 * 24 * 20

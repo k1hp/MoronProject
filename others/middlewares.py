@@ -52,4 +52,10 @@ def verify_token(token: str) -> bool:
     return True
 
 
+def check_cookies(request: Request) -> bool:
+    if "token" in dict(request.cookies):
+        raise ValueError("Токен уже есть в куках")
+    return True
+
+
 class ValidationService: ...

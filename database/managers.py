@@ -3,6 +3,8 @@ from datetime import datetime, timedelta
 
 from database.creation import db, Base, User, Token
 from typing import Optional, List
+
+from others.constants import TOKEN_LIFETIME
 from others.decorators import integrity_check
 from others.exceptions import ParameterError
 
@@ -26,10 +28,10 @@ class DatabaseAdder:
 
     @integrity_check
     def add_token(
-            self,
-            user_id: int,
-            token: str,
-            revoked: Optional[bool] = None,
+        self,
+        user_id: int,
+        token: str,
+        revoked: Optional[bool] = None,
     ):
         if revoked is None:
             revoked = 0
@@ -42,14 +44,12 @@ class DatabaseAdder:
         db.session.commit()
 
 
-
-
 class DatabaseSelector:
     def select_user(
-            self,
-            login: Optional[str] = None,
-            email: Optional[str] = None,
-            password_hash: Optional[str] = None,
+        self,
+        login: Optional[str] = None,
+        email: Optional[str] = None,
+        password_hash: Optional[str] = None,
     ) -> Optional[User]:
         result = None
         if login is None:
@@ -68,7 +68,9 @@ class DatabaseSelector:
             )
         return result
 
-    def select_token(self, user_id: Optional[int] = None, token: Optional[str] = None) -> Token:
+    def select_token(
+        self, user_id: Optional[int] = None, token: Optional[str] = None
+    ) -> Token:
         if token is None and user_id is not None:
             return db.session.query(Token).filter(Token.user_id == user_id).first()
         elif user_id is None and token is not None:
@@ -83,8 +85,9 @@ class DatabaseUpdater(DatabaseSelector):
         data = self.select_token(user_id=user_id)
         data.token = new_token
         data.created_at = datetime.now()
-        data.expired_at = data.created_at + timedelta(days=15)
+        data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
         db.session.commit()
+
 
 if __name__ == "__main__":
     adder = DatabaseAdder()

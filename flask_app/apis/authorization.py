@@ -5,6 +5,7 @@ from flask_restx import Resource, Namespace, fields
 
 from flask_app.models.input_models import UserSchema, bad_response, success_response
 from database.managers import DatabaseAdder, DatabaseSelector, DatabaseUpdater
+from others.constants import TOKEN_LIFETIME
 from others.helpers import Password, AccessToken, Token
 from others.middlewares import (
     verify_token,
@@ -128,7 +129,7 @@ def set_response(
     result: tuple, user_id: int, set_age: Optional[bool] = None
 ) -> Response:
     if set_age is True:
-        age = 60 * 60 * 24 * 20
+        age = 60 * 60 * 24 * TOKEN_LIFETIME
     else:
         age = None
 

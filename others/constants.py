@@ -1,3 +1,6 @@
+TOKEN_LIFETIME = 15
+
+
 class Status:
     SUCCESS: str = "OK"
     CREATED: str = "CREATED"

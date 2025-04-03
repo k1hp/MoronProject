@@ -5,6 +5,7 @@ from flask import Request
 from database.managers import DatabaseSelector
 from others.helpers import Password
 from flask_app.models.input_models import LoginEmailSchema, LoginUsernameSchema
+from others.exceptions import LackToken
 
 
 def generate_correct_data(data: dict) -> dict:
@@ -42,14 +43,13 @@ def validate_data(schema, data) -> bool:  # pydentic и перенести вс�
     return True
 
 
-def verify_token(token: str) -> bool:
+def verify_token(token: str) -> None:
     print(token)
     selector = DatabaseSelector()
     # result = selector.select_token(token=token)
     # print(result)
     if selector.select_token(token=token) is None:
-        return False
-    return True
+        raise LackToken()
 
 
 def check_cookies(request: Request) -> bool:

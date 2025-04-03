@@ -5,6 +5,7 @@ from flask import request, make_response, Response, Request
 from flask_restx import Resource, Namespace, fields
 
 from flask_app.models.input_models import UserSchema, bad_response, success_response
+from flask_app.models.response_models import CommentResponseSchema
 from database.managers import DatabaseAdder, DatabaseSelector, DatabaseUpdater
 from others.constants import TOKEN_LIFETIME
 from others.helpers import Password, AccessToken, Token
@@ -40,17 +41,62 @@ login_model = api.model(
 
 
 @api.route("/registration", methods=["POST"])
-@swag_from(
-    "flask_app/yml_files/registration.yml"
-)  # нужно определенные значения возвращать при случаях существующего аккаунта и тп
 class Registration(Resource):
-    @api.expect(user_model)
+
     def post(self):
+        """
+        This router registers a new user.
+        It works also with swag_from, schemas and spec_dict
+        ---
+        parameters:
+          - in: body
+            name: User
+            required: true
+            schema:
+              type: object
+              properties:
+                login:
+                  type: string
+                  description: The login name of the user
+                  example: parfen
+                email:
+                  type: string
+                  description: The email address of the user
+                  example: hui@gmail.com
+                password:
+                  type: string
+                  description: The password for the user account
+                  example: 1234f
+        responses:
+          200:
+            description: User created successfully
+            schema:
+              id: User
+              properties:
+                id:
+                  type: integer
+                  description: The unique identifier for the user
+                  example: 1
+                login:
+                  type: string
+                  description: The login name of the user
+                  example: johndoe
+                email:
+                  type: string
+                  description: The email address of the user
+                  example: johndoe@example.com
+          400:
+            description: Bad request, invalid input
+          409:
+            description: Conflict, user already exists
+        """
+
         response = CommentResponse()
         db_adder = DatabaseAdder()
         json_data = request.json
         user_schema = UserSchema()
         if not validate_data(user_schema, json_data):
+            print(json_data)
             return response.failure_response()
 
         password = Password(json_data["password"])
@@ -59,9 +105,9 @@ class Registration(Resource):
         return response.success_response()
 
 
-@api.route("/token/auth", methods=["POST"])
+# @api.route("/token/auth", methods=["POST"])
 class LoginToken(Resource):
-    @api.expect(login_model)
+
     def post(self):
         check_cookies(request)
         result = full_check_post(request)
@@ -74,7 +120,7 @@ class LoginToken(Resource):
         return response
 
 
-@api.route("/token/auth/temporary", methods=["POST"])
+# @api.route("/token/auth/temporary", methods=["POST"])
 class LoginTempToken(Resource):
     @api.expect(login_model)
     def post(self):
@@ -88,7 +134,7 @@ class LoginTempToken(Resource):
         return response
 
 
-@api.route("/token/refresh", methods=["PUT"])
+# @api.route("/token/refresh", methods=["PUT"])
 class TokenRefresher(Resource):
     def put(self):
         response = CommentResponse()
@@ -99,7 +145,7 @@ class TokenRefresher(Resource):
         try:
             verify_token(token)
         except LackToken:
-            return response.failure_response(comment="Your token does not exists")
+            return response.failure_response(comment="This token does not exists")
         selector = DatabaseSelector()
         updater = DatabaseUpdater()
         user_id = selector.select_token(token=token).user_id
@@ -115,7 +161,7 @@ class TokenRefresher(Resource):
         return response
 
 
-@api.route("/token/logout", methods=["DELETE"])
+# @api.route("/token/logout", methods=["DELETE"])
 class Logout(Resource):
     def delete(self):
         response = CommentResponse()

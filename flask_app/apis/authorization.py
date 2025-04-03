@@ -1,5 +1,6 @@
 from typing import Optional
 
+from flasgger import swag_from
 from flask import request, make_response, Response, Request
 from flask_restx import Resource, Namespace, fields
 
@@ -15,7 +16,7 @@ from others.middlewares import (
     check_token_presence,
     check_cookies,
 )
-from others.exceptions import ReIntegrityError
+from others.exceptions import ReIntegrityError, LackToken
 from others.responses import CommentResponse, Response as MyResponse
 
 api = Namespace("authorization", description="Authorization to you nice")
@@ -38,8 +39,9 @@ login_model = api.model(
 )
 
 
-@api.route(
-    "/registration", methods=["POST"]
+@api.route("/registration", methods=["POST"])
+@swag_from(
+    "flask_app/yml_files/registration.yml"
 )  # нужно определенные значения возвращать при случаях существующего аккаунта и тп
 class Registration(Resource):
     @api.expect(user_model)
@@ -94,12 +96,16 @@ class TokenRefresher(Resource):
             return response.access_denied(comment="You have not token")
         cookies = dict(request.cookies)
         token = cookies["token"]
-        if not verify_token(token):
+        try:
+            verify_token(token)
+        except LackToken:
             return response.failure_response(comment="Your token does not exists")
         selector = DatabaseSelector()
         updater = DatabaseUpdater()
         user_id = selector.select_token(token=token).user_id
-        updater.update_token(user_id=user_id, new_token=AccessToken().hash)
+        updater.update_token(
+            user_id, new_token=AccessToken().hash
+        )  # нужно подумать как лучше
         # то есть мы обновим и потом оно вернет что токен есть в бд
         response = set_response(
             ({"status": "success", "comment": "token refreshed"}, 200),

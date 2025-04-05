@@ -1,4 +1,4 @@
-from marshmallow import ValidationError
+import marshmallow as ma
 from typing import Optional
 from flask import Request
 
@@ -6,6 +6,23 @@ from database.managers import DatabaseSelector
 from others.helpers import Password
 from flask_app.models.input_models import LoginEmailSchema, LoginUsernameSchema
 from others.exceptions import LackToken
+from others.responses import CommentResponse
+
+
+class ValidationBase:
+        # self._response_object = CommentResponse()
+        # self._bad_response = self._response_object.failure_response()
+    @staticmethod
+    def check_model(model_class: ma.Schema, data: dict):
+        model = model_class()
+        model.validate(data)
+
+
+class ValidationService(ValidationBase):
+    def __init__(self, model_class: ma.Schema, data: dict):
+        self.check_model(model_class, data)
+
+    def
 
 
 def generate_correct_data(data: dict) -> dict:
@@ -13,11 +30,14 @@ def generate_correct_data(data: dict) -> dict:
     email_schema = LoginEmailSchema()
     try:
         email_schema.load(data)
-    except ValidationError:
+    except ma.ValidationError:
         return data
     result_data["email"] = data["login"]
     return result_data
 
+class TokenService(ValidationBase):
+    def __init__(self):
+        pass
 
 def check_token_presence(request: Request) -> bool:
     cookies = dict(request.cookies)
@@ -38,7 +58,7 @@ def check_login_data(json_data: dict) -> Optional[int]:
 def validate_data(schema, data) -> bool:  # pydentic и перенести всё в класс service
     try:
         schema.load(data)
-    except ValidationError as err:
+    except ma.ValidationError as err:
         return False
     return True
 
@@ -56,6 +76,3 @@ def check_cookies(request: Request) -> bool:
     if "token" in dict(request.cookies):
         raise ValueError("Токен уже есть в куках")
     return True
-
-
-class ValidationService: ...

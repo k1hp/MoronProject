@@ -2,7 +2,7 @@ import os
 import shutil
 from undetected_chromedriver import Chrome
 
-class OurDriver(Chrome):
+class our_driver(Chrome):
     def quit(self):
         try:
             self.service.process.kill()

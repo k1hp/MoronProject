@@ -4,7 +4,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from utils.custom_driver import our_driver
 from utils.main_parser_utils import get_text_card,next_page,choise_category
 import time
-from selenium.webdriver.common.keys import Keys
 
 urls = [
     "https://www.dns-shop.ru/catalog/17a899cd16404e77/processory/?stock=now-today-tomorrow-later&f[1zs]=cln9-1p2j-agnc-68te-gfw3&f[13]=bn-bo-bq-1ox-1oz-1qs-br-234&f[1b]=d4w-68vs",

@@ -3,22 +3,28 @@ from typing import Optional
 from flasgger import swag_from
 from flask import request, make_response, Response, Request
 from flask_restx import Resource, Namespace, fields
+from marshmallow import ValidationError
 
-from flask_app.models.input_models import UserSchema, bad_response, success_response
-from flask_app.models.response_models import CommentResponseSchema
-from database.managers import DatabaseAdder, DatabaseSelector, DatabaseUpdater
+from flask_app.models.input_models import UserSchema, AuthorizationSchema
+from database.managers import (
+    DatabaseAdder,
+    DatabaseSelector,
+    DatabaseUpdater,
+    TokenManager,
+)
 from others.constants import TOKEN_LIFETIME
 from others.helpers import Password, AccessToken, Token
 from others.middlewares import (
     verify_token,
     validate_data,
     check_login_data,
-    generate_correct_data,
     check_token_presence,
     check_cookies,
+    AuthorizationService,
 )
 from others.exceptions import ReIntegrityError, LackToken
-from others.responses import CommentResponse, Response as MyResponse
+from others.responses import CommentResponse, CookieResponse, Response as MyResponse
+from others.decorators import convert_error
 
 api = Namespace("authorization", description="Authorization to you nice")
 
@@ -39,58 +45,104 @@ login_model = api.model(
     },
 )
 
+registration_dict = {
+    "parameters": [
+        {
+            "in": "body",
+            "name": "body",
+            "required": True,
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "login": {"type": "string", "required": True},
+                    "email": {
+                        "type": "string",
+                        "required": True,
+                    },
+                    "password": {"type": "string", "required": True},
+                },
+                "examples": {
+                    "example1": {
+                        "login": "pafenov",
+                        "email": "pafenov@gmail.com",
+                        "password": "1234",
+                    },
+                    "example2": {
+                        "login": "ivanov",
+                        "email": "ivanov@gmail.com",
+                        "password": "abcd",
+                    },
+                    "example3": {
+                        "login": "sidorov",
+                        "email": "sidorov@gmail.com",
+                        "password": "qwerty",
+                    },
+                },
+            },
+        }
+    ],
+    "definitions": {
+        "Palette": {
+            "type": "object",
+            "properties": {
+                "palette_name": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Color"},
+                }
+            },
+        },
+        "Color": {"type": "string"},
+    },
+    "responses": {
+        "200": {
+            "description": "A list of colors (may be filtered by palette)",
+            "schema": {"$ref": "#/definitions/Palette"},
+            "examples": {"rgb": ["red", "green", "blue"]},
+        }
+    },
+}
+
+specs_dict = {
+    "parameters": [
+        {
+            "name": "palette",
+            "in": "path",
+            "type": "string",
+            "enum": ["all", "rgb", "cmyk"],
+            "required": "true",
+            "default": "all",
+        }
+    ],
+    "definitions": {
+        "Palette": {
+            "type": "object",
+            "properties": {
+                "palette_name": {
+                    "type": "array",
+                    "items": {"$ref": "#/definitions/Color"},
+                }
+            },
+        },
+        "Color": {"type": "string"},
+    },
+    "responses": {
+        "200": {
+            "description": "A list of colors (may be filtered by palette)",
+            "schema": {"$ref": "#/definitions/Palette"},
+            "examples": {"rgb": ["red", "green", "blue"]},
+        }
+    },
+}
+
 
 @api.route("/registration", methods=["POST"])
 class Registration(Resource):
-
+    @swag_from(registration_dict)
+    @convert_error
     def post(self):
+        """Example endpoint returning a list of colors by palette
+        In this example the specification is taken from specs_dict
         """
-        This router registers a new user.
-        It works also with swag_from, schemas and spec_dict
-        ---
-        parameters:
-          - in: body
-            name: User
-            required: true
-            schema:
-              type: object
-              properties:
-                login:
-                  type: string
-                  description: The login name of the user
-                  example: parfen
-                email:
-                  type: string
-                  description: The email address of the user
-                  example: hui@gmail.com
-                password:
-                  type: string
-                  description: The password for the user account
-                  example: 1234f
-        responses:
-          200:
-            description: User created successfully
-            schema:
-              id: User
-              properties:
-                id:
-                  type: integer
-                  description: The unique identifier for the user
-                  example: 1
-                login:
-                  type: string
-                  description: The login name of the user
-                  example: johndoe
-                email:
-                  type: string
-                  description: The email address of the user
-                  example: johndoe@example.com
-          400:
-            description: Bad request, invalid input
-          409:
-            description: Conflict, user already exists
-        """
-
         response = CommentResponse()
         db_adder = DatabaseAdder()
         json_data = request.json
@@ -105,37 +157,45 @@ class Registration(Resource):
         return response.success_response()
 
 
-# @api.route("/token/auth", methods=["POST"])
+@api.route("/token/auth", methods=["POST"])
 class LoginToken(Resource):
-
+    @api.expect(login_model)
+    @convert_error
     def post(self):
         check_cookies(request)
-        result = full_check_post(request)
-        if result["code"] == 400:
-            return result
-        response = set_response(
-            (result, result["code"]), user_id=result["user_id"], set_age=True
+        token = AuthorizationService(
+            model_class=AuthorizationSchema, request=request
+        ).get_token()
+        success = CommentResponse().success_response("Вы были успешно авторизованы")
+        cookie_response = CookieResponse(response=success)
+        # cookie_response = CookieResponse()  # в emergency режиме (без данных)
+        cookie_response.set_cookie(
+            key="token", value=token.hash, httponly=True, age_days=TOKEN_LIFETIME
         )
-        print(response)
-        return response
+
+        return cookie_response.response
 
 
-# @api.route("/token/auth/temporary", methods=["POST"])
+@api.route("/token/auth/temporary", methods=["POST"])
 class LoginTempToken(Resource):
     @api.expect(login_model)
+    @convert_error
     def post(self):
-        result = full_check_post(request)
-        if result["code"] == 400:
-            return result
-        response = set_response(
-            (result, result["code"]), user_id=result["user_id"], set_age=False
-        )
-        print(response)
-        return response
+        check_cookies(request)
+        token = AuthorizationService(
+            model_class=AuthorizationSchema, request=request
+        ).get_token()
+        success = CommentResponse().success_response("Вы были успешно авторизованы")
+        cookie_response = CookieResponse(response=success)
+        # cookie_response = CookieResponse()  # в emergency режиме (без данных)
+        cookie_response.set_cookie(key="token", value=token.hash, httponly=True)
+
+        return cookie_response.response
 
 
 # @api.route("/token/refresh", methods=["PUT"])
 class TokenRefresher(Resource):
+    @convert_error
     def put(self):
         response = CommentResponse()
         if not check_token_presence(request=request):
@@ -163,6 +223,7 @@ class TokenRefresher(Resource):
 
 # @api.route("/token/logout", methods=["DELETE"])
 class Logout(Resource):
+    @convert_error
     def delete(self):
         response = CommentResponse()
         if not check_token_presence(request=request):
@@ -199,18 +260,18 @@ def set_response(
     return response
 
 
-def full_check_post(request: Request) -> dict:
-    json_data = generate_correct_data(request.json)
-    # email_schema = LoginEmailSchema()
-    # if not validate_data(schema, json_data):
-    #     return bad_response, 400
-    user = check_login_data(json_data)
-    if user is None:
-        # нет такого пользователя либо пароль неверный
-        return {"response": "success", "code": 400}
-
-    user_id = user.id
-    return {"response": "success", "user_id": user_id, "code": 200}
+# def full_check_post(request: Request) -> dict:
+#     # json_data = generate_login_data(request.json)
+#     # email_schema = LoginEmailSchema()
+#     # if not validate_data(schema, json_data):
+#     #     return bad_response, 400
+#     user = check_login_data(json_data)
+#     if user is None:
+#         # нет такого пользователя либо пароль неверный
+#         return {"response": "success", "code": 400}
+#
+#     user_id = user.id
+#     return {"response": "success", "user_id": user_id, "code": 200}
 
 
 def create_token(token: Token, user_id: int) -> str:

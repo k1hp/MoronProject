@@ -2,42 +2,82 @@ import marshmallow as ma
 from typing import Optional
 from flask import Request
 
-from database.managers import DatabaseSelector
-from others.helpers import Password
+from database.creation import db, User
+from database.managers import DatabaseSelector, TokenManager
+from others.helpers import Password, AccessToken
 from flask_app.models.input_models import LoginEmailSchema, LoginUsernameSchema
-from others.exceptions import LackToken
+from others.exceptions import LackToken, CookieTokenError, LoginError, PasswordError
 from others.responses import CommentResponse
 
 
-class ValidationBase:
-        # self._response_object = CommentResponse()
-        # self._bad_response = self._response_object.failure_response()
+class ServiceBase:
+    # self._response_object = CommentResponse()
+    # self._bad_response = self._response_object.failure_response()
     @staticmethod
-    def check_model(model_class: ma.Schema, data: dict):
+    def _check_model(model_class: ma.Schema, data: dict):
         model = model_class()
         model.validate(data)
 
 
-class ValidationService(ValidationBase):
+class ValidationService(ServiceBase):
     def __init__(self, model_class: ma.Schema, data: dict):
-        self.check_model(model_class, data)
-
-    def
+        self._check_model(model_class, data)
 
 
-def generate_correct_data(data: dict) -> dict:
-    result_data = {"password": data["password"]}
-    email_schema = LoginEmailSchema()
-    try:
-        email_schema.load(data)
-    except ma.ValidationError:
-        return data
-    result_data["email"] = data["login"]
-    return result_data
+class AuthorizationService(ServiceBase):
+    def __init__(self, model_class: ma.Schema, request: Request):
+        self._check_model(model_class, request.json)
+        self.__selector = DatabaseSelector()
+        self.__data = self._generate_login_data(request.json)
+        self.__user = self._get_user()
 
-class TokenService(ValidationBase):
+    @staticmethod
+    def _generate_login_data(data: dict) -> dict:
+        result_data = {"password": data["password"]}
+        try:
+            LoginEmailSchema().load(data)
+        except ma.ValidationError:
+            return data
+        result_data["email"] = data["login"]
+        return result_data
+
+    def _get_user(self) -> dict:
+        if (
+            "email" in self.__data
+            and db.session.query(User).filter_by(email=self.__data["email"]).first()
+            is None
+        ):
+            raise LoginError()
+        elif (
+            "login" in self.__data
+            and db.session.query(User).filter_by(login=self.__data["login"]).first()
+            is None
+        ):
+            raise LoginError()
+        new_data = self.__data.copy()
+        new_data.pop("password")
+        new_data["password_hash"] = Password(self.__data["password"]).hash
+
+        result = self.__selector.select_user(**new_data)
+        if result is None:
+            raise PasswordError()
+        return result
+
+    def get_token(self):
+        user_id = self.__user.id
+        result = self.__selector.select_token(user_id)
+        if result is not None:  # возвращается токен если он уже есть в бд
+            return result.token
+        token = AccessToken()
+        print(user_id)
+        TokenManager(token).add_token(user_id)
+        return token
+
+
+class TokenService(ServiceBase):
     def __init__(self):
         pass
+
 
 def check_token_presence(request: Request) -> bool:
     cookies = dict(request.cookies)
@@ -74,5 +114,9 @@ def verify_token(token: str) -> None:
 
 def check_cookies(request: Request) -> bool:
     if "token" in dict(request.cookies):
-        raise ValueError("Токен уже есть в куках")
+        raise CookieTokenError("Токен уже есть в куках")
     return True
+
+
+def get_token():
+    pass

@@ -1,9 +1,17 @@
 from sqlalchemy.exc import IntegrityError
+from typing import Optional
 
 
-class ParameterError(Exception):
+class MyException(Exception):
+    def __init__(self, message: Optional[str] = None):
+        self._message = message
+
+
+class ParameterError(MyException):
     def __str__(self):
-        return "Параметр передан неверно, или вовсе не был передан"
+        if self._message is None:
+            return "Параметр передан неверно, или вовсе не был передан"
+        return self._message
 
 
 class ReIntegrityError(IntegrityError):
@@ -11,21 +19,29 @@ class ReIntegrityError(IntegrityError):
         return "Ошибка вставки данных. Скорее всего такая запись существует."
 
 
-class LackToken(Exception):
+class LackToken(MyException):
     def __str__(self):
-        return "В бд нету такого токена"
+        if self._message is None:
+            return "В бд нету такого токена"
+        return self._message
 
 
-class LoginError(Exception):
+class LoginError(MyException):
     def __str__(self):
-        return "Неверный логин"
+        if self._message is None:
+            return "Неверный логин"
+        return self._message
 
 
-class PasswordError(Exception):
+class PasswordError(MyException):
     def __str__(self):
-        return "Неверный пароль"
+        if self._message is None:
+            return "Неверный пароль"
+        return self._message
 
 
-class CookieTokenError(Exception):
+class CookieTokenError(MyException):
     def __str__(self):
-        return "В куках отсутствует токен или что-то еще связанное с ним"
+        if self._message is None:
+            return "В куках отсутствует токен или что-то еще связанное с ним"
+        return self._message

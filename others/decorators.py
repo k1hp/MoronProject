@@ -44,7 +44,8 @@ def convert_error(function):
             return response_object.failure_response(comment=e.__str__())
 
         except CookieTokenError as e:
-            return response_object.failure_response(comment=e.__str__())
+            print(e)
+            return response_object.access_denied(comment=e.__str__())
 
         except LackToken as e:
             return response_object.failure_response(comment=e.__str__())

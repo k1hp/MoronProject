@@ -88,22 +88,44 @@ class CustomCommentResponse(Response):
 
 
 class CookieResponse(Response):
-    def __init__(self, model_class: ma.Schema, data: dict, code: int):
-        super().__init__(model_class)
-        self.__data = data
-        self.__code = code
-        self.__response = self._generate_response()
+    def __init__(
+        self,
+        response: Optional[FlResponse] = None,
+        model_class: Optional[ma.Schema] = None,
+        data: Optional[dict] = None,
+        code: Optional[int] = None,
+    ):
+        if all(el is None for el in (response, model_class, data, code)):
+            self.__response = self._emergency_response()
+        elif response is None:
+            super().__init__(model_class)
+            self.__data = data
+            self.__code = code
+            self.__response = self._generate_response()
+        else:
+            self.__response = response
 
     def _generate_response(self) -> FlResponse:
         data = self._model.dump(self.__data)
         response = make_response(data, code)
         return response
 
+    @staticmethod
+    def _emergency_response() -> FlResponse:
+        print("Ответ с куками, но без данных")
+        return make_response({"status": "emergency"}, 204)
+
     def set_cookie(
-        self, key: str, value: str, httponly: bool = False, age: Optional[int] = None
+        self,
+        key: str,
+        value: str,
+        httponly: bool = False,
+        age_days: Optional[int] = None,
     ) -> None:
-        if age:
-            age = 60 * 60 * 24 * age
+        if age_days:
+            age = 60 * 60 * 24 * age_days
+        else:
+            age = None
         self.__response.set_cookie(
             key=key,
             value=value,

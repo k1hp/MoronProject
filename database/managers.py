@@ -6,15 +6,45 @@ from typing import Optional, List
 
 from others.constants import TOKEN_LIFETIME
 from others.decorators import integrity_check
-from others.exceptions import ParameterError
+from others.exceptions import ParameterError, ReIntegrityError
+from others.helpers import Token as TokenType
 
 
 class DatabaseManager:
-    def create_all(self): ...
+    # def create_all(self): ...
+    #
+    # def drop_all(self): ...
+    #
+    # def drop_table(self, table: Base) -> None: ...
+    @staticmethod
+    def _add_data(object):
+        db.session.add(object)
+        db.session.commit()
 
-    def drop_all(self): ...
+    @staticmethod
+    def _delete_data():
+        pass
 
-    def drop_table(self, table: Base) -> None: ...
+
+class TokenManager(DatabaseManager):
+    def __init__(self, token: TokenType):
+        self.__token = token.hash
+
+    def add_token(self, user_id: int):
+        user = Token(token=self.__token, user_id=user_id)
+        self._add_data(user)
+
+    def update_token(
+        self, user_id: Optional[int] = None, old_token: Optional[str] = None
+    ):
+        if user_id is None and old_token is not None:
+            token = db.session.query(Token).filter(Token.token == old_token).first()
+        elif old_token is None and user_id is not None:
+            token = db.session.query(Token).filter(Token.id == user_id).first()
+        if token is None:
+            raise ReIntegrityError("Такого пользователя не существует")
+        token.token = self.__token
+        db.session.commit()
 
 
 class DatabaseAdder:

@@ -6,12 +6,8 @@ from database.creation import db
 from others.settings import DB_CONNECTION
 from flask_app.apis.authorization import (
     api as ns1,
-    Registration,
-    LoginToken,
-    LoginTempToken,
-    TokenRefresher,
-    Logout,
 )
+from flask_app.apis.profile import api as ns2
 from database.managers import DatabaseAdder, DatabaseSelector
 from others.helpers import AccessToken, RefreshToken, Password
 from others.responses import CommentResponse
@@ -23,6 +19,7 @@ db.init_app(app)
 api = Api(app)
 swagger = Swagger(app)
 api.add_namespace(ns1, path="/api")
+api.add_namespace(ns2, path="/api")
 # api.add_resource(Registration, "/api/token/registration")
 # api.add_resource(LoginToken, "/api/token/auth/")
 # api.add_resource(LoginTempToken, "/api/token/auth/temporary")

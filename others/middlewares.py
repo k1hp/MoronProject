@@ -16,7 +16,8 @@ class ServiceBase:
     @staticmethod
     def _check_model(model_class: ma.Schema, data: dict):
         model = model_class()
-        model.validate(data)
+        # model.validate(data)  не проверяет лишние параметры
+        model.load(data)
 
 
 class ValidationService(ServiceBase):

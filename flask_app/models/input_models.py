@@ -24,8 +24,7 @@ class ResponseSchema(ma.Schema):
 
 
 class AuthorizationSchema(ma.Schema):
-    login = ma.fields.Str(required=False)
-    email = ma.fields.Email(required=False)
+    login = ma.fields.Str(required=True)
     password = ma.fields.Str(required=True)
 
 

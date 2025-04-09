@@ -1,0 +1,18 @@
+description: Creates a new pet in the store. Duplicates are allowed
+operationId: addPet
+requestBody:
+  description: Pet to add to the store
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: '#/components/schemas/NewPet'
+      examples:
+        sample1:
+          value:
+            name: Cupcake
+            tag: Chihuahua
+        sample2:
+          value:
+            name: Prince
+            tag: Poodle

@@ -25,6 +25,7 @@ from others.middlewares import (
 from others.exceptions import ReIntegrityError, LackToken
 from others.responses import CommentResponse, CookieResponse, Response as MyResponse
 from others.decorators import convert_error
+from others.settings import YAMLS_DIR
 
 api = Namespace("authorization", description="Authorization to you nice")
 
@@ -45,99 +46,10 @@ login_model = api.model(
     },
 )
 
-registration_dict = {
-    "parameters": [
-        {
-            "in": "body",
-            "name": "body",
-            "required": True,
-            "schema": {
-                "type": "object",
-                "properties": {
-                    "login": {"type": "string", "required": True},
-                    "email": {
-                        "type": "string",
-                        "required": True,
-                    },
-                    "password": {"type": "string", "required": True},
-                },
-                "examples": {
-                    "example1": {
-                        "login": "pafenov",
-                        "email": "pafenov@gmail.com",
-                        "password": "1234",
-                    },
-                    "example2": {
-                        "login": "ivanov",
-                        "email": "ivanov@gmail.com",
-                        "password": "abcd",
-                    },
-                    "example3": {
-                        "login": "sidorov",
-                        "email": "sidorov@gmail.com",
-                        "password": "qwerty",
-                    },
-                },
-            },
-        }
-    ],
-    "definitions": {
-        "Palette": {
-            "type": "object",
-            "properties": {
-                "palette_name": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/Color"},
-                }
-            },
-        },
-        "Color": {"type": "string"},
-    },
-    "responses": {
-        "200": {
-            "description": "A list of colors (may be filtered by palette)",
-            "schema": {"$ref": "#/definitions/Palette"},
-            "examples": {"rgb": ["red", "green", "blue"]},
-        }
-    },
-}
-
-specs_dict = {
-    "parameters": [
-        {
-            "name": "palette",
-            "in": "path",
-            "type": "string",
-            "enum": ["all", "rgb", "cmyk"],
-            "required": "true",
-            "default": "all",
-        }
-    ],
-    "definitions": {
-        "Palette": {
-            "type": "object",
-            "properties": {
-                "palette_name": {
-                    "type": "array",
-                    "items": {"$ref": "#/definitions/Color"},
-                }
-            },
-        },
-        "Color": {"type": "string"},
-    },
-    "responses": {
-        "200": {
-            "description": "A list of colors (may be filtered by palette)",
-            "schema": {"$ref": "#/definitions/Palette"},
-            "examples": {"rgb": ["red", "green", "blue"]},
-        }
-    },
-}
-
 
 @api.route("/registration", methods=["POST"])
 class Registration(Resource):
-    @swag_from(registration_dict)
+    @swag_from(YAMLS_DIR / "registration.yaml")
     @convert_error
     def post(self):
         """Example endpoint returning a list of colors by palette
@@ -193,35 +105,7 @@ class LoginTempToken(Resource):
         return cookie_response.response
 
 
-# @api.route("/token/refresh", methods=["PUT"])
-class TokenRefresher(Resource):
-    @convert_error
-    def put(self):
-        response = CommentResponse()
-        if not check_token_presence(request=request):
-            return response.access_denied(comment="You have not token")
-        cookies = dict(request.cookies)
-        token = cookies["token"]
-        try:
-            verify_token(token)
-        except LackToken:
-            return response.failure_response(comment="This token does not exists")
-        selector = DatabaseSelector()
-        updater = DatabaseUpdater()
-        user_id = selector.select_token(token=token).user_id
-        updater.update_token(
-            user_id, new_token=AccessToken().hash
-        )  # нужно подумать как лучше
-        # то есть мы обновим и потом оно вернет что токен есть в бд
-        response = set_response(
-            ({"status": "success", "comment": "token refreshed"}, 200),
-            user_id=user_id,
-            set_age=True,
-        )
-        return response
-
-
-# @api.route("/token/logout", methods=["DELETE"])
+@api.route("/token/logout", methods=["DELETE"])
 class Logout(Resource):
     @convert_error
     def delete(self):
@@ -235,53 +119,29 @@ class Logout(Resource):
         return response
 
 
-# def set_response(
-#     response: MyResponse, user_id: int, set_age: Optional[bool] = None
-# ) -> Response:
-def set_response(
-    result: tuple, user_id: int, set_age: Optional[bool] = None
-) -> Response:
-    if set_age is True:
-        age = 60 * 60 * 24 * TOKEN_LIFETIME
-    else:
-        age = None
-
-    print(*result)
-    response = make_response(*result)
-    print(response)
-    response.set_cookie(
-        key="token",
-        value=create_token(token=AccessToken(), user_id=user_id),
-        httponly=True,
-        secure=True,
-        samesite="lax",
-        max_age=age,
-    )
-    return response
-
-
-# def full_check_post(request: Request) -> dict:
-#     # json_data = generate_login_data(request.json)
-#     # email_schema = LoginEmailSchema()
-#     # if not validate_data(schema, json_data):
-#     #     return bad_response, 400
-#     user = check_login_data(json_data)
-#     if user is None:
-#         # нет такого пользователя либо пароль неверный
-#         return {"response": "success", "code": 400}
-#
-#     user_id = user.id
-#     return {"response": "success", "user_id": user_id, "code": 200}
-
-
-def create_token(token: Token, user_id: int) -> str:
-    selector = DatabaseSelector()
-    result = selector.select_token(user_id)
-    if result is not None:  # возвращается токен если он уже есть в бд
-        return result.token
-    result = token.hash
-    print(user_id)
-    adder = DatabaseAdder()
-    adder.add_token(user_id=user_id, token=result)
-
-    return result
+# @api.route("/token/refresh", methods=["PUT"])
+# class TokenRefresher(Resource):
+#     @convert_error
+#     def put(self):
+#         response = CommentResponse()
+#         if not check_token_presence(request=request):
+#             return response.access_denied(comment="You have not token")
+#         cookies = dict(request.cookies)
+#         token = cookies["token"]
+#         try:
+#             verify_token(token)
+#         except LackToken:
+#             return response.failure_response(comment="This token does not exists")
+#         selector = DatabaseSelector()
+#         updater = DatabaseUpdater()
+#         user_id = selector.select_token(token=token).user_id
+#         updater.update_token(
+#             user_id, new_token=AccessToken().hash
+#         )  # нужно подумать как лучше
+#         # то есть мы обновим и потом оно вернет что токен есть в бд
+#         response = set_response(
+#             ({"status": "success", "comment": "token refreshed"}, 200),
+#             user_id=user_id,
+#             set_age=True,
+#         )
+#         return response

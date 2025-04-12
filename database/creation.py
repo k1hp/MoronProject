@@ -49,8 +49,8 @@ class Token(
 class Processor(db.Model):
     __tablename__ = "processors"
     id: Mapped[int] = mapped_column(
-        autoincrement=True, primary_key=True, nullable=False)
-    # xui in ass == parfenov.cpp:
+        autoincrement=True, primary_key=True, nullable=False
+    )
     name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     socket: Mapped[str] = mapped_column(String(10), nullable=False)
     frequency: Mapped[str] = mapped_column(String(20), nullable=False)

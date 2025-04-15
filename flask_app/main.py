@@ -54,7 +54,7 @@ with app.app_context():
 with app.app_context():
     adder = DatabaseAdder()
     access_token = AccessToken().hash
-    adder.add_user("nigger", "4@yandex.ru", Password("1234").hash)
+    adder.add_user("helloworld", "4@yandex.ru", Password("1234").hash)  # не админка -_-
     # adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
     # try:
     #     adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)

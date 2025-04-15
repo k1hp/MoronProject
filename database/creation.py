@@ -1,5 +1,3 @@
-from xmlrpc.client import Boolean
-
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import String, ForeignKey
@@ -38,10 +36,28 @@ class Token(
         String(130), unique=True, nullable=False, index=True
     )
     created_at: Mapped[datetime] = mapped_column(nullable=False, default=datetime.now())
-    expired_at: Mapped[datetime] = mapped_column(nullable=False, default=datetime.now()+timedelta(days=15))
+    expired_at: Mapped[datetime] = mapped_column(
+        nullable=False, default=datetime.now() + timedelta(days=15)
+    )
     revoked: Mapped[bool] = mapped_column(nullable=False, index=True, default=False)
 
     user: Mapped[User] = relationship("User", back_populates="token")
+
+
+class Processor(db.Model):
+    __tablename__ = "processors"
+    id: Mapped[int] = mapped_column(
+        autoincrement=True, primary_key=True, nullable=False
+    )
+    name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
+    socket: Mapped[str] = mapped_column(String(10), nullable=False)
+    frequency: Mapped[str] = mapped_column(String(20), nullable=False)
+    l2_cache: Mapped[str] = mapped_column(String(10), nullable=False)
+    l3_cache: Mapped[str] = mapped_column(String(10), nullable=False)
+    ddr4_memory: Mapped[str] = mapped_column(String(20))
+    ddr5_memory: Mapped[str] = mapped_column(String(20))
+    tdp: Mapped[str] = mapped_column(String(10), nullable=False)
+    price: Mapped[int] = mapped_column(nullable=False)
 
 
 # запретить доступ к login если есть токен в куках

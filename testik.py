@@ -56,8 +56,8 @@ def parse_processors(driver) -> List[dict]:
                         socket=specs_product[0],
                         core=specs_product[1][1:2],
                         frequency=specs_product[1][5:],
-                        L2_cache=specs_product[2][6:],
-                        L3_cache=specs_product[3][6:],
+                        l2_cache=specs_product[2][6:],
+                        l3_cache=specs_product[3][6:],
                         ddr4="DDR4",
                         ddr5="DDR5",
                         RAM_frequency=specs_product[5][6:],
@@ -153,5 +153,6 @@ def parse_motherboards(driver):
     print(result)
 
 
-driver = our_driver()
-parse_processors(driver)
+if __name__ == "__main__":
+    driver = our_driver()
+    parse_processors(driver)

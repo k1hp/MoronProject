@@ -1,7 +1,7 @@
-from sqlalchemy import and_
+from sqlalchemy import and_, insert
 from datetime import datetime, timedelta
 
-from database.creation import db, Base, User, Token
+from database.creation import db, Base, User, Token, Processor
 from typing import Optional, List
 
 from others.constants import TOKEN_LIFETIME
@@ -73,7 +73,10 @@ class DatabaseAdder:
         db.session.add(note)
         db.session.commit()
 
-    def add_processors(self, data) -> None: ...
+    def add_processors(self, data: List[dict]) -> None:
+        table = Processor
+        db.session.execute(insert(table), data)
+        db.session.commit()
 
 
 class DatabaseSelector:

@@ -59,7 +59,10 @@ with app.app_context():
     access_token = AccessToken().hash
     adder.add_user("nigger", "4@yandex.ru", Password("1234").hash)
     driver = custom_driver.our_driver()
+
+    # processors = [{'name': 'AMD Ryzen 5 3500 OEM', 'socket': 'AM4', 'core': '6', 'frequency': '3.6 ГГц', 'l2_cache': '3 МБ', 'l3_cache': '16 МБ', 'ddr4': 'DDR4', 'RAM_frequency': '3200 МГц', 'TDP': '65 Вт'}, {'name': 'Intel Core i3-10100F OEM', 'socket': 'LGA 1200', 'core': '4', 'frequency': '3.6 ГГц', 'l2_cache': '1 МБ', 'l3_cache': '6 МБ', 'ddr4': 'DDR4', 'RAM_frequency': '2666 МГц', 'TDP': '65 Вт'}]
     adder.add_processors(data=testik.parse_processors(driver=driver))
+    # adder.add_processors(processors)
     # adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
     # try:
     #     adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
@@ -71,4 +74,5 @@ with app.app_context():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+
+    app.run()  # debug делает двойной запуск main

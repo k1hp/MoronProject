@@ -1,3 +1,4 @@
+from email.policy import default
 from xmlrpc.client import Boolean
 
 from flask_sqlalchemy import SQLAlchemy
@@ -51,14 +52,15 @@ class Processor(db.Model):
     id: Mapped[int] = mapped_column(
         autoincrement=True, primary_key=True, nullable=False
     )
-    name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
+    # name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
+    name: Mapped[str] = mapped_column(String(100), nullable=False)
     socket: Mapped[str] = mapped_column(String(10), nullable=False)
     core: Mapped[str] = mapped_column(String(5), nullable=False)
     frequency: Mapped[str] = mapped_column(String(20), nullable=False)
     l2_cache: Mapped[str] = mapped_column(String(10), nullable=False)
     l3_cache: Mapped[str] = mapped_column(String(10), nullable=False)
     ddr4: Mapped[str] = mapped_column(String(20), nullable=False)
-    ddr5: Mapped[str] = mapped_column(String(20))
+    ddr5: Mapped[str] = mapped_column(String(20), default=None, nullable=True)
     RAM_frequency: Mapped[str] = mapped_column(String(20), nullable=False)
     TDP: Mapped[str] = mapped_column(String(20), nullable=False)
     # price: Mapped[int] = mapped_column(nullable=False)

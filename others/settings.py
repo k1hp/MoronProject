@@ -10,3 +10,7 @@ PASSWORD_SECRET = os.getenv("PASSWORD_SECRET")
 
 BASE_DIR = Path(__file__).parent.parent
 YAMLS_DIR = BASE_DIR / "flask_app/yaml_files/"
+
+
+if __name__ == "__main__":
+    print(DB_CONNECTION)

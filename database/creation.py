@@ -53,13 +53,15 @@ class Processor(db.Model):
     )
     name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     socket: Mapped[str] = mapped_column(String(10), nullable=False)
+    core: Mapped[str] = mapped_column(String(5), nullable=False)
     frequency: Mapped[str] = mapped_column(String(20), nullable=False)
     l2_cache: Mapped[str] = mapped_column(String(10), nullable=False)
     l3_cache: Mapped[str] = mapped_column(String(10), nullable=False)
-    ddr4_memory: Mapped[str] = mapped_column(String(20))
-    ddr5_memory: Mapped[str] = mapped_column(String(20))
-    tdp: Mapped[str] = mapped_column(String(10), nullable=False)
-    price: Mapped[int] = mapped_column(nullable=False)
+    ddr4: Mapped[str] = mapped_column(String(20), nullable=False)
+    ddr5: Mapped[str] = mapped_column(String(20))
+    RAM_frequency: Mapped[str] = mapped_column(String(20), nullable=False)
+    TDP: Mapped[str] = mapped_column(String(20), nullable=False)
+    # price: Mapped[int] = mapped_column(nullable=False)
 
 
 # запретить доступ к login если есть токен в куках

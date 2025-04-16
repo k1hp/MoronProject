@@ -15,6 +15,9 @@ from others.helpers import AccessToken, RefreshToken, Password
 from others.responses import CommentResponse
 from flask_app.models.input_models import UserSchema
 
+import testik
+from utils import custom_driver
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION
 db.init_app(app)
@@ -55,6 +58,8 @@ with app.app_context():
     adder = DatabaseAdder()
     access_token = AccessToken().hash
     adder.add_user("nigger", "4@yandex.ru", Password("1234").hash)
+    driver = custom_driver.our_driver()
+    adder.add_processors(data=testik.parse_processors(driver=driver))
     # adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
     # try:
     #     adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)

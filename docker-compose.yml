@@ -1,0 +1,26 @@
+services:
+  python_api:
+    env_file: .env
+    build:
+      context: ./
+      dockerfile: ./backend.Dockerfile
+    depends_on:
+      - mysql_db
+    ports:
+      - "5000:5000"
+    environment:
+      - PYTHONPATH=/usr/src/app/
+
+
+
+  mysql_db:
+    image: mysql
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
+      MYSQL_USER: ${MYSQL_USERNAME}
+      MYSQL_PASSWORD: ${MYSQL_PWD}
+    ports:
+      - ${DATABASE_PORT}:3306

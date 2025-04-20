@@ -18,7 +18,7 @@ from flask_app.models.input_models import UserSchema
 # import testik
 # from utils import custom_driver
 
-check_exists_db()
+# check_exists_db()
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION + DB_NAME
 db.init_app(app)
@@ -72,4 +72,6 @@ with app.app_context():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(
+        debug=True, host="0.0.0.0"
+    )  # нужно слушать по всем, иначе нельзя подключиться

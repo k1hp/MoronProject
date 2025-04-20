@@ -6,19 +6,20 @@ load_dotenv()
 
 
 def create_connection(
-    user: str, password: str, port: str = "3306", host: str = "mysql_db"
+    user: str, password: str, port: str = "3306", host: str = "postgres_db"
 ) -> str:
-    return f"mysql+pymysql://{user}:{password}@{host}:{port}/"
+    return f"postgresql+psycopg2://{user}:{password}@{host}:{port}/"
 
 
 DB_CONNECTION = create_connection(
-    user=os.getenv("MYSQL_USERNAME"),
-    password=os.getenv("MYSQL_PWD"),
+    user=os.getenv("POSTGRES_USERNAME"),
+    password=os.getenv("POSTGRES_PWD"),
     port=os.getenv("DATABASE_PORT"),
 )
 print(DB_CONNECTION)
 DB_NAME = os.getenv("DATABASE_NAME")
-PASSWORD_SECRET = os.getenv("PASSWORD_SECRET")
+PASSWORD_SECRET = "$2b$12$" + os.getenv("PASSWORD_SECRET")
+print(PASSWORD_SECRET)
 
 
 BASE_DIR = Path(__file__).parent.parent

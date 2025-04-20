@@ -1,26 +1,27 @@
 services:
   python_api:
-    env_file: .env
     build:
       context: ./
       dockerfile: ./backend.Dockerfile
-    depends_on:
-      - mysql_db
+    env_file: .env
+    restart: always
+    container_name: python_api
     ports:
       - "5000:5000"
     environment:
       - PYTHONPATH=/usr/src/app/
+    depends_on:
+      - postgres_db
 
 
 
-  mysql_db:
-    image: mysql
+  postgres_db:
+    image: postgres
     restart: always
     env_file: .env
     environment:
-      MYSQL_DATABASE: ${DATABASE_NAME}
-      MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
-      MYSQL_USER: ${MYSQL_USERNAME}
-      MYSQL_PASSWORD: ${MYSQL_PWD}
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PWD}
     ports:
-      - ${DATABASE_PORT}:3306
+      - '5432:5432'

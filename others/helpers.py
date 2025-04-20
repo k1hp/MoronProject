@@ -51,6 +51,7 @@ class Password(HashedData):
         password = self.__password_string
         start = perf_counter()
         for _ in range(self.__attempts):
+            print(password, self.__salt)
             password = bcrypt.hashpw(password, self.__salt)
         print("Итог:", perf_counter() - start)
         return password.decode()
@@ -122,17 +123,18 @@ class AccessToken(Token):
 
 
 if __name__ == "__main__":
-    password = Password("12345689893432")
-    psw = Password("12345689893432")
-    print(password.hash)
-    print(password == "$2b$12$IfWmvy0xVWeuRZ/6tobhe..mrm6Kv9D42wzfRqUDHVPPBXVOaDVhi")
-    print(password == psw)
-    print(len(password.hash))
-    token = RefreshToken()
-    token_2 = AccessToken()
-    print(f"Access: {token_2.hash, len(token_2.hash)}")
-    print(f"Refresh: {token.hash, len(token.hash)}")
-    print(
-        token_2
-        == "$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu.$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu"
-    )
+    # password = Password("12345689893432")
+    # psw = Password("12345689893432")
+    # print(password.hash)
+    # print(password == "$2b$12$IfWmvy0xVWeuRZ/6tobhe..mrm6Kv9D42wzfRqUDHVPPBXVOaDVhi")
+    # print(password == psw)
+    # print(len(password.hash))
+    # token = RefreshToken()
+    # token_2 = AccessToken()
+    # print(f"Access: {token_2.hash, len(token_2.hash)}")
+    # print(f"Refresh: {token.hash, len(token.hash)}")
+    # print(
+    #     token_2
+    #     == "$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu.$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu"
+    # )
+    print(Password("1234").hash)

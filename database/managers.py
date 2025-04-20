@@ -73,6 +73,8 @@ class DatabaseAdder:
         db.session.add(note)
         db.session.commit()
 
+    def add_processors(self, data) -> None: ...
+
 
 class DatabaseSelector:
     def select_user(

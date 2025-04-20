@@ -1,8 +1,23 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import String, ForeignKey
+from sqlalchemy.exc import OperationalError
 from typing import List
 from datetime import date, datetime, timedelta
+from others.settings import DB_CONNECTION, DB_NAME
+from sqlalchemy import create_engine, text
+from sqlalchemy_utils import database_exists, create_database
+
+
+def check_exists_db():
+    engine = create_engine(DB_CONNECTION)
+    try:
+        with engine.connect() as connection:
+            # Проверяем, существует ли база данных
+            connection.execute(text(f"CREATE DATABASE IF NOT EXISTS {DB_NAME}"))
+            print(f"База данных '{DB_NAME}' успешно создана или уже существует.")
+    except OperationalError as e:
+        print(f"Ошибка подключения к базе данных: {e}")
 
 
 class Base(DeclarativeBase):
@@ -51,13 +66,15 @@ class Processor(db.Model):
     )
     name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     socket: Mapped[str] = mapped_column(String(10), nullable=False)
+    core: Mapped[str] = mapped_column(String(5), nullable=False)
     frequency: Mapped[str] = mapped_column(String(20), nullable=False)
     l2_cache: Mapped[str] = mapped_column(String(10), nullable=False)
     l3_cache: Mapped[str] = mapped_column(String(10), nullable=False)
-    ddr4_memory: Mapped[str] = mapped_column(String(20))
-    ddr5_memory: Mapped[str] = mapped_column(String(20))
-    tdp: Mapped[str] = mapped_column(String(10), nullable=False)
-    price: Mapped[int] = mapped_column(nullable=False)
+    ddr4: Mapped[str] = mapped_column(String(20), nullable=False)
+    ddr5: Mapped[str] = mapped_column(String(20))
+    RAM_frequency: Mapped[str] = mapped_column(String(20), nullable=False)
+    TDP: Mapped[str] = mapped_column(String(20), nullable=False)
+    # price: Mapped[int] = mapped_column(nullable=False)
 
 
 # запретить доступ к login если есть токен в куках

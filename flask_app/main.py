@@ -4,8 +4,8 @@ from flasgger import Swagger, APISpec
 from apispec_webframeworks.flask import FlaskPlugin
 from apispec.ext.marshmallow import MarshmallowPlugin
 
-from database.creation import db
-from others.settings import DB_CONNECTION
+from database.creation import db, check_exists_db
+from others.settings import DB_CONNECTION, DB_NAME
 from flask_app.apis.authorization import (
     api as ns1,
 )
@@ -15,8 +15,12 @@ from others.helpers import AccessToken, RefreshToken, Password
 from others.responses import CommentResponse
 from flask_app.models.input_models import UserSchema
 
+# import testik
+# from utils import custom_driver
+
+# check_exists_db()
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION
+app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION + DB_NAME
 db.init_app(app)
 
 api = Api(app)
@@ -54,7 +58,9 @@ with app.app_context():
 with app.app_context():
     adder = DatabaseAdder()
     access_token = AccessToken().hash
-    adder.add_user("helloworld", "4@yandex.ru", Password("1234").hash)  # не админка -_-
+    adder.add_user("chelik", "4@yandex.ru", Password("1234").hash)
+    # driver = custom_driver.our_driver()
+    # adder.add_processors(data=testik.parse_processors(driver=driver))
     # adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
     # try:
     #     adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
@@ -66,4 +72,6 @@ with app.app_context():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(
+        debug=True, host="0.0.0.0"
+    )  # нужно слушать по всем, иначе нельзя подключиться

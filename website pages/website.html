@@ -2,211 +2,571 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Название сайта</title>
-    <link rel="icon" type="image/x-icon" href="ссылка на иконку сайта" />
-    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MRN — Сборка ПК</title>
+    <link rel="icon" href="/images/pc-display.svg" />
+    <!-- Bootstrap 5 CSS (Dark theme) -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- LOGO -->
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        
-        <!-- На случай если лого будет окрывать гланую страницу сайтика -->
-        <a class="navbar-brand vertical-align-middle" href=".">
-          <img
-            src="ссылка на картинку логотипа"
-            alt="empty"
-            width="50"
-            height="50"
-          />
-        </a>
-        <div class="row">
-          <!-- Кнопочка конфигураций (СЭМ ЛЕГЕНДА, ДАВАЙТЕ ВСЕ КНОПКИ БУДУТ ВЫПАДАЮЩИЕ ) -->
-          <div class="col">
-            <li class="nav-item dropdown mx-1">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Конфигурации
-              </a>
-              <ul class="dropdown-menu">
-                <a class="dropdown-item" href="#">Сохранненные Конфигурации</a>
-                <a class="dropdown-item" href="#"
-                  >Конфигурации пользователей
-                </a>
-              </ul>
-            </li>
+  <body class="bg-dark text-light">
+    <!-- Шапка сайта -->
+    <header class="bg-black py-3 shadow">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand text-primary fw-bold fs-4" href="#">
+              <i class="bi bi-pc-display-horizontal me-2"></i>MoRoN
+            </a>
           </div>
-          <!-- Кнопка аккаунта -->
-          <div class="col">
-            <li class="nav-item dropdown mx-4">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Аккаунт
-              </a>
-              <ul class="dropdown-menu">
-                <a class="dropdown-item" href="#">Войти</a>
-                <a class="dropdown-item" href="#">Зарегистрироваться</a>
-              </ul>
-            </li>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Основная часть -->
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Боковая панель -->
-        <div class="col-md-3">
-          <div class="sidebar bg-white p-3 rounded shadow-sm">
-            <!-- Процессор -->
-            <div class="dropdown mb-2">
-              <button
-                class="btn btn-light category-title dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-              >
-                Процессор
-              </button>
-              <ul class="dropdown-menu w-100">
-                <li>
-                  <a class="dropdown-item" href="#">Intel Core i9-13900K</a>
-                </li>
-                <li><a class="dropdown-item" href="#">AMD Ryzen 9 7950X</a></li>  <!-- Амдшники лохи  -->
-                <li>
-                  <a class="dropdown-item" href="#">Intel Core i7-13700K</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">AMD Ryzen 7 7800X3D</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Видеокарта -->
-            <div class="dropdown mb-2">
-              <button
-                class="btn btn-light category-title dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-              >
-                Видеокарта
-              </button>
-              <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item" href="#">NVIDIA RTX 4090</a></li>
-                <li><a class="dropdown-item" href="#">AMD RX 7900 XTX</a></li>
-                <li><a class="dropdown-item" href="#">NVIDIA RTX 4080</a></li>
-                <li><a class="dropdown-item" href="#">AMD RX 7900 XT</a></li>
-              </ul>
-            </div>
-
-            <!-- Материнская плата -->
-            <div class="dropdown mb-2">
-              <button
-                class="btn btn-light category-title dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-              >
-                Материнская плата
-              </button>
-              <ul class="dropdown-menu w-100">
-                <li>
-                  <a class="dropdown-item" href="#">ASUS ROG Maximus Z790</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Gigabyte X670E AORUS</a>
-                </li>
-                <li><a class="dropdown-item" href="#">MSI MPG B650</a></li>
-              </ul>
-            </div>
-
-            <!-- Оперативная память -->
-            <div class="dropdown mb-2">
-              <button
-                class="btn btn-light category-title dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-              >
-                Оперативная память
-              </button>
-              <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item" href="#">DDR5 32GB 6000MHz</a></li>
-                <li><a class="dropdown-item" href="#">DDR5 64GB 5600MHz</a></li>
-                <li><a class="dropdown-item" href="#">DDR4 32GB 3600MHz</a></li>
-              </ul>
-            </div>
-
-            <!-- Блок питания -->
-            <div class="dropdown mb-2">
-              <button
-                class="btn btn-light category-title dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-              >
-                Блок питания
-              </button>
-              <ul class="dropdown-menu w-100">
-                <li>
-                  <a class="dropdown-item" href="#">1000W 80+ Platinum</a>
-                </li>
-                <li><a class="dropdown-item" href="#">850W 80+ Gold</a></li>
-                <li><a class="dropdown-item" href="#">750W 80+ Bronze</a></li>
-              </ul>
-            </div>
-
-            <!-- Накопитель -->
-            <div class="dropdown mb-2">
-              <button
-                class="btn btn-light dropdown-toggle category-title"
-                type="button"
-                data-bs-toggle="dropdown"
-              >
-                Накопитель
-              </button>
-              <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item" href="#">SSD NVMe 2TB</a></li>
-                <li><a class="dropdown-item" href="#">SSD SATA 1TB</a></li>
-                <li><a class="dropdown-item" href="#">HDD 4TB 7200RPM</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Основное содержимое -->
-        <div class="col-md-9">
-          <div class="bg-white p-4 rounded shadow-sm">
-            <div class="price-display mb-4">
-              ТУТ БУДЕТ ВЫВОДИТСЯ СТОИМОСТЬ И ХАРАКТЕРИСТИКА СОБИРАЕМОГО
-              КОМПЬЮТЕРА (я не знаю как мы будем это парсить)
-            </div>
-
-            <button class="btn btn-success w-100 py-2">
-              ✔ Перейти к производительности ✔
+          <nav class="d-none d-md-block">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active text-light" href="#">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Сборки пользователей</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Комплектующие</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Конфигуратор</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <button class="btn btn-outline-primary me-2">
+              <i class="bi bi-person"></i>
+            </button>
+            <button class="btn btn-outline-primary">
+              <i class="bi bi-cart"></i>
             </button>
           </div>
         </div>
       </div>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Левая панель с категориями комплектующих -->
+        <aside class="col-md-3 col-lg-2 d-md-block bg-black sidebar p-1">
+          <div class="p-3">
+            <h5 class="text-primary mb-3">Комплектующие</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-cpu me-2"> </i>Процессоры
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-motherboard me-2"> </i>Материнские платы
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-gpu-card me-2"> </i>Видеокарты
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-memory me-2"> </i>Оперативная память
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-hdd me-2"> </i>Накопители
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-plug me-2"> </i>Блоки питания
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-pc me-2"> </i>Корпуса
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light" href="#">
+                  <i class="bi bi-fan me-2"> </i>Охлаждение
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Основная область контента -->
+        <main class="col-md-9 col-lg-10 py-4 px-md-4">
+          <!-- Секция готовых сборок -->
+          <section class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 class="text-primary">Готовые сборки</h2>
+              <a href="#" class="btn btn-outline-primary">Все сборки</a>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark border-secondary build-card h-100">
+                  <img
+                    src="/images/Start.jpeg"
+                    class="card-img-top"
+                    alt="Сборка ПК"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">Игровая "Starter"</h5>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i
+                        >Ryzen 5 5600X
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>RTX
+                        3060 12GB
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>16GB
+                        DDR4
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>1TB
+                        NVMe SSD
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-black border-top border-secondary">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="h5 mb-0">85 990 ₽</span>
+                      <button class="btn btn-primary">Купить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark border-secondary build-card h-100">
+                  <img
+                    src="/images/Pro.jpg"
+                    class="card-img-top"
+                    alt="Сборка ПК"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">Игровая "Pro"</h5>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i
+                        >Intel i7-13700K
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>RTX
+                        4070 12GB
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>32GB
+                        DDR5
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>2TB
+                        NVMe SSD
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-black border-top border-secondary">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="h5 mb-0">149 990 ₽</span>
+                      <button class="btn btn-primary">Купить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <div class="card bg-dark border-secondary build-card h-100">
+                  <img
+                    src="/images/Extreame.jpg"
+                    class="card-img-top"
+                    alt="Сборка ПК"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">Игровая "Extreme"</h5>
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i
+                        >Ryzen 9 7950X
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>RTX
+                        4090 24GB
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>64GB
+                        DDR5
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success me-2"></i>4TB
+                        NVMe SSD
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-footer bg-black border-top border-secondary">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="h5 mb-0">349 990 ₽</span>
+                      <button class="btn btn-primary">Купить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Секция комплектующих по производителям -->
+          <section>
+            <h2 class="text-primary mb-4">Комплектующие по производителям</h2>
+            <div class="row g-4">
+              <!-- Процессоры -->
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card bg-dark border-secondary h-100">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">
+                      <i class="bi bi-cpu me-2"></i>Процессоры
+                    </h5>
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.intel.ru"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/intel.com"
+                            class="brand-logo"
+                            alt="Intel"
+                          />
+                          <span class="ms-2">Intel</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.amd.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/amd.com"
+                            class="brand-logo"
+                            alt="AMD"
+                          />
+                          <span class="ms-2">AMD</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Видеокарты -->
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card bg-dark border-secondary h-100">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">
+                      <i class="bi bi-gpu-card me-2"></i>Видеокарты
+                    </h5>
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.nvidia.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/nvidia.com"
+                            class="brand-logo"
+                            alt="NVIDIA"
+                          />
+                          <span class="ms-2">NVIDIA</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.amd.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/amd.com"
+                            class="brand-logo"
+                            alt="AMD"
+                          />
+                          <span class="ms-2">AMD Radeon</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.asus.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/asus.com"
+                            class="brand-logo"
+                            alt="ASUS"
+                          />
+                          <span class="ms-2">ASUS</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.msi.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/msi.com"
+                            class="brand-logo"
+                            alt="MSI"
+                          />
+                          <span class="ms-2">MSI</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Материнские платы -->
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card bg-dark border-secondary h-100">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">
+                      <i class="bi bi-motherboard me-2"></i>Материнские платы
+                    </h5>
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.asus.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/asus.com"
+                            class="brand-logo"
+                            alt="ASUS"
+                          />
+                          <span class="ms-2">ASUS</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.gigabyte.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/gigabyte.com"
+                            class="brand-logo"
+                            alt="Gigabyte"
+                          />
+                          <span class="ms-2">Gigabyte</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.msi.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/msi.com"
+                            class="brand-logo"
+                            alt="MSI"
+                          />
+                          <span class="ms-2">MSI</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.asrock.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/asrock.com"
+                            class="brand-logo"
+                            alt="ASRock"
+                          />
+                          <span class="ms-2">ASRock</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Оперативная память -->
+              <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card bg-dark border-secondary h-100">
+                  <div class="card-body">
+                    <h5 class="card-title text-primary">
+                      <i class="bi bi-memory me-2"></i>Оперативная память
+                    </h5>
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.corsair.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/corsair.com"
+                            class="brand-logo"
+                            alt="Corsair"
+                          />
+                          <span class="ms-2">Corsair</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.kingston.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/kingston.com"
+                            class="brand-logo"
+                            alt="Kingston"
+                          />
+                          <span class="ms-2">Kingston</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.gskill.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/gskill.com"
+                            class="brand-logo"
+                            alt="G.Skill"
+                          />
+                          <span class="ms-2">G.Skill</span>
+                        </a>
+                      </li>
+                      <li
+                        class="list-group-item bg-dark text-light border-secondary d-flex align-items-center"
+                      >
+                        <a
+                          href="https://www.crucial.com"
+                          target="_blank"
+                          class="d-flex align-items-center text-decoration-none text-light w-100"
+                        >
+                          <img
+                            src="https://logo.clearbit.com/crucial.com"
+                            class="brand-logo"
+                            alt="Crucial"
+                          />
+                          <span class="ms-2">Crucial</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
+
+    <!-- Подвал -->
+    <footer class="bg-black text-light py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="text-primary">MoRoN</h5>
+            <p>Лучшие сборки ПК для любых задач по оптимальным ценам.</p>
+          </div>
+          <div class="col-md-2 mb-4 mb-md-0">
+            <h5>Меню</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Главная</a></li>
+              <li><a href="#" class="text-light">Сборки</a></li>
+              <li><a href="#" class="text-light">Комплектующие</a></li>
+              <li><a href="#" class="text-light">Конфигуратор</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4 mb-md-0">
+            <h5>Контакты</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-envelope me-2"></i>info@MoRoN.ru</li>
+              <li><i class="bi bi-telephone me-2"></i>+7 (800) 123-45-67</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Соцсети</h5>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-light"
+                ><i class="bi bi-telegram fs-4"></i
+              ></a>
+              <a href="#" class="text-light"><i class="bi bi-vk fs-4"></i></a>
+              <a href="#" class="text-light"
+                ><i class="bi bi-youtube fs-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4 bg-secondary" />
+        <div class="text-center">
+          <p class="mb-0">© 2025 MNR. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

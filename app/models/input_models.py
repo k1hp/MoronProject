@@ -26,13 +26,3 @@ class ResponseSchema(ma.Schema):
 class AuthorizationSchema(ma.Schema):
     login = ma.fields.Str(required=True)
     password = ma.fields.Str(required=True)
-
-
-response_schema = ResponseSchema()
-
-bad_response_data = {"status": "BAD", "comment": "Data is not valid"}
-success_response_data = {"status": "OK", "comment": "All the true"}
-
-# Преобразуем словарь в JSON
-bad_response = response_schema.dump(bad_response_data)
-success_response = response_schema.dump(success_response_data)

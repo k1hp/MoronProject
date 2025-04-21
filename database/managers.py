@@ -1,13 +1,13 @@
 from sqlalchemy import and_
 from datetime import datetime, timedelta
 
-from database.creation import db, Base, User, Token
-from typing import Optional, List
+from database.creation import db, User, Token
+from typing import Optional
 
-from others.constants import TOKEN_LIFETIME
-from others.decorators import integrity_check
-from others.exceptions import ParameterError, ReIntegrityError
-from others.helpers import Token as TokenType
+from app.others.constants import TOKEN_LIFETIME
+from app.others.decorators import integrity_check
+from app.others.exceptions import ParameterError, ReIntegrityError
+from app.others.helpers import Token as TokenType
 
 
 class DatabaseManager:
@@ -122,6 +122,4 @@ class DatabaseUpdater(DatabaseSelector):
 
 
 if __name__ == "__main__":
-    adder = DatabaseAdder()
-    adder.add_user("nigger", "<EMAIL>", "<PASSWORD>")
-    # adder.add_tokens(1, "d", "ds", "fdsf")
+    ...

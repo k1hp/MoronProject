@@ -1,19 +1,19 @@
-from flask import Flask, request
-from flask_restx import Api, Resource
+from flask import Flask
+from flask_restx import Api
 from flasgger import Swagger, APISpec
 from apispec_webframeworks.flask import FlaskPlugin
 from apispec.ext.marshmallow import MarshmallowPlugin
 
-from database.creation import db, check_exists_db
-from others.settings import DB_CONNECTION, DB_NAME
-from flask_app.apis.authorization import (
+from database.creation import db
+from app.others.settings import DB_CONNECTION, DB_NAME
+from app.apis.authorization import (
     api as ns1,
 )
-from flask_app.apis.profile import api as ns2
-from database.managers import DatabaseAdder, DatabaseSelector
-from others.helpers import AccessToken, RefreshToken, Password
-from others.responses import CommentResponse
-from flask_app.models.input_models import UserSchema
+from app.apis.profile import api as ns2
+from database.managers import DatabaseAdder
+from app.others.helpers import AccessToken, Password
+from app.others.responses import CommentResponse
+from app.models.input_models import UserSchema
 
 # import testik
 # from utils import custom_driver

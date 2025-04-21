@@ -4,8 +4,8 @@ import marshmallow as ma
 from flask import Response as FlResponse, make_response
 from typing import Optional
 
-from flask_app.models.response_models import CommentResponseSchema
-from others.constants import Status, Comment, StatusCode
+from app.models.response_models import CommentResponseSchema
+from app.others.constants import Status, Comment, StatusCode
 
 
 class Response(ABC):

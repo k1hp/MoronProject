@@ -1,31 +1,22 @@
-from typing import Optional
-
 from flasgger import swag_from
-from flask import request, make_response, Response, Request
+from flask import request
 from flask_restx import Resource, Namespace, fields
-from marshmallow import ValidationError
 
-from flask_app.models.input_models import UserSchema, AuthorizationSchema
+from app.models.input_models import UserSchema, AuthorizationSchema
 from database.managers import (
     DatabaseAdder,
-    DatabaseSelector,
-    DatabaseUpdater,
-    TokenManager,
 )
-from others.constants import TOKEN_LIFETIME
-from others.helpers import Password, AccessToken, Token
-from others.middlewares import (
-    verify_token,
+from app.others.constants import TOKEN_LIFETIME
+from app.others.helpers import Password
+from app.others.middlewares import (
     validate_data,
-    check_login_data,
     check_token_presence,
     check_cookies,
     AuthorizationService,
 )
-from others.exceptions import ReIntegrityError, LackToken
-from others.responses import CommentResponse, CookieResponse, Response as MyResponse
-from others.decorators import convert_error
-from others.settings import YAMLS_DIR
+from app.others.responses import CommentResponse, CookieResponse
+from app.others.decorators import convert_error
+from app.others.settings import YAMLS_DIR
 
 api = Namespace("authorization", description="Authorization to you nice")
 

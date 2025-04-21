@@ -3,14 +3,14 @@ from sqlalchemy.exc import IntegrityError
 from marshmallow import ValidationError
 from flask import Response
 
-from others.exceptions import (
+from app.others.exceptions import (
     ReIntegrityError,
     LackToken,
     PasswordError,
     LoginError,
     CookieTokenError,
 )
-from others.responses import CommentResponse
+from app.others.responses import CommentResponse
 
 
 def integrity_check(function):

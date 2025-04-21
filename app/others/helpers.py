@@ -4,7 +4,7 @@ from time import perf_counter
 from typing import Union
 import random
 
-from others.settings import PASSWORD_SECRET
+from app.others.settings import PASSWORD_SECRET
 
 
 # Declaring our password
@@ -51,7 +51,6 @@ class Password(HashedData):
         password = self.__password_string
         start = perf_counter()
         for _ in range(self.__attempts):
-            print(password, self.__salt)
             password = bcrypt.hashpw(password, self.__salt)
         print("Итог:", perf_counter() - start)
         return password.decode()

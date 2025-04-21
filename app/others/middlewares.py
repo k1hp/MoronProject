@@ -4,10 +4,9 @@ from flask import Request
 
 from database.creation import db, User
 from database.managers import DatabaseSelector, TokenManager
-from others.helpers import Password, AccessToken
-from flask_app.models.input_models import LoginEmailSchema, LoginUsernameSchema
-from others.exceptions import LackToken, CookieTokenError, LoginError, PasswordError
-from others.responses import CommentResponse
+from app.others.helpers import Password, AccessToken
+from app.models.input_models import LoginEmailSchema
+from app.others.exceptions import LackToken, CookieTokenError, LoginError, PasswordError
 
 
 class ServiceBase:

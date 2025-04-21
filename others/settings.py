@@ -14,7 +14,6 @@ def create_connection(
 DB_CONNECTION = create_connection(
     user=os.getenv("POSTGRES_USERNAME"),
     password=os.getenv("POSTGRES_PWD"),
-    port=os.getenv("DATABASE_PORT"),
 )
 print(DB_CONNECTION)
 DB_NAME = os.getenv("DATABASE_NAME")

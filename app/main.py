@@ -10,7 +10,7 @@ from app.apis.authorization import (
     api as ns1,
 )
 from app.apis.profile import api as ns2
-from database.managers import DatabaseAdder
+from database.flask_managers import DatabaseAdder
 from app.others.helpers import AccessToken, Password
 from app.others.responses import CommentResponse
 from app.models.input_models import UserSchema

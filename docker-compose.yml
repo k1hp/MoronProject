@@ -12,6 +12,7 @@ services:
       - PYTHONPATH=/usr/src/app/
     depends_on:
       - postgres_db
+      - python_selenium
 
 
 
@@ -25,3 +26,15 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PWD}
     ports:
       - '5432:5432'
+
+  python_selenium:
+    build:
+      context: ./
+      dockerfile: ./selenium.Dockerfile
+    container_name: python_selenium
+    env_file: .env
+    restart: always
+    environment:
+      - PYTHONPATH=/usr/src/app/
+    depends_on:
+      - postgres_db

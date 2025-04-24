@@ -4,7 +4,7 @@ from flasgger import swag_from
 from flask_restx import Resource, Namespace, fields
 
 from app.models.response_models import CommentResponseSchema
-from database.managers import DatabaseAdder, DatabaseSelector, DatabaseUpdater
+from database.flask_managers import DatabaseAdder, DatabaseSelector, DatabaseUpdater
 from app.others.constants import TOKEN_LIFETIME
 from app.others.helpers import Password, AccessToken, Token
 from app.others.exceptions import ReIntegrityError, LackToken

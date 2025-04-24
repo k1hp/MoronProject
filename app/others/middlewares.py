@@ -3,7 +3,7 @@ from typing import Optional
 from flask import Request
 
 from database.creation import db, User
-from database.managers import DatabaseSelector, TokenManager
+from database.flask_managers import DatabaseSelector, TokenManager
 from app.others.helpers import Password, AccessToken
 from app.models.input_models import LoginEmailSchema
 from app.others.exceptions import LackToken, CookieTokenError, LoginError, PasswordError
@@ -74,9 +74,16 @@ class AuthorizationService(ServiceBase):
         return token
 
 
-class TokenService(ServiceBase):
-    def __init__(self):
-        pass
+# class TokenService(ServiceBase):  # проверяет наличие токена и его валидность в бд
+#     def __init__(self, request: Request):
+#         self.__request = request
+#         self.__cookies = request.cookies
+#         self.__token =
+#
+#     def __exist_token(self) -> str:
+#         if self.__cookies["token"]
+#
+#     def __
 
 
 def check_token_presence(request: Request) -> bool:

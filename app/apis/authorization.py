@@ -3,7 +3,7 @@ from flask import request
 from flask_restx import Resource, Namespace, fields
 
 from app.models.input_models import UserSchema, AuthorizationSchema
-from database.managers import (
+from database.flask_managers import (
     DatabaseAdder,
 )
 from app.others.constants import TOKEN_LIFETIME

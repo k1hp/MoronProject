@@ -19,3 +19,32 @@
 .nav-link.active {
   border-bottom: 2px solid #0d6efd;
 }
+/* Карточки для доб страниц */
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-body {
+  flex-grow: 1;
+}
+.rating {
+  color: #ffc107;
+}
+.availability {
+  color: #28a745;
+  font-weight: 500;
+}
+.specs-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.specs-list li {
+  margin-bottom: 0.3rem;
+}
+.reliability-good {
+  color: #28a745;
+}
+.reliability-bad {
+  color: #dc3545;
+}

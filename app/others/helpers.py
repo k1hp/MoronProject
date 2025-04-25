@@ -66,6 +66,10 @@ class Password(HashedData):
     def hash(self) -> str:
         return self.__password_hash
 
+    @property
+    def start_string(self) -> str:
+        return self.__password_string.decode()
+
 
 class Token(HashedData):
     def __init__(self):
@@ -137,3 +141,5 @@ if __name__ == "__main__":
     #     == "$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu.$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu"
     # )
     print(Password("1234").hash)
+    print(Password("12345").hash)
+    print(Password("1234").start_string)

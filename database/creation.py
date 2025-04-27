@@ -39,6 +39,7 @@ class Token(
     expired_at: Mapped[datetime] = mapped_column(
         nullable=False, default=datetime.now() + timedelta(days=15)
     )
+    # expired_at: Mapped[datetime] = mapped_column(nullable=False, default=datetime.now())
     revoked: Mapped[bool] = mapped_column(nullable=False, index=True, default=False)
 
     user: Mapped[User] = relationship("User", back_populates="token")

@@ -7,6 +7,7 @@ from database.flask_managers import DatabaseSelector, TokenManager
 from app.others.helpers import Password, AccessToken
 from app.models.input_models import LoginEmailSchema
 from app.others.exceptions import LackToken, CookieTokenError, LoginError, PasswordError
+from database.flask_managers import get_token
 
 
 class ServiceBase:
@@ -69,21 +70,28 @@ class AuthorizationService(ServiceBase):
         if result is not None:  # возвращается токен если он уже есть в бд
             return result.token
         token = AccessToken()
-        print(user_id)
         TokenManager(token).add_token(user_id)
         return token
 
 
-# class TokenService(ServiceBase):  # проверяет наличие токена и его валидность в бд
-#     def __init__(self, request: Request):
-#         self.__request = request
-#         self.__cookies = request.cookies
-#         self.__token =
-#
-#     def __exist_token(self) -> str:
-#         if self.__cookies["token"]
-#
-#     def __
+class TokenService(ServiceBase):  # проверяет наличие токена и его валидность в бд
+    def __init__(self, request: Request):
+        self.__request = request
+        self.__cookies = request.cookies
+        self.__token = self.__exist_cookies_token()
+        self.__is_active()
+
+    def __exist_cookies_token(self) -> str:
+        token = self.__cookies.get("token", None)
+        if token is None:
+            raise CookieTokenError()
+        return token
+
+    def __is_active(self) -> None:
+        get_token(token=self.__token)
+
+    # можно докинуть проверку на то что он не должен быть
+    # в куках для повторной авторизации
 
 
 def check_token_presence(request: Request) -> bool:
@@ -123,7 +131,3 @@ def check_cookies(request: Request) -> bool:
     if "token" in dict(request.cookies):
         raise CookieTokenError("Токен уже есть в куках")
     return True
-
-
-def get_token():
-    pass

@@ -76,7 +76,6 @@ class Token(HashedData):
         self._salt = bcrypt.gensalt()
         self._string = str(random.randint(1, 1000000)).encode()
         self._token_hash = self._hash_data()
-        # self._secret = TOKEN_SECRET.encode()
 
     @abstractmethod
     def _hash_data(self) -> str:
@@ -92,18 +91,6 @@ class Token(HashedData):
     @property
     def hash(self) -> str:
         return self._token_hash
-
-
-class RefreshToken(Token):
-    def __init__(self):
-        super().__init__()
-
-    def _hash_data(self) -> str:
-        result = self._salt
-        start = perf_counter()
-        result = bcrypt.hashpw(self._salt, result)
-        print("Итог:", perf_counter() - start)
-        return result.decode()
 
 
 class AccessToken(Token):

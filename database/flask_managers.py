@@ -6,7 +6,7 @@ from typing import Optional
 
 from app.others.constants import TOKEN_LIFETIME
 from app.others.decorators import integrity_check
-from app.others.exceptions import ParameterError, ReIntegrityError
+from app.others.exceptions import ParameterError, ReIntegrityError, LackToken
 from app.others.helpers import Token as TokenType
 
 
@@ -102,7 +102,7 @@ class DatabaseSelector:
 
     def select_token(
         self, user_id: Optional[int] = None, token: Optional[str] = None
-    ) -> Token:
+    ) -> Optional[Token]:
         if token is None and user_id is not None:
             return db.session.query(Token).filter(Token.user_id == user_id).first()
         elif user_id is None and token is not None:
@@ -119,6 +119,28 @@ class DatabaseUpdater(DatabaseSelector):
         data.created_at = datetime.now()
         data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
         db.session.commit()
+
+
+def get_token(
+    user_id: Optional[int] = None, token: Optional[str] = None
+) -> Optional[Token]:
+    result = None
+    if token is None and user_id is not None:
+        result = db.session.query(Token).filter(Token.user_id == user_id).first()
+    elif token is not None and user_id is None:
+        result = db.session.query(Token).filter(Token.token == token).first()
+    return check_active_token(token=result)
+
+
+def check_active_token(token: Optional[Token]) -> Optional[Token]:
+    if token is None:
+        raise LackToken()
+
+    if token.expired_at < datetime.now():
+        db.session.delete(token)
+        db.session.commit()
+        raise LackToken()
+    return token
 
 
 if __name__ == "__main__":

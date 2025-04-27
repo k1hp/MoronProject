@@ -10,7 +10,7 @@ from app.others.exceptions import (
     LoginError,
     CookieTokenError,
 )
-from app.others.responses import CommentResponse
+from app.others.responses import CommentResponse, CookieResponse
 
 
 def integrity_check(function):
@@ -48,7 +48,19 @@ def convert_error(function):
             return response_object.access_denied(comment=e.__str__())
 
         except LackToken as e:
-            return response_object.failure_response(comment=e.__str__())
+            response = response_object.failure_response(comment=e.__str__())
+            # cookie_response = CookieResponse(response=response)
+            # cookie_response.set_cookie(key="token", value="None", age_days=0)
+            # return cookie_response.response  # сброс токена в куках
+            response.set_cookie(
+                key="token",
+                value="",
+                httponly=True,
+                secure=True,
+                samesite="lax",
+                max_age=0,
+            )
+            return response
         # except IntegrityError as e:
         #     return response_object.failure_response("")
 

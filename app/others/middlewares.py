@@ -77,6 +77,7 @@ class TokenService(ServiceBase):  # проверяет наличие токен
         return token
 
     def __is_active(self) -> None:
+        print("Внутри")
         get_token(token=self.__token)
 
     # можно докинуть проверку на то что он не должен быть

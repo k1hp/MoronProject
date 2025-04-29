@@ -6,11 +6,10 @@ from typing import Optional
 
 from app.models.response_models import CommentResponseSchema
 from app.others.constants import Status, Comment, StatusCode
+from database.creation import db
 
 
 class Response(ABC):
-    def __init__(self, model_class: ma.Schema):
-        self._model = model_class()
 
     @abstractmethod
     def _generate_response(self):
@@ -20,12 +19,12 @@ class Response(ABC):
 class CommentResponse(Response):
     def __init__(
         self,
-        model_class: ma.Schema = CommentResponseSchema,
+        model: ma.Schema = CommentResponseSchema(),
         statuses=Status,
         codes=StatusCode,
         comments=Comment,
     ):
-        super().__init__(model_class)
+        self._model = model
         self._status = statuses
         self._codes = codes
         self._comments = comments
@@ -66,20 +65,21 @@ class CommentResponse(Response):
         return self._generate_response(status, comment, code)
 
 
-class CustomCommentResponse(Response):
+class CustomResponse(Response):
     def __init__(
         self,
-        status: str,
-        comment: str,
-        code: int,
-        model_class: ma.Schema = CommentResponseSchema,
+        model: ma.Schema = CommentResponseSchema(),
+        code: int = StatusCode.SUCCESS,
+        data: Optional[dict | db.Model] = None,
     ):
-        super().__init__(model_class)
-        self.__response = self._generate_response(status, comment, code)
+        self._data = data
+        self._code = code
+        self._model = model
+        self.__response = self._generate_response()
 
-    def _generate_response(self, status: str, comment: str, code: int) -> FlResponse:
-        data = self._model.dump({"status": status, "comment": comment})
-        response = make_response(data, code)
+    def _generate_response(self) -> FlResponse:
+        data = self._model.dump(self._data)  # то есть мы, и dict, и объект orm dump
+        response = make_response(data, self._code)
         return response
 
     @property
@@ -91,14 +91,14 @@ class CookieResponse(Response):
     def __init__(
         self,
         response: Optional[FlResponse] = None,
-        model_class: Optional[ma.Schema] = None,
+        model: Optional[ma.Schema] = None,
         data: Optional[dict] = None,
         code: Optional[int] = None,
     ):
-        if all(el is None for el in (response, model_class, data, code)):
+        if all(el is None for el in (response, model, data, code)):
             self.__response = self._emergency_response()
         elif response is None:
-            super().__init__(model_class)
+            self._model = model
             self.__data = data
             self.__code = code
             self.__response = self._generate_response()
@@ -140,4 +140,5 @@ class CookieResponse(Response):
         return self.__response
 
 
-# отдельный класс для генерации с куками, мы сможем выбирать куки сами
+if __name__ == "__main__":
+    ...

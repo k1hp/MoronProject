@@ -12,7 +12,7 @@ from app.apis.authorization import (
 from app.apis.profile import api as ns2
 from database.flask_managers import DatabaseAdder
 from app.others.helpers import AccessToken, Password
-from app.others.responses import CommentResponse
+from app.others.responses import CommentResponse, CustomResponse
 from app.models.input_models import UserSchema
 
 # import testik
@@ -66,9 +66,6 @@ with app.app_context():
     #     adder.add_tokens(1, "d", access_token, RefreshToken().hash, revoked=True)
     # except ValueError as e:
     #     print(e)
-
-with app.app_context():
-    print(CommentResponse().success_response())
 
 
 if __name__ == "__main__":

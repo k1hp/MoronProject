@@ -17,11 +17,28 @@ class User(db.Model):
     id: Mapped[int] = mapped_column(
         autoincrement=True, primary_key=True, nullable=False
     )
-    login: Mapped[str] = mapped_column(String(40), unique=True, nullable=False)
+    nickname: Mapped[str] = mapped_column(String(20), nullable=False)
     email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     password: Mapped[str] = mapped_column(String(100), nullable=False)
 
     token: Mapped["Token"] = relationship("Token", back_populates="user")
+    profile: Mapped["Profile"] = relationship("Profile", back_populates="user")
+
+
+class Profile(db.Model):
+    __tablename__ = "profiles"
+    id: Mapped[int] = mapped_column(
+        autoincrement=True, primary_key=True, nullable=False
+    )
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
+    photo_link: Mapped[str] = mapped_column(
+        String(256),
+        nullable=False,
+        default="https://i1.sndcdn.com/artworks-b8vZs1TN28AFyDpi-JHQM6w-t1080x1080.png",
+    )
+    status: Mapped[str] = mapped_column(String(80), nullable=True)
+
+    user: Mapped[User] = relationship("User", back_populates="profile")
 
 
 class Token(

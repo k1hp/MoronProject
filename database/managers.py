@@ -19,7 +19,7 @@ if __name__ == "__main__":
     add_many(
         data=[
             {
-                "login": "fdsafd",
+                "nickname": "fdsafd",
                 "email": "41212@gmail.com",
                 "password": Password("12345").hash,
             }

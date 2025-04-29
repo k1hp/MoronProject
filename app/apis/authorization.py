@@ -23,7 +23,9 @@ api = Namespace("authorization", description="Authorization to you nice")
 user_model = api.model(
     "User",
     {
-        "login": fields.String(required=True, description="Username of the user"),
+        "nickname": fields.String(
+            required=True, description="Displayed nickname of the user"
+        ),
         "email": fields.String(required=True, description="Email of the user"),
         "password": fields.String(required=True, description="Password of the user"),
     },
@@ -32,7 +34,7 @@ user_model = api.model(
 login_model = api.model(
     "Login/Username",
     {
-        "login": fields.String(required=True, description="Login of the user"),
+        "email": fields.String(required=True, description="Login of the user"),
         "password": fields.String(required=True, description="Password of the user"),
     },
 )
@@ -40,7 +42,8 @@ login_model = api.model(
 
 @api.route("/registration", methods=["POST"])
 class Registration(Resource):
-    @swag_from(YAMLS_DIR / "registration.yaml")
+    # @swag_from(YAMLS_DIR / "registration.yaml")
+    @api.expect(user_model)
     @convert_error
     def post(self):
         """Example endpoint returning a list of colors by palette
@@ -55,7 +58,7 @@ class Registration(Resource):
             return response.failure_response()
 
         password = Password(json_data["password"])
-        db_adder.add_user(json_data["login"], json_data["email"], password.hash)
+        db_adder.add_user(json_data["nickname"], json_data["email"], password.hash)
 
         return response.success_response()
 
@@ -67,7 +70,7 @@ class LoginToken(Resource):
     def post(self):
         check_cookies(request)
         token = AuthorizationService(
-            model_class=AuthorizationSchema, request=request
+            model=AuthorizationSchema(), request=request
         ).get_token()
         success = CommentResponse().success_response("Вы были успешно авторизованы")
         cookie_response = CookieResponse(response=success)
@@ -86,7 +89,7 @@ class LoginTempToken(Resource):
     def post(self):
         check_cookies(request)
         token = AuthorizationService(
-            model_class=AuthorizationSchema, request=request
+            model=AuthorizationSchema(), request=request
         ).get_token()
         success = CommentResponse().success_response("Вы были успешно авторизованы")
         cookie_response = CookieResponse(response=success)

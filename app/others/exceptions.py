@@ -26,10 +26,17 @@ class LackToken(MyException):
         return self._message
 
 
-class LoginError(MyException):
+# class LoginError(MyException):
+#     def __str__(self):
+#         if self._message is None:
+#             return "Неверный логин"
+#         return self._message
+
+
+class EmailError(MyException):
     def __str__(self):
         if self._message is None:
-            return "Неверный логин"
+            return "Неверный email"
         return self._message
 
 

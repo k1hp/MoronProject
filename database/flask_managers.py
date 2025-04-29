@@ -51,8 +51,8 @@ class DatabaseAdder:
     def add_all(self): ...
 
     @integrity_check
-    def add_user(self, login: str, email: str, password: str) -> None:
-        user = User(login=login, email=email, password=password)
+    def add_user(self, nickname: str, email: str, password: str) -> None:
+        user = User(nickname=nickname, email=email, password=password)
         db.session.add(user)
         db.session.commit()
 
@@ -79,26 +79,15 @@ class DatabaseAdder:
 class DatabaseSelector:
     def select_user(
         self,
-        login: Optional[str] = None,
         email: Optional[str] = None,
         password_hash: Optional[str] = None,
     ) -> Optional[User]:
-        result = None
-        if login is None:
-            print(email)
-            result = (
-                db.session.query(User)
-                .filter(and_(User.email == email, User.password == password_hash))
-                .first()
-            )
-        elif email is None:
-            print(login)
-            result = (
-                db.session.query(User)
-                .filter(and_(User.login == login, User.password == password_hash))
-                .first()
-            )
-        return result
+
+        return (
+            db.session.query(User)
+            .filter(and_(User.email == email, User.password == password_hash))
+            .first()
+        )
 
     def select_token(
         self, user_id: Optional[int] = None, token: Optional[str] = None

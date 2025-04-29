@@ -5,8 +5,8 @@ from flask import Request
 from database.creation import db, User
 from database.flask_managers import DatabaseSelector, TokenManager
 from app.others.helpers import Password, AccessToken
-from app.models.input_models import LoginEmailSchema
-from app.others.exceptions import LackToken, CookieTokenError, LoginError, PasswordError
+from app.models.input_models import AuthorizationSchema
+from app.others.exceptions import LackToken, CookieTokenError, EmailError, PasswordError
 from database.flask_managers import get_token
 
 
@@ -14,52 +14,41 @@ class ServiceBase:
     # self._response_object = CommentResponse()
     # self._bad_response = self._response_object.failure_response()
     @staticmethod
-    def _check_model(model_class: ma.Schema, data: dict):
-        model = model_class()
+    def _check_model(model: ma.Schema, data: dict):
         # model.validate(data)  не проверяет лишние параметры
         model.load(data)
 
 
 class ValidationService(ServiceBase):
-    def __init__(self, model_class: ma.Schema, data: dict):
-        self._check_model(model_class, data)
+    def __init__(self, model: ma.Schema, data: dict):
+        self._check_model(model, data)
 
 
 class AuthorizationService(ServiceBase):
-    def __init__(self, model_class: ma.Schema, request: Request):
-        self._check_model(model_class, request.json)
+    def __init__(self, model: ma.Schema, request: Request):
+        self._check_model(model, request.json)
         self.__selector = DatabaseSelector()
-        self.__data = self._generate_login_data(request.json)
+        self.__data = request.json
         self.__user = self._get_user()
 
-    @staticmethod
-    def _generate_login_data(data: dict) -> dict:
-        result_data = {"password": data["password"]}
-        try:
-            LoginEmailSchema().load(data)
-        except ma.ValidationError:
-            return data
-        result_data["email"] = data["login"]
-        return result_data
+    # @staticmethod
+    # def _generate_login_data(data: dict) -> dict:
+    #     result_data = {"password": data["password"]}
+    #     try:
+    #         LoginEmailSchema().load(data)
+    #     except ma.ValidationError:
+    #         return data
+    #     result_data["email"] = data["login"]
+    #     return result_data
 
     def _get_user(self) -> dict:
-        if (
-            "email" in self.__data
-            and db.session.query(User).filter_by(email=self.__data["email"]).first()
-            is None
-        ):
-            raise LoginError()
-        elif (
-            "login" in self.__data
-            and db.session.query(User).filter_by(login=self.__data["login"]).first()
-            is None
-        ):
-            raise LoginError()
-        new_data = self.__data.copy()
-        new_data.pop("password")
-        new_data["password_hash"] = Password(self.__data["password"]).hash
+        if db.session.query(User).filter_by(email=self.__data["email"]).first() is None:
+            raise EmailError()
 
-        result = self.__selector.select_user(**new_data)
+        result = self.__selector.select_user(
+            email=self.__data["email"],
+            password_hash=Password(self.__data["password"]).hash,
+        )
         if result is None:
             raise PasswordError()
         return result

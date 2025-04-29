@@ -7,8 +7,8 @@ from app.others.exceptions import (
     ReIntegrityError,
     LackToken,
     PasswordError,
-    LoginError,
     CookieTokenError,
+    EmailError,
 )
 from app.others.responses import CommentResponse, CookieResponse
 
@@ -40,7 +40,7 @@ def convert_error(function):
         except PasswordError as e:
             return response_object.failure_response(comment=e.__str__())
 
-        except LoginError as e:
+        except EmailError as e:
             return response_object.failure_response(comment=e.__str__())
 
         except CookieTokenError as e:

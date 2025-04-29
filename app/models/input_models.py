@@ -3,19 +3,19 @@ import marshmallow as ma
 
 # Схема Marshmallow
 class UserSchema(ma.Schema):
-    login = ma.fields.Str(required=True)
+    nickname = ma.fields.Str(required=True)
     email = ma.fields.Email(required=True)
     password = ma.fields.Str(required=True)
 
 
-class LoginEmailSchema(ma.Schema):
-    login = ma.fields.Email(required=True)
-    password = ma.fields.Str(required=True)
+# class LoginEmailSchema(ma.Schema):
+#     email = ma.fields.Email(required=True)
+#     password = ma.fields.Str(required=True)
 
 
-class LoginUsernameSchema(ma.Schema):
-    login = ma.fields.Str(required=True)
-    password = ma.fields.Str(required=True)
+# class LoginUsernameSchema(ma.Schema):
+#     login = ma.fields.Str(required=True)
+#     password = ma.fields.Str(required=True)
 
 
 class ResponseSchema(ma.Schema):
@@ -24,5 +24,5 @@ class ResponseSchema(ma.Schema):
 
 
 class AuthorizationSchema(ma.Schema):
-    login = ma.fields.Str(required=True)
+    email = ma.fields.Email(required=True)
     password = ma.fields.Str(required=True)

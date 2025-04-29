@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Мой профиль</title>
-    <link rel="icon" type="image/x-icon" href="/icons/person-circle.svg" />
-    <link rel="stylesheet" href="/style.css" />
-
+<head>
+    <link rel="icon" href="/images/person.svg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <!-- Bootstrap 5 CSS (Dark theme) -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
-  </head>
-  <body>
-    <div class="row">
-      <div class="container" style="margin-top: 20px ;">
-        <img
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+        body {
+            background-color: #343a40; /* Темный фон */
+        }
+        .profile-card {
+            background-color: #495057; /* Цвет карточки */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
 
-          class="rounded-image"
-          src="/icons/person-circle.svg"
-          alt="фото профиля"
-          width="300px"
-          height="300px"
-        />
-      </div>
+<div class="container py-5">
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/100" alt="Avatar">
+            <h2 class="text-light">Ник пользователя</h2>
+            <p class="text-muted">email@example.com</p>
+        </div>
+        <div class="mb-3">
+            <h5 class="text-light">О себе</h5>
+            <p class="text-muted">Краткая информация о пользователе. Здесь можно написать о своих интересах, хобби и чем вы занимаетесь.</p>
+        </div>
+        <div class="mb-3">
+            <h5 class="text-light">Социальные сети</h5>
+            <a href="#" class="text-light me-3" title="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="text-light" title="ВКонтакте"> У гениев на бутсрапе вк не существует, потом че нить придумаю<i class="bi bi-vk"></i></a>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button class="btn btn-info">Редактировать профиль</button>
+            <button class="btn btn-outline-danger">Выйти</button>
+        </div>
     </div>
-    <div></div>
-  </body>
+</div>
+
+<!-- Bootstrap JS (Optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

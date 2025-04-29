@@ -7,7 +7,7 @@ from typing import Optional
 from app.others.constants import TOKEN_LIFETIME
 from app.others.decorators import integrity_check
 from app.others.exceptions import ParameterError, ReIntegrityError, LackToken
-from app.others.helpers import Token as TokenType
+from app.others.helpers import TokenBase as TokenType
 
 
 class DatabaseManager:
@@ -110,6 +110,13 @@ class DatabaseUpdater(DatabaseSelector):
         data.created_at = datetime.now()
         data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
         db.session.commit()
+
+
+def update_profile(profile: Profile, data: dict) -> None:
+    for key, value in data.items():
+        setattr(profile, key, value)
+    db.session.add(profile)
+    db.session.commit()
 
 
 def get_token(

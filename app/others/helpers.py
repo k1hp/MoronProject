@@ -5,6 +5,7 @@ from typing import Union
 import random
 
 from app.others.settings import PASSWORD_SECRET
+from database.creation import db, Profile, Token
 
 
 # Declaring our password
@@ -71,7 +72,7 @@ class Password(HashedData):
         return self.__password_string.decode()
 
 
-class Token(HashedData):
+class TokenBase(HashedData):
     def __init__(self):
         self._salt = bcrypt.gensalt()
         self._string = str(random.randint(1, 1000000)).encode()
@@ -81,8 +82,8 @@ class Token(HashedData):
     def _hash_data(self) -> str:
         pass
 
-    def __eq__(self, other: Union[str, "Token"]) -> bool:
-        if isinstance(other, Token):
+    def __eq__(self, other: Union[str, "TokenBase"]) -> bool:
+        if isinstance(other, TokenBase):
             return self.hash == other.hash
         if isinstance(other, str):
             return self.hash == other
@@ -93,7 +94,7 @@ class Token(HashedData):
         return self._token_hash
 
 
-class AccessToken(Token):
+class AccessToken(TokenBase):
     def __init__(self):
         super().__init__()
 
@@ -110,6 +111,11 @@ class AccessToken(Token):
         )
         print("Итог:", perf_counter() - start)
         return result
+
+
+def get_profile(token: str) -> Profile:
+    u_id = db.session.query(Token).filter(Token.token == token).first().user_id
+    return db.session.query(Profile).filter(Profile.user_id == u_id).first()
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 from sqlalchemy import and_
 from datetime import datetime, timedelta
 
-from database.creation import db, User, Token
+from database.creation import db, User, Token, Profile
 from typing import Optional
 
 from app.others.constants import TOKEN_LIFETIME
@@ -52,8 +52,14 @@ class DatabaseAdder:
 
     @integrity_check
     def add_user(self, nickname: str, email: str, password: str) -> None:
-        user = User(nickname=nickname, email=email, password=password)
+        user = User(email=email, password=password)
         db.session.add(user)
+        db.session.commit()
+        user_id = db.session.query(User).filter(User.email == email).first().id
+        profile = Profile(
+            user_id=user_id, nickname=nickname, status=None, photo_link=None
+        )
+        db.session.add(profile)
         db.session.commit()
 
     @integrity_check
@@ -61,14 +67,10 @@ class DatabaseAdder:
         self,
         user_id: int,
         token: str,
-        revoked: Optional[bool] = None,
     ):
-        if revoked is None:
-            revoked = 0
         note = Token(
             user_id=user_id,
             token=token,
-            revoked=revoked,
         )
         db.session.add(note)
         db.session.commit()

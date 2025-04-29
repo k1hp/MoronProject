@@ -17,7 +17,6 @@ class User(db.Model):
     id: Mapped[int] = mapped_column(
         autoincrement=True, primary_key=True, nullable=False
     )
-    nickname: Mapped[str] = mapped_column(String(20), nullable=False)
     email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     password: Mapped[str] = mapped_column(String(100), nullable=False)
 
@@ -27,13 +26,13 @@ class User(db.Model):
 
 class Profile(db.Model):
     __tablename__ = "profiles"
-    id: Mapped[int] = mapped_column(
-        autoincrement=True, primary_key=True, nullable=False
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id"), nullable=False, primary_key=True
     )
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
+    nickname: Mapped[str] = mapped_column(String(20), nullable=False)
     photo_link: Mapped[str] = mapped_column(
         String(256),
-        nullable=False,
+        nullable=True,
         default="https://i1.sndcdn.com/artworks-b8vZs1TN28AFyDpi-JHQM6w-t1080x1080.png",
     )
     status: Mapped[str] = mapped_column(String(80), nullable=True)
@@ -57,7 +56,6 @@ class Token(
         nullable=False, default=datetime.now() + timedelta(days=15)
     )
     # expired_at: Mapped[datetime] = mapped_column(nullable=False, default=datetime.now())
-    revoked: Mapped[bool] = mapped_column(nullable=False, index=True, default=False)
 
     user: Mapped[User] = relationship("User", back_populates="token")
 

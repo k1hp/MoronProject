@@ -4,8 +4,8 @@ from time import perf_counter
 from typing import Union
 import random
 
-from app.others.settings import PASSWORD_SECRET
-from database.creation import db, Profile, Token
+from backend.app.others.settings import PASSWORD_SECRET
+from backend.database.creation import db, Profile, Token
 
 
 # Declaring our password

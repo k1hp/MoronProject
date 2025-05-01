@@ -10,10 +10,10 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
+COPY ../requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY .. .
 
 
-#CMD [ "python", "database/managers.py" ]
+#CMD [ "python", "backend/database/managers.py" ]

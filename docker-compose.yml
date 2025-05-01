@@ -1,17 +1,17 @@
 services:
-#  python_api:
-#    build:
-#      context: ./
-#      dockerfile: ./backend.Dockerfile
-#    env_file: .env
-#    restart: always
-#    container_name: python_api
-#    ports:
-#      - "5000:5000"
-#    environment:
-#      - PYTHONPATH=/usr/src/app/
-#    depends_on:
-#      - postgres_db
+  python_api:
+    build:
+      context: ./
+      dockerfile: ./backend/backend.Dockerfile
+    env_file: .env
+    restart: always
+    container_name: python_api
+    ports:
+      - "5000:5000"
+    environment:
+      - PYTHONPATH=/usr/src/app/
+    depends_on:
+      - postgres_db
 #      - python_selenium
 
 
@@ -30,7 +30,7 @@ services:
 #  python_selenium:
 #    build:
 #      context: ./
-#      dockerfile: ./selenium.Dockerfile
+#      dockerfile: ./backend/selenium.Dockerfile
 #    container_name: python_selenium
 #    env_file: .env
 #    restart: always

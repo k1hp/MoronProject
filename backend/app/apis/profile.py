@@ -1,16 +1,14 @@
-from typing import Optional
 from flask import request
 from flask_restx import Resource, Namespace, fields
 
-from database.flask_managers import (
+from backend.database.flask_managers import (
     update_profile,
 )
-from app.others.helpers import get_profile
-from app.others.middlewares import TokenService
-from app.others.decorators import convert_error
-from app.others.responses import CommentResponse, CustomResponse
-from app.models.response_models import ProfileResponseSchema, CommentResponseSchema
-from app.models.input_models import ProfileUpdateSchema
+from backend.app.services.helpers import get_profile
+from backend.app.services.middlewares import TokenService
+from backend.app.services.decorators import convert_error
+from backend.app.others.responses import CommentResponse, CustomResponse
+from backend.app.models.response_models import ProfileResponseSchema
 
 api = Namespace("profile", description="Information about profile")
 

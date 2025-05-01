@@ -1,13 +1,13 @@
 from sqlalchemy import and_
 from datetime import datetime, timedelta
 
-from database.creation import db, User, Token, Profile
+from backend.database.creation import db, User, Token, Profile
 from typing import Optional
 
-from app.others.constants import TOKEN_LIFETIME
-from app.others.decorators import integrity_check
-from app.others.exceptions import ParameterError, ReIntegrityError, LackToken
-from app.others.helpers import TokenBase as TokenType
+from backend.app.others.constants import TOKEN_LIFETIME
+from backend.app.services.decorators import integrity_check
+from backend.app.others.exceptions import ParameterError, ReIntegrityError, LackToken
+from backend.app.services.helpers import TokenBase as TokenType
 
 
 class DatabaseManager:

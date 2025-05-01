@@ -2,12 +2,16 @@ import marshmallow as ma
 from typing import Optional
 from flask import Request
 
-from database.creation import db, User
-from database.flask_managers import DatabaseSelector, TokenManager
-from app.others.helpers import Password, AccessToken
-from app.models.input_models import AuthorizationSchema
-from app.others.exceptions import LackToken, CookieTokenError, EmailError, PasswordError
-from database.flask_managers import get_token
+from backend.database.creation import db, User
+from backend.database.flask_managers import DatabaseSelector, TokenManager
+from backend.app.services.helpers import Password, AccessToken
+from backend.app.others.exceptions import (
+    LackToken,
+    CookieTokenError,
+    EmailError,
+    PasswordError,
+)
+from backend.database.flask_managers import get_token
 
 
 class ServiceBase:

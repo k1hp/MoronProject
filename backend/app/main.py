@@ -1,27 +1,35 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_restx import Api
 
-from database.creation import db
-from app.others.settings import DB_CONNECTION, DB_NAME
-from app.apis.authorization import (
+from backend.database.creation import db
+from backend.app.others.settings import DB_CONNECTION, DB_NAME
+from backend.app.apis.authorization import (
     api as ns_authorization,
 )
-from app.apis.profile import api as ns_profile
-from database.flask_managers import DatabaseAdder
-from app.others.helpers import AccessToken, Password
-from app.documentation.swagg import swagger_ui_blueprint, get_apispec
-from app.others.constants import Documentation
+from backend.app.apis.profile import api as ns_profile
+from backend.database.flask_managers import DatabaseAdder
+from backend.app.services.helpers import AccessToken, Password
+from backend.app.documentation.swagg import swagger_ui_blueprint, get_apispec
+from backend.app.others.constants import Documentation
 
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION + DB_NAME
 db.init_app(app)
 
-api = Api(app, title="Morons API")
+api = Api(app, title="Morons API", doc=False)
 api.add_namespace(ns_authorization, path="/api")
 api.add_namespace(ns_profile, path="/api")
 
 app.register_blueprint(swagger_ui_blueprint, url_prefix=Documentation.SWAGGER_URL)
+
+
+# @app.route("/")
+# def default():
+#     return render_template("redirect_on_doc.html")
+@app.errorhandler(404)
+def not_found(error):
+    return (render_template("redirect_on_doc.html", title="Not Found"), 404)
 
 
 @app.route("/swagger")

@@ -4,9 +4,9 @@ import marshmallow as ma
 from flask import Response as FlResponse, make_response
 from typing import Optional
 
-from app.models.response_models import CommentResponseSchema
-from app.others.constants import Status, Comment, StatusCode
-from database.creation import db
+from backend.app.models.response_models import CommentResponseSchema
+from backend.app.others.constants import Status, Comment, StatusCode
+from backend.database.creation import db
 
 
 class Response(ABC):

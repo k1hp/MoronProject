@@ -1,21 +1,20 @@
 from flask import request
 from flask_restx import Resource, Namespace, fields
 
-from app.models.input_models import UserSchema, AuthorizationSchema
-from database.flask_managers import (
+from backend.app.models.input_models import UserSchema, AuthorizationSchema
+from backend.database.flask_managers import (
     DatabaseAdder,
 )
-from app.others.constants import TOKEN_LIFETIME
-from app.others.helpers import Password
-from app.others.middlewares import (
+from backend.app.others.constants import TOKEN_LIFETIME
+from backend.app.services.helpers import Password
+from backend.app.services.middlewares import (
     validate_data,
     check_token_presence,
     check_cookies,
     AuthorizationService,
 )
-from app.others.responses import CommentResponse, CookieResponse
-from app.others.decorators import convert_error
-from app.others.settings import YAMLS_DIR
+from backend.app.others.responses import CommentResponse, CookieResponse
+from backend.app.services.decorators import convert_error
 
 api = Namespace("authorization", description="Authorization to you nice")
 

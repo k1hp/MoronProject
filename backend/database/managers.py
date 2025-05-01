@@ -1,6 +1,6 @@
-from database.creation import db, User
-from app.others.helpers import Password
-from app.others.settings import DB_CONNECTION, DB_NAME
+from backend.database.creation import db, User
+from backend.app.services.helpers import Password
+from backend.app.others.settings import DB_CONNECTION, DB_NAME
 from sqlalchemy import create_engine, insert
 from sqlalchemy.orm import sessionmaker
 from typing import List

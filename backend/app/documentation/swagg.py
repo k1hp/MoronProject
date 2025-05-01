@@ -2,9 +2,9 @@ from apispec import APISpec
 from apispec_webframeworks.flask import FlaskPlugin
 from apispec.ext.marshmallow import MarshmallowPlugin
 from flask_swagger_ui import get_swaggerui_blueprint
-from app.others.constants import Documentation
+from backend.app.others.constants import Documentation
 
-from app.models.response_models import ProfileResponseSchema
+from backend.app.models.response_models import ProfileResponseSchema
 
 
 swagger_ui_blueprint = get_swaggerui_blueprint(

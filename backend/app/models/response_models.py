@@ -1,6 +1,6 @@
 import marshmallow as ma
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
-from database.creation import Profile
+from backend.database.creation import Profile
 
 
 class CommentResponseSchema(ma.Schema):

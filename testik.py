@@ -1,6 +1,11 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+# from selenium.webdriver.chrome.service import Service
+# from selenium.webdriver.chrome.options import Options
+from undetected_chromedriver import ChromeOptions
+
 from utils.custom_driver import our_driver
 from utils.main_parser_utils import get_text_card, next_page, choise_category
 import time
@@ -67,8 +72,8 @@ def parse_processors(driver) -> List[dict]:
 
         if next_page(driver) == False:
             break
-    # print(result)
-    return result
+    print(result)
+    # return result
 
 
 def parse_videocards(driver):
@@ -153,5 +158,18 @@ def parse_motherboards(driver):
     print(result)
 
 
-driver = our_driver()
-parse_processors(driver)
+if __name__ == "__main__":
+    options = ChromeOptions()
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--enable-javascript")
+    options.add_argument(
+        "--user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0'"
+    )
+    options.add_argument("--no-sandbox")
+    options.add_argument("--ignore-certificate-errors")
+    options.add_argument("--allow-insecure-localhost")
+
+    driver = our_driver(driver_executable_path="/usr/bin/chromedriver", options=options)
+    parse_processors(driver)

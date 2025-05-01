@@ -4,7 +4,8 @@ from time import perf_counter
 from typing import Union
 import random
 
-from app.others.settings import PASSWORD_SECRET
+from backend.app.others.settings import PASSWORD_SECRET
+from backend.database.creation import db, Profile, Token
 
 
 # Declaring our password
@@ -66,20 +67,23 @@ class Password(HashedData):
     def hash(self) -> str:
         return self.__password_hash
 
+    @property
+    def start_string(self) -> str:
+        return self.__password_string.decode()
 
-class Token(HashedData):
+
+class TokenBase(HashedData):
     def __init__(self):
         self._salt = bcrypt.gensalt()
         self._string = str(random.randint(1, 1000000)).encode()
         self._token_hash = self._hash_data()
-        # self._secret = TOKEN_SECRET.encode()
 
     @abstractmethod
     def _hash_data(self) -> str:
         pass
 
-    def __eq__(self, other: Union[str, "Token"]) -> bool:
-        if isinstance(other, Token):
+    def __eq__(self, other: Union[str, "TokenBase"]) -> bool:
+        if isinstance(other, TokenBase):
             return self.hash == other.hash
         if isinstance(other, str):
             return self.hash == other
@@ -90,19 +94,7 @@ class Token(HashedData):
         return self._token_hash
 
 
-class RefreshToken(Token):
-    def __init__(self):
-        super().__init__()
-
-    def _hash_data(self) -> str:
-        result = self._salt
-        start = perf_counter()
-        result = bcrypt.hashpw(self._salt, result)
-        print("Итог:", perf_counter() - start)
-        return result.decode()
-
-
-class AccessToken(Token):
+class AccessToken(TokenBase):
     def __init__(self):
         super().__init__()
 
@@ -121,6 +113,11 @@ class AccessToken(Token):
         return result
 
 
+def get_profile(token: str) -> Profile:
+    u_id = db.session.query(Token).filter(Token.token == token).first().user_id
+    return db.session.query(Profile).filter(Profile.user_id == u_id).first()
+
+
 if __name__ == "__main__":
     # password = Password("12345689893432")
     # psw = Password("12345689893432")
@@ -137,3 +134,5 @@ if __name__ == "__main__":
     #     == "$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu.$2b$12$liyfhEdVa3H1YqsWDz4AA.sOydTA5kGvjJKtA0cpVU6g/vIFq4ftu"
     # )
     print(Password("1234").hash)
+    print(Password("12345").hash)
+    print(Password("1234").start_string)

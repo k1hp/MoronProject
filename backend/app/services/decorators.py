@@ -3,14 +3,14 @@ from sqlalchemy.exc import IntegrityError
 from marshmallow import ValidationError
 from flask import Response
 
-from app.others.exceptions import (
+from backend.app.others.exceptions import (
     ReIntegrityError,
     LackToken,
     PasswordError,
-    LoginError,
     CookieTokenError,
+    EmailError,
 )
-from app.others.responses import CommentResponse
+from backend.app.others.responses import CommentResponse
 
 
 def integrity_check(function):
@@ -40,15 +40,27 @@ def convert_error(function):
         except PasswordError as e:
             return response_object.failure_response(comment=e.__str__())
 
-        except LoginError as e:
+        except EmailError as e:
             return response_object.failure_response(comment=e.__str__())
 
         except CookieTokenError as e:
             print(e)
-            return response_object.access_denied(comment=e.__str__())
+            return response_object.unauthorized(comment=e.__str__())
 
         except LackToken as e:
-            return response_object.failure_response(comment=e.__str__())
+            response = response_object.failure_response(comment=e.__str__())
+            # cookie_response = CookieResponse(response=response)
+            # cookie_response.set_cookie(key="token", value="None", age_days=0)
+            # return cookie_response.response  # сброс токена в куках
+            response.set_cookie(
+                key="token",
+                value="",
+                httponly=True,
+                secure=True,
+                samesite="lax",
+                max_age=0,
+            )
+            return response
         # except IntegrityError as e:
         #     return response_object.failure_response("")
 

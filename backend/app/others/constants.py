@@ -13,7 +13,7 @@ class Status:
 class Comment:
     SUCCESS: str = "Everything is OK"
     FAILURE: str = "Something went wrong"
-    UNAUTHORIZED: str = "You are unauthorized"
+    UNAUTHORIZED: str = "User is unauthorized"
     ACCESS_DENIED: str = "Access denied"
     NOT_FOUND: str = "Resource was not found"
 
@@ -25,3 +25,12 @@ class StatusCode:
     UNAUTHORIZED: int = 401
     ACCESS_DENIED: int = 403
     NOT_FOUND: int = 404
+
+
+class Documentation:
+    SWAGGER_URL = "/docs"
+    API_URL = "/swagger"
+    TAGS = [
+        {"name": "Authorization", "description": "Авторизация и регистрация"},
+        {"name": "Profile", "description": "Профиль пользователя"},
+    ]

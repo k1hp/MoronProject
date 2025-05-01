@@ -17,11 +17,27 @@ class User(db.Model):
     id: Mapped[int] = mapped_column(
         autoincrement=True, primary_key=True, nullable=False
     )
-    login: Mapped[str] = mapped_column(String(40), unique=True, nullable=False)
     email: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     password: Mapped[str] = mapped_column(String(100), nullable=False)
 
     token: Mapped["Token"] = relationship("Token", back_populates="user")
+    profile: Mapped["Profile"] = relationship("Profile", back_populates="user")
+
+
+class Profile(db.Model):
+    __tablename__ = "profiles"
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id"), nullable=False, primary_key=True
+    )
+    nickname: Mapped[str] = mapped_column(String(20), nullable=False)
+    photo_link: Mapped[str] = mapped_column(
+        String(256),
+        nullable=True,
+        default="https://i1.sndcdn.com/artworks-b8vZs1TN28AFyDpi-JHQM6w-t1080x1080.png",
+    )
+    status: Mapped[str] = mapped_column(String(80), nullable=True)
+
+    user: Mapped[User] = relationship("User", back_populates="profile")
 
 
 class Token(
@@ -39,7 +55,7 @@ class Token(
     expired_at: Mapped[datetime] = mapped_column(
         nullable=False, default=datetime.now() + timedelta(days=15)
     )
-    revoked: Mapped[bool] = mapped_column(nullable=False, index=True, default=False)
+    # expired_at: Mapped[datetime] = mapped_column(nullable=False, default=datetime.now())
 
     user: Mapped[User] = relationship("User", back_populates="token")
 

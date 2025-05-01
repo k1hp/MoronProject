@@ -1,13 +1,13 @@
 from sqlalchemy import and_
 from datetime import datetime, timedelta
 
-from database.creation import db, User, Token
+from backend.database.creation import db, User, Token, Profile
 from typing import Optional
 
-from app.others.constants import TOKEN_LIFETIME
-from app.others.decorators import integrity_check
-from app.others.exceptions import ParameterError, ReIntegrityError
-from app.others.helpers import Token as TokenType
+from backend.app.others.constants import TOKEN_LIFETIME
+from backend.app.services.decorators import integrity_check
+from backend.app.others.exceptions import ParameterError, ReIntegrityError, LackToken
+from backend.app.services.helpers import TokenBase as TokenType
 
 
 class DatabaseManager:
@@ -51,9 +51,15 @@ class DatabaseAdder:
     def add_all(self): ...
 
     @integrity_check
-    def add_user(self, login: str, email: str, password: str) -> None:
-        user = User(login=login, email=email, password=password)
+    def add_user(self, nickname: str, email: str, password: str) -> None:
+        user = User(email=email, password=password)
         db.session.add(user)
+        db.session.commit()
+        user_id = db.session.query(User).filter(User.email == email).first().id
+        profile = Profile(
+            user_id=user_id, nickname=nickname, status=None, photo_link=None
+        )
+        db.session.add(profile)
         db.session.commit()
 
     @integrity_check
@@ -61,14 +67,10 @@ class DatabaseAdder:
         self,
         user_id: int,
         token: str,
-        revoked: Optional[bool] = None,
     ):
-        if revoked is None:
-            revoked = 0
         note = Token(
             user_id=user_id,
             token=token,
-            revoked=revoked,
         )
         db.session.add(note)
         db.session.commit()
@@ -79,30 +81,19 @@ class DatabaseAdder:
 class DatabaseSelector:
     def select_user(
         self,
-        login: Optional[str] = None,
         email: Optional[str] = None,
         password_hash: Optional[str] = None,
     ) -> Optional[User]:
-        result = None
-        if login is None:
-            print(email)
-            result = (
-                db.session.query(User)
-                .filter(and_(User.email == email, User.password == password_hash))
-                .first()
-            )
-        elif email is None:
-            print(login)
-            result = (
-                db.session.query(User)
-                .filter(and_(User.login == login, User.password == password_hash))
-                .first()
-            )
-        return result
+
+        return (
+            db.session.query(User)
+            .filter(and_(User.email == email, User.password == password_hash))
+            .first()
+        )
 
     def select_token(
         self, user_id: Optional[int] = None, token: Optional[str] = None
-    ) -> Token:
+    ) -> Optional[Token]:
         if token is None and user_id is not None:
             return db.session.query(Token).filter(Token.user_id == user_id).first()
         elif user_id is None and token is not None:
@@ -119,6 +110,35 @@ class DatabaseUpdater(DatabaseSelector):
         data.created_at = datetime.now()
         data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
         db.session.commit()
+
+
+def update_profile(profile: Profile, data: dict) -> None:
+    for key, value in data.items():
+        setattr(profile, key, value)
+    db.session.add(profile)
+    db.session.commit()
+
+
+def get_token(
+    user_id: Optional[int] = None, token: Optional[str] = None
+) -> Optional[Token]:
+    result = None
+    if token is None and user_id is not None:
+        result = db.session.query(Token).filter(Token.user_id == user_id).first()
+    elif token is not None and user_id is None:
+        result = db.session.query(Token).filter(Token.token == token).first()
+    return check_active_token(token=result)
+
+
+def check_active_token(token: Optional[Token]) -> Optional[Token]:
+    if token is None:
+        raise LackToken()
+
+    if token.expired_at < datetime.now():
+        db.session.delete(token)
+        db.session.commit()
+        raise LackToken()
+    return token
 
 
 if __name__ == "__main__":

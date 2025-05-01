@@ -1,29 +1,29 @@
-from flasgger import swag_from
 from flask import request
 from flask_restx import Resource, Namespace, fields
 
-from app.models.input_models import UserSchema, AuthorizationSchema
-from database.managers import (
+from backend.app.models.input_models import UserSchema, AuthorizationSchema
+from backend.database.flask_managers import (
     DatabaseAdder,
 )
-from app.others.constants import TOKEN_LIFETIME
-from app.others.helpers import Password
-from app.others.middlewares import (
+from backend.app.others.constants import TOKEN_LIFETIME
+from backend.app.services.helpers import Password
+from backend.app.services.middlewares import (
     validate_data,
     check_token_presence,
     check_cookies,
     AuthorizationService,
 )
-from app.others.responses import CommentResponse, CookieResponse
-from app.others.decorators import convert_error
-from app.others.settings import YAMLS_DIR
+from backend.app.others.responses import CommentResponse, CookieResponse
+from backend.app.services.decorators import convert_error
 
 api = Namespace("authorization", description="Authorization to you nice")
 
 user_model = api.model(
     "User",
     {
-        "login": fields.String(required=True, description="Username of the user"),
+        "nickname": fields.String(
+            required=True, description="Displayed nickname of the user"
+        ),
         "email": fields.String(required=True, description="Email of the user"),
         "password": fields.String(required=True, description="Password of the user"),
     },
@@ -32,7 +32,7 @@ user_model = api.model(
 login_model = api.model(
     "Login/Username",
     {
-        "login": fields.String(required=True, description="Login of the user"),
+        "email": fields.String(required=True, description="Login of the user"),
         "password": fields.String(required=True, description="Password of the user"),
     },
 )
@@ -40,7 +40,7 @@ login_model = api.model(
 
 @api.route("/registration", methods=["POST"])
 class Registration(Resource):
-    @swag_from(YAMLS_DIR / "registration.yaml")
+    @api.expect(user_model)
     @convert_error
     def post(self):
         """Example endpoint returning a list of colors by palette
@@ -55,7 +55,7 @@ class Registration(Resource):
             return response.failure_response()
 
         password = Password(json_data["password"])
-        db_adder.add_user(json_data["login"], json_data["email"], password.hash)
+        db_adder.add_user(json_data["nickname"], json_data["email"], password.hash)
 
         return response.success_response()
 
@@ -67,7 +67,7 @@ class LoginToken(Resource):
     def post(self):
         check_cookies(request)
         token = AuthorizationService(
-            model_class=AuthorizationSchema, request=request
+            model=AuthorizationSchema(), request=request
         ).get_token()
         success = CommentResponse().success_response("Вы были успешно авторизованы")
         cookie_response = CookieResponse(response=success)
@@ -86,7 +86,7 @@ class LoginTempToken(Resource):
     def post(self):
         check_cookies(request)
         token = AuthorizationService(
-            model_class=AuthorizationSchema, request=request
+            model=AuthorizationSchema(), request=request
         ).get_token()
         success = CommentResponse().success_response("Вы были успешно авторизованы")
         cookie_response = CookieResponse(response=success)

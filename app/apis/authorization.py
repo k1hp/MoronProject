@@ -1,4 +1,3 @@
-from flasgger import swag_from
 from flask import request
 from flask_restx import Resource, Namespace, fields
 
@@ -42,7 +41,6 @@ login_model = api.model(
 
 @api.route("/registration", methods=["POST"])
 class Registration(Resource):
-    # @swag_from(YAMLS_DIR / "registration.yaml")
     @api.expect(user_model)
     @convert_error
     def post(self):

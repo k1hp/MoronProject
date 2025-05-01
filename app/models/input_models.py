@@ -26,3 +26,9 @@ class ResponseSchema(ma.Schema):
 class AuthorizationSchema(ma.Schema):
     email = ma.fields.Email(required=True)
     password = ma.fields.Str(required=True)
+
+
+class ProfileUpdateSchema(ma.Schema):
+    nickname: ma.fields.String(required=False)
+    status: ma.fields.String(required=False)
+    photo_link: ma.fields.String(required=False)

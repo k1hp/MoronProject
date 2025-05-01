@@ -45,7 +45,7 @@ def convert_error(function):
 
         except CookieTokenError as e:
             print(e)
-            return response_object.access_denied(comment=e.__str__())
+            return response_object.unauthorized(comment=e.__str__())
 
         except LackToken as e:
             response = response_object.failure_response(comment=e.__str__())

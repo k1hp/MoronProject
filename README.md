@@ -30,8 +30,10 @@
 - Если необходимо подключение к базе данных для собственноручного взаимодействия -> ПО УМОЛЧАНИЮ: порт `5432`
 - API работает на `127.0.0.1:5000`
 - Чтобы посмотреть документацию перейдите по `127.0.0.1:5000/docs`
-получите примерно такое
-![image](https://github.com/user-attachments/assets/d43762dc-862d-48c8-a871-6779d2f6034b)
+< получится примерно так >
+
+![image](https://github.com/user-attachments/assets/1eaf39ae-95ac-490a-9dd7-1bfa804bb2b7)
+
 ![image](https://github.com/user-attachments/assets/4dd502f7-833e-4732-9c86-2e37c3a6116e)
 
 

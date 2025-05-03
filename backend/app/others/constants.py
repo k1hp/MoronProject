@@ -12,6 +12,7 @@ class Status:
 
 class Comment:
     SUCCESS: str = "Everything is OK"
+    CREATED: str = "CREATED"
     FAILURE: str = "Something went wrong"
     UNAUTHORIZED: str = "User is unauthorized"
     ACCESS_DENIED: str = "Access denied"

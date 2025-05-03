@@ -29,7 +29,7 @@ class Profile(db.Model):
     user_id: Mapped[int] = mapped_column(
         ForeignKey("users.id"), nullable=False, primary_key=True
     )
-    nickname: Mapped[str] = mapped_column(String(20), nullable=False)
+    nickname: Mapped[str] = mapped_column(String(20), nullable=False, unique=True)
     photo_link: Mapped[str] = mapped_column(
         String(256),
         nullable=True,

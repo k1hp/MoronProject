@@ -107,12 +107,8 @@ def check_login_data(json_data: dict) -> Optional[int]:
     return selector.select_user(**new_data)
 
 
-def validate_data(schema, data) -> bool:  # pydentic и перенести всё в класс service
-    try:
-        schema.load(data)
-    except ma.ValidationError as err:
-        return False
-    return True
+# def validate_data(schema, data) -> bool:  # pydentic и перенести всё в класс service
+#         schema.load(data)
 
 
 def verify_token(token: str) -> None:

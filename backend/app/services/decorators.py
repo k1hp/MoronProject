@@ -9,6 +9,8 @@ from backend.app.others.exceptions import (
     PasswordError,
     CookieTokenError,
     EmailError,
+    EmailIntegrityError,
+    NicknameIntegrityError,
 )
 from backend.app.others.responses import CommentResponse
 
@@ -37,6 +39,12 @@ def convert_error(function):
             return response_object.failure_response(
                 comment="Данные не прошли проверку в модели marshmallow"
             )
+        except EmailIntegrityError as e:
+            return response_object.failure_response(comment=e.__str__())
+
+        except NicknameIntegrityError as e:
+            return response_object.failure_response(comment=e.__str__())
+
         except PasswordError as e:
             return response_object.failure_response(comment=e.__str__())
 

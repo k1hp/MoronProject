@@ -40,6 +40,12 @@ class CommentResponse(Response):
         code = self._codes.SUCCESS
         return self._generate_response(status, comment, code)
 
+    def created_response(self, comment: Optional[str] = None) -> FlResponse:
+        status = self._status.CREATED
+        comment = self._comments.CREATED if comment is None else comment
+        code = self._codes.CREATED
+        return self._generate_response(status, comment, code)
+
     def failure_response(self, comment: Optional[str] = None) -> FlResponse:
         status = self._status.FAILURE
         comment = self._comments.FAILURE if comment is None else comment

@@ -8,7 +8,13 @@ from backend.app.services.helpers import get_profile
 from backend.app.services.middlewares import TokenService
 from backend.app.services.decorators import convert_error
 from backend.app.others.responses import CommentResponse, CustomResponse
-from backend.app.models.response_models import ProfileResponseSchema
+from backend.app.models.response_models import (
+    ProfileResponseSchema,
+    CommentResponseSchema,
+)
+from backend.database.flask_managers import DatabaseAdder
+from backend.app.services.helpers import Password
+from backend.app.models.input_models import UserSchema
 
 api = Namespace("profile", description="Information about profile")
 
@@ -69,7 +75,6 @@ class ProfileResource(Resource):
           parameters:
           - in: body
             name: body
-            required: true
             description: "Данные на обновление пользователя"
             schema:
               type: object
@@ -112,6 +117,7 @@ class ProfileResource(Resource):
           tags:
             - Profile
         """
+        print(request.cookies, request.json)
         token = TokenService(request=request).token
         update_profile(get_profile(token), request.json)
         return CommentResponse().success_response(

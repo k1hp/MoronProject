@@ -2,13 +2,13 @@ from flask import request
 from flask_restx import Resource, Namespace, fields
 
 from backend.app.models.input_models import UserSchema, AuthorizationSchema
+from backend.app.models.response_models import CommentResponseSchema
 from backend.database.flask_managers import (
     DatabaseAdder,
 )
 from backend.app.others.constants import TOKEN_LIFETIME
 from backend.app.services.helpers import Password
 from backend.app.services.middlewares import (
-    validate_data,
     check_token_presence,
     check_cookies,
     AuthorizationService,
@@ -40,31 +40,87 @@ login_model = api.model(
 
 @api.route("/registration", methods=["POST"])
 class Registration(Resource):
-    @api.expect(user_model)
     @convert_error
     def post(self):
-        """Example endpoint returning a list of colors by palette
-        In this example the specification is taken from specs_dict
         """
-        response = CommentResponse()
+        ---
+          summary: Создание нового пользователя
+          parameters:
+          - in: body
+            schema: UserSchema
+
+
+          responses:
+            '201':
+              description: Успешное создание пользователя
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "SUCCESS"
+                        comment: "Пользователь успешно создан"
+            '403':
+              description: Пользователь не был создан
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "UNAUTHORIZED"
+                        comment: "User is unauthorized"
+          tags:
+            - Authorization
+        """
         db_adder = DatabaseAdder()
         json_data = request.json
-        user_schema = UserSchema()
-        if not validate_data(user_schema, json_data):
-            print(json_data)
-            return response.failure_response()
+        UserSchema().load(json_data)
 
         password = Password(json_data["password"])
         db_adder.add_user(json_data["nickname"], json_data["email"], password.hash)
 
-        return response.success_response()
+        return CommentResponse().created_response(comment="Пользователь успешно создан")
 
 
 @api.route("/token/auth", methods=["POST"])
 class LoginToken(Resource):
-    @api.expect(login_model)
+
     @convert_error
     def post(self):
+        """
+        ---
+          summary: Вход в аккаунт
+          parameters:
+          - in: body
+            schema: AuthorizationSchema
+
+
+          responses:
+            '201':
+              description: Успешное создание пользователя
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "SUCCESS"
+                        comment: "Пользователь успешно создан"
+            '403':
+              description: Пользователь не был создан
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "UNAUTHORIZED"
+                        comment: "User is unauthorized"
+          tags:
+            - Authorization
+        """
         check_cookies(request)
         token = AuthorizationService(
             model=AuthorizationSchema(), request=request
@@ -81,9 +137,39 @@ class LoginToken(Resource):
 
 @api.route("/token/auth/temporary", methods=["POST"])
 class LoginTempToken(Resource):
-    @api.expect(login_model)
     @convert_error
     def post(self):
+        """
+        ---
+          summary: ВРЕМЕННЫЙ вход в аккаунт
+          parameters:
+          - in: body
+            schema: AuthorizationSchema
+
+          responses:
+            '201':
+              description: Успешное создание пользователя
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "SUCCESS"
+                        comment: "Пользователь успешно создан"
+            '403':
+              description: Пользователь не был создан
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "UNAUTHORIZED"
+                        comment: "User is unauthorized"
+          tags:
+            - Authorization
+        """
         check_cookies(request)
         token = AuthorizationService(
             model=AuthorizationSchema(), request=request
@@ -100,6 +186,34 @@ class LoginTempToken(Resource):
 class Logout(Resource):
     @convert_error
     def delete(self):
+        """
+        ---
+          summary: Выход из аккаунта
+
+          responses:
+            '201':
+              description: Успешное создание пользователя
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "SUCCESS"
+                        comment: "Пользователь успешно создан"
+            '403':
+              description: Пользователь не был создан
+              content:
+                application/json:
+                  schema: CommentResponseSchema
+                  examples:
+                    example:
+                      value:
+                        status: "UNAUTHORIZED"
+                        comment: "User is unauthorized"
+          tags:
+            - Authorization
+        """
         response = CommentResponse()
         if not check_token_presence(request=request):
             return response.access_denied(comment="You have not token")

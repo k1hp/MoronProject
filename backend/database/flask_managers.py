@@ -1,4 +1,5 @@
 from sqlalchemy import and_
+from sqlalchemy.exc import IntegrityError
 from datetime import datetime, timedelta
 
 from backend.database.creation import db, User, Token, Profile
@@ -6,7 +7,13 @@ from typing import Optional
 
 from backend.app.others.constants import TOKEN_LIFETIME
 from backend.app.services.decorators import integrity_check
-from backend.app.others.exceptions import ParameterError, ReIntegrityError, LackToken
+from backend.app.others.exceptions import (
+    ParameterError,
+    ReIntegrityError,
+    LackToken,
+    NicknameIntegrityError,
+    EmailIntegrityError,
+)
 from backend.app.services.helpers import TokenBase as TokenType
 
 
@@ -50,17 +57,27 @@ class TokenManager(DatabaseManager):
 class DatabaseAdder:
     def add_all(self): ...
 
-    @integrity_check
+    # @integrity_check
     def add_user(self, nickname: str, email: str, password: str) -> None:
-        user = User(email=email, password=password)
-        db.session.add(user)
-        db.session.commit()
+        try:
+            user = User(email=email, password=password)
+            db.session.add(user)
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
+            raise EmailIntegrityError()
+
         user_id = db.session.query(User).filter(User.email == email).first().id
-        profile = Profile(
-            user_id=user_id, nickname=nickname, status=None, photo_link=None
-        )
-        db.session.add(profile)
-        db.session.commit()
+
+        try:
+            profile = Profile(
+                user_id=user_id, nickname=nickname, status=None, photo_link=None
+            )
+            db.session.add(profile)
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
+            raise NicknameIntegrityError()
 
     @integrity_check
     def add_token(

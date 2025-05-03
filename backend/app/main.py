@@ -6,6 +6,7 @@ from backend.app.others.settings import DB_CONNECTION, DB_NAME
 from backend.app.apis.authorization import (
     api as ns_authorization,
 )
+
 from backend.app.apis.profile import api as ns_profile
 from backend.database.flask_managers import DatabaseAdder
 from backend.app.services.helpers import AccessToken, Password
@@ -18,15 +19,15 @@ app.config["SQLALCHEMY_DATABASE_URI"] = DB_CONNECTION + DB_NAME
 db.init_app(app)
 
 api = Api(app, title="Morons API", doc=False)
+# swagger = Swagger(app)
+#
 api.add_namespace(ns_authorization, path="/api")
 api.add_namespace(ns_profile, path="/api")
+# api.add_resource(Registration, "/api/registration")
 
 app.register_blueprint(swagger_ui_blueprint, url_prefix=Documentation.SWAGGER_URL)
 
 
-# @app.route("/")
-# def default():
-#     return render_template("redirect_on_doc.html")
 @app.errorhandler(404)
 def not_found(error):
     return (render_template("redirect_on_doc.html", title="Not Found"), 404)

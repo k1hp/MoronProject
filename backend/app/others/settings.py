@@ -7,16 +7,16 @@ from pathlib import Path
 load_dotenv()
 
 
-# def create_connection(
-#     user: str, password: str, port: str = "5432", host: str = "postgres_db"
-# ) -> str:
-#     return f"postgresql+psycopg2://{user}:{password}@{host}:{port}/"
-
-
 def create_connection(
-    user: str, password: str, port: str = "5432", host: str = "localhost"
+    user: str, password: str, port: str = "5432", host: str = "postgres_db"
 ) -> str:
     return f"postgresql+psycopg2://{user}:{password}@{host}:{port}/"
+
+
+# def create_connection(
+#     user: str, password: str, port: str = "5432", host: str = "localhost"
+# ) -> str:
+#     return f"postgresql+psycopg2://{user}:{password}@{host}:{port}/"
 
 
 def get_password_secret():

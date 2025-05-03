@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Вход</title>
+    <link rel="icon" type="image/x-icon" href="/images/person-circle.svg" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body
+    style="
+      background: url('/images/fon.jpg');
+      display: flex; /* Flexbox имба */
+      justify-content: center; /* Центрирование по горизонтали */
+      align-items: center; /* Центрирование по вертикали */
+      min-height: 100vh; /* Минимальная высота - весь экран */
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      background-size: cover;
+      background-position: center; /* Центрирование изображения */
+    "
+  >
+    
+  <div>
+      <div
+        class="container"
+        style="
+          background-color: rgba(60, 59, 59, 0.9);
+          display: inline-flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: auto;
+          border: 1px solid #343131;
+          border-radius: 30px;
+          padding: 15px 25px;
+          max-width: 400px;
+        "
+      >
+        <form>
+          <div class="mb-3">
+            
+            <label
+              for="exampleInputEmail1"
+              class="form-label"
+              style="color: #fbfbfb"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              style="color: rgba(118, 113, 113, 0.861)"
+            />
+            <div id="emailHelp" class="form-text" style="color: #918d8d">
+              Мы никогда не передадим вашу электронную почту кому-либо еще (не
+              факт).
+            </div>
+          </div>
+          <div class="mb-3">
+            <label
+              for="exampleInputPassword1"
+              class="form-label"
+              style="color: #fbfbfb"
+              >Пароль</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              style="color: rgba(118, 113, 113, 0.861)"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label
+              class="form-check-label"
+              for="exampleCheck1"
+              style="color: #fbfbfb"
+              >Запомнить меня</label
+            >
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="margin-left: 280px"
+          >
+            Войти
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -54,6 +54,13 @@ class PasswordError(MyException):
         return self._message
 
 
+class CookieTokenExistsError(MyException):
+    def __str__(self):
+        if self._message is None:
+            return "Токен уже есть в куках."
+        return self._message
+
+
 class CookieTokenError(MyException):
     def __str__(self):
         if self._message is None:

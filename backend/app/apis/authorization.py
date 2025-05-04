@@ -1,20 +1,27 @@
 from flask import request
 from flask_restx import Resource, Namespace, fields
 
-from backend.app.models.input_models import UserSchema, AuthorizationSchema
-from backend.app.models.response_models import CommentResponseSchema
+from backend.app.models.request_models import UserSchema, AuthorizationSchema
 from backend.database.flask_managers import (
     DatabaseAdder,
 )
 from backend.app.others.constants import TOKEN_LIFETIME
 from backend.app.services.helpers import Password
 from backend.app.services.middlewares import (
-    check_token_presence,
     check_cookies,
     AuthorizationService,
+    TokenService,
 )
 from backend.app.others.responses import CommentResponse, CookieResponse
 from backend.app.services.decorators import convert_error
+from backend.app.documentation.output_models import (
+    CreatedResponseSchema,
+    UnauthorizedResponseSchema,
+    FailureRegistrationResponseSchema,
+    SuccessResponseSchema,
+    FailureAuthorizationResponseSchema,
+    ExistsTokenAuthorizationFailure,
+)
 
 api = Namespace("authorization", description="Authorization to you nice")
 
@@ -53,24 +60,10 @@ class Registration(Resource):
           responses:
             '201':
               description: Успешное создание пользователя
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "SUCCESS"
-                        comment: "Пользователь успешно создан"
-            '403':
-              description: Пользователь не был создан
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "UNAUTHORIZED"
-                        comment: "User is unauthorized"
+              schema: CreatedResponseSchema
+            '400':
+              description: Пользователь не был создан (Nickname или Email уже существуют)
+              schema: FailureRegistrationResponseSchema
           tags:
             - Authorization
         """
@@ -98,26 +91,16 @@ class LoginToken(Resource):
 
 
           responses:
-            '201':
-              description: Успешное создание пользователя
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "SUCCESS"
-                        comment: "Пользователь успешно создан"
+            '200':
+              description: Успешная авторизация
+              schema: SuccessResponseSchema
+            '400':
+              description: Какие-то данные введены неверно (password, email)
+              schema: FailureAuthorizationResponseSchema
             '403':
-              description: Пользователь не был создан
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "UNAUTHORIZED"
-                        comment: "User is unauthorized"
+              description: "Пользователь уже авторизован"
+              schema: ExistsTokenAuthorizationFailure
+
           tags:
             - Authorization
         """
@@ -129,7 +112,7 @@ class LoginToken(Resource):
         cookie_response = CookieResponse(response=success)
         # cookie_response = CookieResponse()  # в emergency режиме (без данных)
         cookie_response.set_cookie(
-            key="token", value=token.hash, httponly=True, age_days=TOKEN_LIFETIME
+            key="token", value=token, httponly=True, age_days=TOKEN_LIFETIME
         )
 
         return cookie_response.response
@@ -146,27 +129,18 @@ class LoginTempToken(Resource):
           - in: body
             schema: AuthorizationSchema
 
+
           responses:
-            '201':
-              description: Успешное создание пользователя
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "SUCCESS"
-                        comment: "Пользователь успешно создан"
+            '200':
+              description: Успешная авторизация
+              schema: SuccessResponseSchema
+            '400':
+              description: Какие-то данные введены неверно (password, email)
+              schema: FailureAuthorizationResponseSchema
             '403':
-              description: Пользователь не был создан
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "UNAUTHORIZED"
-                        comment: "User is unauthorized"
+              description: "Пользователь уже авторизован"
+              schema: ExistsTokenAuthorizationFailure
+
           tags:
             - Authorization
         """
@@ -177,7 +151,7 @@ class LoginTempToken(Resource):
         success = CommentResponse().success_response("Вы были успешно авторизованы")
         cookie_response = CookieResponse(response=success)
         # cookie_response = CookieResponse()  # в emergency режиме (без данных)
-        cookie_response.set_cookie(key="token", value=token.hash, httponly=True)
+        cookie_response.set_cookie(key="token", value=token, httponly=True)
 
         return cookie_response.response
 
@@ -191,62 +165,18 @@ class Logout(Resource):
           summary: Выход из аккаунта
 
           responses:
-            '201':
-              description: Успешное создание пользователя
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "SUCCESS"
-                        comment: "Пользователь успешно создан"
-            '403':
-              description: Пользователь не был создан
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "UNAUTHORIZED"
-                        comment: "User is unauthorized"
+            '200':
+              description: Успешный выход из аккаунта
+              schema: SuccessResponseSchema
+            '401':
+              description: Пользователь не авторизован
+              schema: UnauthorizedResponseSchema
           tags:
             - Authorization
         """
-        response = CommentResponse()
-        if not check_token_presence(request=request):
-            return response.access_denied(comment="You have not token")
-        response = response.success_response(comment="Token has been deleted!")
+        TokenService(request=request)
+        response = CommentResponse().success_response(comment="Token has been deleted!")
         response.set_cookie(
             key="token", value="", httponly=True, secure=True, samesite="lax", max_age=0
         )
         return response
-
-
-# @api.route("/token/refresh", methods=["PUT"])
-# class TokenRefresher(Resource):
-#     @convert_error
-#     def put(self):
-#         response = CommentResponse()
-#         if not check_token_presence(request=request):
-#             return response.access_denied(comment="You have not token")
-#         cookies = dict(request.cookies)
-#         token = cookies["token"]
-#         try:
-#             verify_token(token)
-#         except LackToken:
-#             return response.failure_response(comment="This token does not exists")
-#         selector = DatabaseSelector()
-#         updater = DatabaseUpdater()
-#         user_id = selector.select_token(token=token).user_id
-#         updater.update_token(
-#             user_id, new_token=AccessToken().hash
-#         )  # нужно подумать как лучше
-#         # то есть мы обновим и потом оно вернет что токен есть в бд
-#         response = set_response(
-#             ({"status": "success", "comment": "token refreshed"}, 200),
-#             user_id=user_id,
-#             set_age=True,
-#         )
-#         return response

@@ -34,8 +34,8 @@ class DatabaseManager:
 
 
 class TokenManager(DatabaseManager):
-    def __init__(self, token: TokenType):
-        self.__token = token.hash
+    def __init__(self, token: str):
+        self.__token = token
 
     def add_token(self, user_id: int):
         user = Token(token=self.__token, user_id=user_id)
@@ -120,13 +120,13 @@ class DatabaseSelector:
             raise ParameterError
 
 
-class DatabaseUpdater(DatabaseSelector):
-    def update_token(self, user_id: int, new_token: str) -> None:
-        data = self.select_token(user_id=user_id)
-        data.token = new_token
-        data.created_at = datetime.now()
-        data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
-        db.session.commit()
+# class DatabaseUpdater(DatabaseSelector):
+#     def update_token(self, user_id: int, new_token: str) -> None:
+#         data = self.select_token(user_id=user_id)
+#         data.token = new_token
+#         data.created_at = datetime.now()
+#         data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
+#         db.session.commit()
 
 
 def update_profile(profile: Profile, data: dict) -> None:

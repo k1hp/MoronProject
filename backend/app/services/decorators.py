@@ -8,6 +8,7 @@ from backend.app.others.exceptions import (
     LackToken,
     PasswordError,
     CookieTokenError,
+    CookieTokenExistsError,
     EmailError,
     EmailIntegrityError,
     NicknameIntegrityError,
@@ -50,6 +51,9 @@ def convert_error(function):
 
         except EmailError as e:
             return response_object.failure_response(comment=e.__str__())
+
+        except CookieTokenExistsError as e:
+            return response_object.access_denied(comment=e.__str__())
 
         except CookieTokenError as e:
             print(e)

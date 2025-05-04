@@ -7,6 +7,7 @@ from backend.database.flask_managers import DatabaseSelector, TokenManager
 from backend.app.services.helpers import Password, AccessToken
 from backend.app.others.exceptions import (
     LackToken,
+    CookieTokenExistsError,
     CookieTokenError,
     EmailError,
     PasswordError,
@@ -62,7 +63,7 @@ class AuthorizationService(ServiceBase):
         result = self.__selector.select_token(user_id)
         if result is not None:  # возвращается токен если он уже есть в бд
             return result.token
-        token = AccessToken()
+        token = AccessToken().hash
         TokenManager(token).add_token(user_id)
         return token
 
@@ -91,12 +92,12 @@ class TokenService(ServiceBase):  # проверяет наличие токен
     # в куках для повторной авторизации
 
 
-def check_token_presence(request: Request) -> bool:
-    cookies = dict(request.cookies)
-    print("Куки:", cookies.keys())
-    if "token" not in cookies.keys():
-        return False
-    return True
+# def check_token_presence(request: Request) -> bool:
+#     cookies = dict(request.cookies)
+#     print("Куки:", cookies.keys())
+#     if "token" not in cookies.keys():
+#         return False
+#     return True
 
 
 def check_login_data(json_data: dict) -> Optional[int]:
@@ -122,5 +123,5 @@ def verify_token(token: str) -> None:
 
 def check_cookies(request: Request) -> bool:
     if "token" in dict(request.cookies):
-        raise CookieTokenError("Токен уже есть в куках")
+        raise CookieTokenExistsError("Токен уже есть в куках")
     return True

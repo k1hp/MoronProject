@@ -12,9 +12,10 @@ from backend.app.models.response_models import (
     ProfileResponseSchema,
     CommentResponseSchema,
 )
-from backend.database.flask_managers import DatabaseAdder
-from backend.app.services.helpers import Password
-from backend.app.models.input_models import UserSchema
+from backend.app.documentation.output_models import (
+    UnauthorizedResponseSchema,
+    SuccessResponseSchema,
+)
 
 api = Namespace("profile", description="Information about profile")
 
@@ -39,26 +40,12 @@ class ProfileResource(Resource):
           responses:
             '200':
               description: Успешное получение информации
-              content:
-                application/json:
-                  schema: ProfileResponseSchema
-                  examples:
-                    example:
-                      summary: Пример успешного ответа
-                      value:
-                        status: "my status ahahahha"
-                        photo_link: "https://i1.sndcdn.com/artworks-b8vZs1TN28AFyDpi-JHQM6w-t1080x1080.png"
-                        nickname: "Egorch1k"
+              schema: SuccessResponseSchema
+
             '401':
               description: Пользователь не авторизован, нужно перенаправить на авторизацию
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "UNAUTHORIZED"
-                        comment: "User is unauthorized"
+              schema: UnauthorizedResponseSchema
+
           tags:
             - Profile
         """
@@ -96,24 +83,21 @@ class ProfileResource(Resource):
           responses:
             '200':
               description: Данные были успешно обновлены
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "SUCCESS"
-                        comment: "Данные были успешно обновлены"
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: "Статус ответа"
+                    example: "SUCCESS"
+                  comment:
+                    type: string
+                    description: "Коммент"
+                    example: "Данные были успешно обновлены."
             '401':
               description: Пользователь не авторизован, нужно перенаправить на авторизацию
-              content:
-                application/json:
-                  schema: CommentResponseSchema
-                  examples:
-                    example:
-                      value:
-                        status: "UNAUTHORIZED"
-                        comment: "User is unauthorized"
+              schema: UnauthorizedResponseSchema
+
           tags:
             - Profile
         """

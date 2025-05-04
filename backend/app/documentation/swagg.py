@@ -5,7 +5,7 @@ from flask_swagger_ui import get_swaggerui_blueprint
 from backend.app.others.constants import Documentation
 
 from backend.app.models.response_models import ProfileResponseSchema
-from backend.app.models.input_models import UserSchema
+from backend.app.models.request_models import UserSchema
 
 swagger_ui_blueprint = get_swaggerui_blueprint(
     Documentation.SWAGGER_URL, Documentation.API_URL, config={"app_name": "Morons App"}
@@ -50,8 +50,8 @@ def get_apispec(app):
         plugins=[FlaskPlugin(), MarshmallowPlugin()],
     )
 
-    spec.components.schema("Out", schema=ProfileResponseSchema)
-    spec.components.schema("Registration", schema=UserSchema)
+    # spec.components.schema("Out", schema=ProfileResponseSchema)
+    # spec.components.schema("Registration", schema=UserSchema)
     # spec.components.schema("Error", schema=ErrorSchema)
 
     create_tags(spec)

@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import './App.css'; // Если у вас есть стили
-
 const App = () => {
-    const [isLogin, setIsLogin] = useState(true);
+    const [isUsername, setIsUsername] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    
-    const emailSuggestions = ['test@example.com', 'user@example.com', 'admin@example.com'];
 
     const toggleForm = () => {
-        setIsLogin((prev) => !prev);
+        setIsUsername((prev) => !prev);
         setEmail('');
         setPassword('');
         setErrorMessage('');
@@ -25,7 +21,7 @@ const App = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({ Username, password }),
             });
 
             if (!response.ok) {
@@ -49,7 +45,7 @@ const App = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({ email, Username }),
             });
 
             if (!response.ok) {

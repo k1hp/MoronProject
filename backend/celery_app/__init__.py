@@ -4,8 +4,7 @@ from celery import Celery
 
 app = Celery('hello', broker='redis://localhost:6379/0',backend='redis://localhost:6379/0')
 
-from celery_app import tasks
-from celery.schedules import crontab
+from backend.celery_app import tasks
 
 app.conf.beat_schedule = {
     # Executes every Monday morning at 7:30 a.m.

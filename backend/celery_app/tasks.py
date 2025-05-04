@@ -1,4 +1,4 @@
-from celery_app import app
+from backend.celery_app import app
 
 @app.task
 def hello():

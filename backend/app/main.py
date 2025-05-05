@@ -8,7 +8,7 @@ from backend.app.apis.authorization import (
 )
 
 from backend.app.apis.profile import api as ns_profile
-from backend.database.flask_managers import DatabaseAdder
+from backend.database.flask_managers import DatabaseAdder, add_components
 from backend.app.services.helpers import AccessToken, Password
 from backend.app.documentation.swagg import swagger_ui_blueprint, get_apispec
 from backend.app.others.constants import Documentation
@@ -47,6 +47,7 @@ with app.app_context():
     adder = DatabaseAdder()
     access_token = AccessToken().hash
     adder.add_user("chelik", "4@yandex.ru", Password("1234").hash)
+    add_components()
 
 
 if __name__ == "__main__":

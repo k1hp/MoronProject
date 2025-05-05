@@ -1,11 +1,21 @@
-from sqlalchemy import and_
+from sqlalchemy import and_, insert
 from sqlalchemy.exc import IntegrityError
 from datetime import datetime, timedelta
-
-from backend.database.creation import db, User, Token, Profile
 from typing import Optional
 
-from backend.app.others.constants import TOKEN_LIFETIME
+from backend.database.creation import (
+    db,
+    User,
+    Token,
+    Profile,
+    Processor,
+    Motherboard,
+    VideoCard,
+    Ssd,
+    PowerUnit,
+    Ram,
+)
+
 from backend.app.services.decorators import integrity_check
 from backend.app.others.exceptions import (
     ParameterError,
@@ -14,6 +24,7 @@ from backend.app.others.exceptions import (
     NicknameIntegrityError,
     EmailIntegrityError,
 )
+from backend.parser.manager import JsonManager
 from backend.app.services.helpers import TokenBase as TokenType
 
 
@@ -127,6 +138,20 @@ class DatabaseSelector:
 #         data.created_at = datetime.now()
 #         data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
 #         db.session.commit()
+def add_components() -> None:
+    manager = JsonManager()
+    COMPONENTS = {
+        Processor.__tablename__: Processor,
+        Motherboard.__tablename__: Motherboard,
+        Ssd.__tablename__: Ssd,
+        VideoCard.__tablename__: VideoCard,
+        PowerUnit.__tablename__: PowerUnit,
+        Ram.__tablename__: Ram,
+    }
+    for key, table in COMPONENTS.items():
+        data = manager.get_components(name=key)
+        db.session.execute(insert(table), data)
+        db.session.commit()
 
 
 def update_profile(profile: Profile, data: dict) -> None:

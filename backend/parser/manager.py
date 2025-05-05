@@ -13,12 +13,15 @@ class JsonManager:
 
     def get_components(self, name: str) -> List[dict]:
         with open(DB_DIR / f"{name}.json", "r") as file:
-            return json.load(file)
+            return [
+                dict(t) for t in set(tuple(dct.items()) for dct in json.load(file))
+            ]  # убирает дубликаты
 
 
 if __name__ == "__main__":
     json_manager = JsonManager()
-    json_manager.file_write_components(
-        name="tesrsfds", data=[{"finger": 123}, {"pinger": "fdsf"}]
-    )
-    print(json_manager.get_components(name="processors"))
+    # json_manager.file_write_components(
+    #     name="tesrsfds", data=[{"finger": 123}, {"pinger": "fdsf"}]
+    # )
+    result = json_manager.get_components(name="processors")
+    print([dict(t) for t in set(tuple(dct.items()) for dct in result)])

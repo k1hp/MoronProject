@@ -2,6 +2,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from undetected_chromedriver import ChromeOptions
+
+from backend.database.creation import COMPONENTS
+from backend.database.managers import add_components
 from backend.parser.utils.custom_driver import our_driver
 from backend.parser.utils.main_parser_utils import get_text_card, next_page
 from backend.parser.manager import JsonManager
@@ -74,6 +77,7 @@ def parse_processors(driver) -> List[dict]:
             break
 
     JsonManager().file_write_components("processors", result)
+    add_components(data=result, table=COMPONENTS["processors"])
 
     return result
 

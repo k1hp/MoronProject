@@ -8,12 +8,7 @@ from backend.database.creation import (
     User,
     Token,
     Profile,
-    Processor,
-    Motherboard,
-    VideoCard,
-    Ssd,
-    PowerUnit,
-    Ram,
+    COMPONENTS,
 )
 
 from backend.app.services.decorators import integrity_check
@@ -26,16 +21,6 @@ from backend.app.others.exceptions import (
 )
 from backend.parser.manager import JsonManager
 from backend.app.services.helpers import TokenBase as TokenType
-
-
-COMPONENTS = {
-    Processor.__tablename__: Processor,
-    Motherboard.__tablename__: Motherboard,
-    Ssd.__tablename__: Ssd,
-    VideoCard.__tablename__: VideoCard,
-    PowerUnit.__tablename__: PowerUnit,
-    Ram.__tablename__: Ram,
-}
 
 
 class DatabaseManager:
@@ -154,10 +139,14 @@ def get_component(table_name: str) -> List[dict]:
 
 
 def update_profile(profile: Profile, data: dict) -> None:
-    for key, value in data.items():
-        setattr(profile, key, value)
-    db.session.add(profile)
-    db.session.commit()
+    try:
+        for key, value in data.items():
+            setattr(profile, key, value)
+        db.session.add(profile)
+        db.session.commit()
+    except IntegrityError:
+        db.session.rollback()
+        raise NicknameIntegrityError()
 
 
 def get_token(

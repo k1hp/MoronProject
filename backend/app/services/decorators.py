@@ -94,7 +94,7 @@ def convert_error(function):
                 max_age=0,
             )
             return response
-        # except IntegrityError as e:
-        #     return response_object.failure_response("")
+        # except ReIntegrityError as e:
+        #     return response_object.failure_response(comment=e.__str__())
 
     return wrapper

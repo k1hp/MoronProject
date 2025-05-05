@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, render_template
 from flask_restx import Api
 
-from backend.database.creation import db
+from backend.database.creation import db, User
 from backend.app.others.settings import DB_CONNECTION, DB_NAME
 from backend.app.apis.authorization import (
     api as ns_authorization,
@@ -49,7 +49,10 @@ with app.app_context():
     access_token = AccessToken().hash
     adder.add_user("chelik", "4@yandex.ru", Password("1234").hash)
     add_components()
-    print(get_component("processors"))
+
+with app.app_context():
+    user = db.session.query(User).filter(User.id == 1).first()
+    print(user.profile.nickname)
 
 
 if __name__ == "__main__":

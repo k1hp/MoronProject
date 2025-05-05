@@ -151,4 +151,13 @@ class VideoCard(db.Model):
     price: Mapped[str] = mapped_column(String(20), nullable=False)
 
 
+COMPONENTS = {
+    Processor.__tablename__: Processor,
+    Motherboard.__tablename__: Motherboard,
+    Ssd.__tablename__: Ssd,
+    VideoCard.__tablename__: VideoCard,
+    PowerUnit.__tablename__: PowerUnit,
+    Ram.__tablename__: Ram,
+}
+
 # запретить доступ к login если есть токен в куках

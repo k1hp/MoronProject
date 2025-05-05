@@ -1,4 +1,6 @@
 import functools
+from typing import Callable
+
 from sqlalchemy.exc import IntegrityError
 from marshmallow import ValidationError
 from flask import Response
@@ -14,6 +16,25 @@ from backend.app.others.exceptions import (
     NicknameIntegrityError,
 )
 from backend.app.others.responses import CommentResponse
+
+
+def clear_duplicates(function) -> Callable:
+    """
+    Убирает дубликаты словарей в списке или объектов в списке
+    :param function:
+    :return:
+    """
+
+    @functools.wraps(function)
+    def wrapper(*args, **kwargs) -> list:
+        result = function(*args, **kwargs)
+        if isinstance(result[0], dict):
+            return [dict(t) for t in set(tuple(dct.items()) for dct in result)]
+        else:
+            print(len(result), len(list(set(result))))
+            return list(set(result))
+
+    return wrapper
 
 
 def integrity_check(function):

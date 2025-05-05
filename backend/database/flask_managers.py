@@ -1,7 +1,7 @@
 from sqlalchemy import and_, insert
 from sqlalchemy.exc import IntegrityError
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, List
 
 from backend.database.creation import (
     db,
@@ -26,6 +26,16 @@ from backend.app.others.exceptions import (
 )
 from backend.parser.manager import JsonManager
 from backend.app.services.helpers import TokenBase as TokenType
+
+
+COMPONENTS = {
+    Processor.__tablename__: Processor,
+    Motherboard.__tablename__: Motherboard,
+    Ssd.__tablename__: Ssd,
+    VideoCard.__tablename__: VideoCard,
+    PowerUnit.__tablename__: PowerUnit,
+    Ram.__tablename__: Ram,
+}
 
 
 class DatabaseManager:
@@ -131,27 +141,16 @@ class DatabaseSelector:
             raise ParameterError
 
 
-# class DatabaseUpdater(DatabaseSelector):
-#     def update_token(self, user_id: int, new_token: str) -> None:
-#         data = self.select_token(user_id=user_id)
-#         data.token = new_token
-#         data.created_at = datetime.now()
-#         data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
-#         db.session.commit()
 def add_components() -> None:
     manager = JsonManager()
-    COMPONENTS = {
-        Processor.__tablename__: Processor,
-        Motherboard.__tablename__: Motherboard,
-        Ssd.__tablename__: Ssd,
-        VideoCard.__tablename__: VideoCard,
-        PowerUnit.__tablename__: PowerUnit,
-        Ram.__tablename__: Ram,
-    }
     for key, table in COMPONENTS.items():
         data = manager.get_components(name=key)
         db.session.execute(insert(table), data)
         db.session.commit()
+
+
+def get_component(table_name: str) -> List[dict]:
+    return db.session.query(COMPONENTS[table_name]).all()
 
 
 def update_profile(profile: Profile, data: dict) -> None:

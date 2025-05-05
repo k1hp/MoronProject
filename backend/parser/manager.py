@@ -2,8 +2,7 @@ import json
 from typing import List
 
 from backend.app.others.settings import DB_DIR
-
-COMPONENTS = {"processors": ...}
+from backend.app.services.decorators import clear_duplicates
 
 
 class JsonManager:
@@ -11,11 +10,10 @@ class JsonManager:
         with open(DB_DIR / f"{name}.json", "w") as file:
             json.dump(data, file, indent=4)
 
+    @clear_duplicates
     def get_components(self, name: str) -> List[dict]:
         with open(DB_DIR / f"{name}.json", "r") as file:
-            return [
-                dict(t) for t in set(tuple(dct.items()) for dct in json.load(file))
-            ]  # убирает дубликаты
+            return json.load(file)  # убирает дубликаты
 
 
 if __name__ == "__main__":

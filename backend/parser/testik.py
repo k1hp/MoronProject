@@ -6,6 +6,7 @@ from backend.parser.utils.custom_driver import our_driver
 from backend.parser.utils.main_parser_utils import get_text_card, next_page
 import time, re
 from typing import List
+from backend.parser.manager import JsonManager
 
 
 def parse_processors(driver) -> List[dict]:
@@ -71,6 +72,8 @@ def parse_processors(driver) -> List[dict]:
 
         if next_page(driver) == False:
             break
+
+    JsonManager().file_write_components("processors", result)
 
     return result
 
@@ -332,4 +335,5 @@ if __name__ == "__main__":
     options.add_argument("--ignore-certificate-errors")
     options.add_argument("--allow-insecure-localhost")
     driver = our_driver(options=options)
-    parse_ssd(driver)
+    # parse_ssd(driver)
+    parse_processors(driver)

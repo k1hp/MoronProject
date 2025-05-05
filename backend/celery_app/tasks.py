@@ -1,11 +1,9 @@
 from backend.celery_app import app
 
+
 @app.task
 def hello():
-    return 'hello world'
-
-
-
+    return "hello world"
 
 
 # celery -A celery_app beat

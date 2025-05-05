@@ -1,11 +1,16 @@
-from sqlalchemy import and_
+from sqlalchemy import and_, insert
 from sqlalchemy.exc import IntegrityError
 from datetime import datetime, timedelta
+from typing import Optional, List
 
-from backend.database.creation import db, User, Token, Profile
-from typing import Optional
+from backend.database.creation import (
+    db,
+    User,
+    Token,
+    Profile,
+    COMPONENTS,
+)
 
-from backend.app.others.constants import TOKEN_LIFETIME
 from backend.app.services.decorators import integrity_check
 from backend.app.others.exceptions import (
     ParameterError,
@@ -14,6 +19,7 @@ from backend.app.others.exceptions import (
     NicknameIntegrityError,
     EmailIntegrityError,
 )
+from backend.parser.manager import JsonManager
 from backend.app.services.helpers import TokenBase as TokenType
 
 
@@ -120,20 +126,27 @@ class DatabaseSelector:
             raise ParameterError
 
 
-# class DatabaseUpdater(DatabaseSelector):
-#     def update_token(self, user_id: int, new_token: str) -> None:
-#         data = self.select_token(user_id=user_id)
-#         data.token = new_token
-#         data.created_at = datetime.now()
-#         data.expired_at = data.created_at + timedelta(days=TOKEN_LIFETIME)
-#         db.session.commit()
+def add_components() -> None:
+    manager = JsonManager()
+    for key, table in COMPONENTS.items():
+        data = manager.get_components(name=key)
+        db.session.execute(insert(table), data)
+        db.session.commit()
+
+
+def get_component(table_name: str) -> List[dict]:
+    return db.session.query(COMPONENTS[table_name]).all()
 
 
 def update_profile(profile: Profile, data: dict) -> None:
-    for key, value in data.items():
-        setattr(profile, key, value)
-    db.session.add(profile)
-    db.session.commit()
+    try:
+        for key, value in data.items():
+            setattr(profile, key, value)
+        db.session.add(profile)
+        db.session.commit()
+    except IntegrityError:
+        db.session.rollback()
+        raise NicknameIntegrityError()
 
 
 def get_token(

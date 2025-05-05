@@ -34,4 +34,9 @@ class Documentation:
     TAGS = [
         {"name": "Authorization", "description": "Авторизация и регистрация"},
         {"name": "Profile", "description": "Профиль пользователя"},
+        {
+            "name": "Components-names",
+            "description": "Получение перечня названий комплектующих определённого типа",
+        },
+        {"name": "Processors", "description": "Информация по процессорам"},
     ]

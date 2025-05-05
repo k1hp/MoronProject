@@ -1,7 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import String, ForeignKey
-from typing import List
+from typing import List, Optional
 from datetime import date, datetime, timedelta
 
 
@@ -65,17 +65,99 @@ class Processor(db.Model):
     id: Mapped[int] = mapped_column(
         autoincrement=True, primary_key=True, nullable=False
     )
-    name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
-    socket: Mapped[str] = mapped_column(String(10), nullable=False)
+    name: Mapped[str] = mapped_column(
+        String(100), nullable=False
+    )  # насчёт уникальности вопросики
+    socket: Mapped[str] = mapped_column(String(20), nullable=False)
     core: Mapped[str] = mapped_column(String(5), nullable=False)
     frequency: Mapped[str] = mapped_column(String(20), nullable=False)
     l2_cache: Mapped[str] = mapped_column(String(10), nullable=False)
     l3_cache: Mapped[str] = mapped_column(String(10), nullable=False)
-    ddr4: Mapped[str] = mapped_column(String(20), nullable=False)
-    ddr5: Mapped[str] = mapped_column(String(20))
+    ddr4: Mapped[str] = mapped_column(String(10), nullable=False)
+    ddr5: Mapped[Optional[str]] = mapped_column(String(10), nullable=True)
     RAM_frequency: Mapped[str] = mapped_column(String(20), nullable=False)
     TDP: Mapped[str] = mapped_column(String(20), nullable=False)
-    # price: Mapped[int] = mapped_column(nullable=False)
+    price: Mapped[str] = mapped_column(String(20), nullable=False)
 
+
+class Motherboard(db.Model):
+    __tablename__ = "motherboards"
+    id: Mapped[int] = mapped_column(
+        autoincrement=True, primary_key=True, nullable=False
+    )
+    name: Mapped[str] = mapped_column(String(100), nullable=False)
+    socket: Mapped[str] = mapped_column(String(20), nullable=False)
+    chipset: Mapped[str] = mapped_column(String(20), nullable=False)
+    RAM: Mapped[str] = mapped_column(String(10), nullable=False)
+    RAM_frequency: Mapped[str] = mapped_column(String(20), nullable=False)
+    form_factor: Mapped[str] = mapped_column(String(20), nullable=False)
+    price: Mapped[str] = mapped_column(String(20), nullable=False)
+
+
+class PowerUnit(db.Model):
+    __tablename__ = "power_units"
+    id: Mapped[int] = mapped_column(
+        autoincrement=True, primary_key=True, nullable=False
+    )
+    name: Mapped[str] = mapped_column(String(100), nullable=False)
+    power: Mapped[str] = mapped_column(String(20), nullable=False)
+    certificate: Mapped[str] = mapped_column(String(20), nullable=False)
+    pin_cpu: Mapped[str] = mapped_column(String(20), nullable=False)
+    pin_gpu: Mapped[str] = mapped_column(String(20), nullable=False)
+    price: Mapped[str] = mapped_column(String(20), nullable=False)
+
+
+class Ram(db.Model):
+    __tablename__ = "ram"
+    id: Mapped[int] = mapped_column(
+        autoincrement=True, primary_key=True, nullable=False
+    )
+    name: Mapped[str] = mapped_column(String(100), nullable=False)
+    type: Mapped[str] = mapped_column(String(20), nullable=False)
+    volume: Mapped[str] = mapped_column(String(20), nullable=False)
+    quantity: Mapped[str] = mapped_column(String(20), nullable=False)
+    frequency: Mapped[str] = mapped_column(String(20), nullable=False)
+    cl: Mapped[str] = mapped_column(String(20), nullable=False)
+    price: Mapped[str] = mapped_column(String(20), nullable=False)
+
+
+class Ssd(db.Model):
+    __tablename__ = "ssd"
+    id: Mapped[int] = mapped_column(
+        autoincrement=True, primary_key=True, nullable=False
+    )
+    name: Mapped[str] = mapped_column(String(100), nullable=False)
+    connector: Mapped[str] = mapped_column(String(20), nullable=False)
+    type: Mapped[str] = mapped_column(String(20), nullable=False)
+    interface: Mapped[str] = mapped_column(String(20), nullable=False)
+    volume: Mapped[str] = mapped_column(String(20), nullable=False)
+    sread: Mapped[str] = mapped_column(String(30), nullable=False)
+    swrite: Mapped[str] = mapped_column(String(30), nullable=False)
+    tbw: Mapped[str] = mapped_column(String(10), nullable=False)
+    price: Mapped[str] = mapped_column(String(20), nullable=False)
+
+
+class VideoCard(db.Model):
+    __tablename__ = "videocards"
+    id: Mapped[int] = mapped_column(
+        autoincrement=True, primary_key=True, nullable=False
+    )
+    name: Mapped[str] = mapped_column(String(120), nullable=False)
+    PCIe: Mapped[str] = mapped_column(String(20), nullable=False)
+    VRAM: Mapped[str] = mapped_column(String(20), nullable=False)
+    type_VRAM: Mapped[str] = mapped_column(String(10), nullable=False)
+    MIW: Mapped[str] = mapped_column(String(20), nullable=False)
+    GPU_frequency: Mapped[str] = mapped_column(String(30), nullable=False)
+    price: Mapped[str] = mapped_column(String(20), nullable=False)
+
+
+COMPONENTS = {
+    Processor.__tablename__: Processor,
+    Motherboard.__tablename__: Motherboard,
+    Ssd.__tablename__: Ssd,
+    VideoCard.__tablename__: VideoCard,
+    PowerUnit.__tablename__: PowerUnit,
+    Ram.__tablename__: Ram,
+}
 
 # запретить доступ к login если есть токен в куках

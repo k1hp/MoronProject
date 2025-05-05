@@ -4,6 +4,7 @@ from flask_restx import Resource, Namespace, fields
 from backend.database.flask_managers import (
     update_profile,
 )
+from backend.database.creation import User
 from backend.app.services.helpers import get_profile
 from backend.app.services.middlewares import TokenService
 from backend.app.services.decorators import convert_error
@@ -94,6 +95,17 @@ class ProfileResource(Resource):
                     type: string
                     description: "Коммент"
                     example: "Данные были успешно обновлены."
+            '400':
+              description: Данные не были обновлены, тк такой Nickname уже существует
+              schema:
+                type: object
+                properties:
+                  comment:
+                    type: string
+                    example: "Пользователь с таким Nickname уже существует"
+                  status:
+                    type: string
+                    example: "FAIL"
             '401':
               description: Пользователь не авторизован, нужно перенаправить на авторизацию
               schema: UnauthorizedResponseSchema
@@ -103,6 +115,7 @@ class ProfileResource(Resource):
         """
         print(request.cookies, request.json)
         token = TokenService(request=request).token
+
         update_profile(get_profile(token), request.json)
         return CommentResponse().success_response(
             comment="Данные были успешно обновлены."

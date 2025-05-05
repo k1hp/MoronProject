@@ -1,5 +1,5 @@
 from backend.celery_app import app
-from backend.parser.parser_dns import parse_processors, parse_videocards
+from backend.parser.parser_dns import parse_processors, parse_videocards, parse_ssd
 from backend.parser.utils.custom_driver import our_driver
 from undetected_chromedriver import ChromeOptions
 

@@ -12,6 +12,6 @@ app.conf.beat_schedule = {
 
     "geg": {
         "task": "backend.celery_app.tasks.parser",
-        "schedule": timedelta(seconds=300),
+        "schedule": timedelta(seconds=200),
     },
 }

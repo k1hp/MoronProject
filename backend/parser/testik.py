@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from undetected_chromedriver import ChromeOptions
 from backend.parser.utils.custom_driver import our_driver
 from backend.parser.utils.main_parser_utils import get_text_card, next_page
+from backend.parser.manager import JsonManager
 import time, re
 from typing import List
 
@@ -72,6 +73,8 @@ def parse_processors(driver) -> List[dict]:
         if next_page(driver) == False:
             break
 
+    JsonManager().file_write_components("processors", result)
+
     return result
 
 
@@ -115,6 +118,8 @@ def parse_videocards(driver) -> List[dict]:
         if next_page(driver) == False:
             break
 
+    JsonManager().file_write_components("videocards", result)
+
     return result
 
 
@@ -157,6 +162,8 @@ def parse_motherboards(driver) -> List[dict]:
 
         if next_page(driver) == False:
             break
+
+    JsonManager().file_write_components("motherboards", result)
 
     return result
 
@@ -202,6 +209,8 @@ def parse_ram(driver) -> List[dict]:
 
         if next_page(driver) == False:
             break
+
+    JsonManager().file_write_components("ram", result)
 
     return result
 
@@ -271,6 +280,8 @@ def parse_power_units(driver) -> List[dict]:
         if next_page(driver) == False:
             break
 
+    JsonManager().file_write_components("power_units", result)
+
     return result
 
 
@@ -316,6 +327,8 @@ def parse_ssd(driver) -> List[dict]:
         if next_page(driver) == False:
             break
 
+    JsonManager().file_write_components("ssd", result)
+
     return result
 
 
@@ -332,4 +345,8 @@ if __name__ == "__main__":
     options.add_argument("--ignore-certificate-errors")
     options.add_argument("--allow-insecure-localhost")
     driver = our_driver(options=options)
-    parse_ssd(driver)
+    # parse_ssd(driver)
+    # parse_ram(driver)
+    # parse_videocards(driver)
+    # parse_motherboards(driver)
+    parse_power_units(driver)

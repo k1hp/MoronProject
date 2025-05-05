@@ -32,6 +32,7 @@ def get_password_secret():
 
 
 BASE_DIR = Path(__file__).parent.parent.parent.parent
+DB_DIR = BASE_DIR / "backend/database/"
 
 DB_CONNECTION = create_connection(
     user=os.getenv("POSTGRES_USERNAME"),

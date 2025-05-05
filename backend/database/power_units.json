@@ -1,0 +1,3082 @@
+[
+    {
+        "name": "ExeGate 80 PLUS 700PPH-LT",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "2 899 \u20bd"
+    },
+    {
+        "name": "Cougar XTC500",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "2 999 \u20bd"
+    },
+    {
+        "name": "ExeGate 550PPH-LT",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 099 \u20bd"
+    },
+    {
+        "name": "CBR PSU-ATX500-12GM",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 199 \u20bd"
+    },
+    {
+        "name": "Cougar XTC600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 299 \u20bd"
+    },
+    {
+        "name": "PowerCase PW500",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 299 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS 550PPH LT S OEM",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 399 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 500PPH S OEM",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PF550",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PF550",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 399 \u20bd"
+    },
+    {
+        "name": "Chieftec VALUE 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "6+2",
+        "price": "3 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PF500",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 399 \u20bd"
+    },
+    {
+        "name": "Cougar STC500 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 499 \u20bd"
+    },
+    {
+        "name": "Formula AP-550\u041c\u041c",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 499 \u20bd"
+    },
+    {
+        "name": "Formula AP-500\u041c\u041c",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 499 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Gamma P550",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 599 \u20bd"
+    },
+    {
+        "name": "Chieftec EON 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 599 \u20bd"
+    },
+    {
+        "name": "1STPLAYER ACK 550W Black",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "6+2",
+        "price": "3 699 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS 900PPH LT",
+        "power": "900 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 699 \u20bd"
+    },
+    {
+        "name": "MONTECH APX 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 699 \u20bd"
+    },
+    {
+        "name": "ZALMAN MegaMax (TXll)",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "(4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 799 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PF600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "3 799 \u20bd"
+    },
+    {
+        "name": "Zalman DecaMax",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 799 \u20bd"
+    },
+    {
+        "name": "Xilence Performance C+ XN410 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 799 \u20bd"
+    },
+    {
+        "name": "Cougar VTE 500W V2",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 799 \u20bd"
+    },
+    {
+        "name": "ExeGate 500PPH",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 799 \u20bd"
+    },
+    {
+        "name": "Cougar VTE500",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 799 \u20bd"
+    },
+    {
+        "name": "PowerCase PW600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 899 \u20bd"
+    },
+    {
+        "name": "GiNZZU PC500",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 899 \u20bd"
+    },
+    {
+        "name": "Chieftec Task TPS-500S BULK",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "ZALMAN MegaMax (TXll)",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "(4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "MONTECH BETA 550",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "Cougar STC 600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PF650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "POWERMAN 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "ExeGate 500PPH",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "Formula AP-650\u041c\u041c",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "Cougar XTC ARGB 600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "AeroCool Cylon 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "ZALMAN ZM600-LX3",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "3 999 \u20bd"
+    },
+    {
+        "name": "GiNZZU MC600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 099 \u20bd"
+    },
+    {
+        "name": "Thermaltake TR2 S 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 099 \u20bd"
+    },
+    {
+        "name": "PowerCase PB500",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "PCCooler KF650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "Zalman DecaMax",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "MSI MAG A600DN",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "AeroCool AERO WHITE 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "AeroCool AERO WHITE 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "Formula APMM-500BD",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "Cougar VTE 600W V2",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 199 \u20bd"
+    },
+    {
+        "name": "Chieftec SMART 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4",
+        "pin_gpu": "6+2",
+        "price": "4 299 \u20bd"
+    },
+    {
+        "name": "Xilence Performance C+ XN420 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 299 \u20bd"
+    },
+    {
+        "name": "Chieftec VALUE 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 299 \u20bd"
+    },
+    {
+        "name": "MONTECH APX 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 299 \u20bd"
+    },
+    {
+        "name": "Chieftec EON 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 299 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PF700",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PL550D",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "4 399 \u20bd"
+    },
+    {
+        "name": "MSI MAG A550BN",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 399 \u20bd"
+    },
+    {
+        "name": "ExeGate 900PPE",
+        "power": "900 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "4 399 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Gamma P650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 399 \u20bd"
+    },
+    {
+        "name": "Cougar STX 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake TR2 S 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "Xilence Gaming series XN215 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart RGB 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "Cougar XTC 650 PLUS",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "GameMax ECO Gamer GE-700",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "AeroCool KCAS PLUS 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "GiNZZU PC600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 499 \u20bd"
+    },
+    {
+        "name": "1STPLAYER ACK 650W Black",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 599 \u20bd"
+    },
+    {
+        "name": "Zalman ZM700-LX3",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "(4+4) + (4)",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 599 \u20bd"
+    },
+    {
+        "name": "Thermaltake TR2 S 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 599 \u20bd"
+    },
+    {
+        "name": "PowerCase PW700",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 599 \u20bd"
+    },
+    {
+        "name": "Cougar Atlas 600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 599 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PK500D",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 599 \u20bd"
+    },
+    {
+        "name": "Accord ACC-500W-80BR",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "6+2",
+        "price": "4 699 \u20bd"
+    },
+    {
+        "name": "MONTECH BETA 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 699 \u20bd"
+    },
+    {
+        "name": "MONTECH APX 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 699 \u20bd"
+    },
+    {
+        "name": "ZALMAN GigaMax (GVII) 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "ZALMAN MegaMax (TXll)",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "8+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "PCCooler YK550",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "HIPER HPB-700FM",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "3 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "ADATA XPG PROBE 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "Redragon RGPS-500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "Cougar STX650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "MSI MAG A500DN",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "Cougar VTE600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 799 \u20bd"
+    },
+    {
+        "name": "ExeGate 700PPH-LT-S-OEM",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 899 \u20bd"
+    },
+    {
+        "name": "1STPLAYER FK 7.5",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 899 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Gamma P850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 899 \u20bd"
+    },
+    {
+        "name": "PowerCase PB600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 899 \u20bd"
+    },
+    {
+        "name": "GameMax VP-700 80+",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 899 \u20bd"
+    },
+    {
+        "name": "1STPLAYER DK PREMIUM 8.0",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Gamma P750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS 800PPH LT",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "ExeGate 750PPH-OEM",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "PCCooler KF750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "Cougar VTE X2 700",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PF750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "Xilence Performance A III Series XN083 | 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake TR2 S 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "Zalman DecaMax",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "8+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "Formula AP-600\u041c\u041c",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "Cougar STX 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PL650D",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BX1 RGB 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "GiNZZU PC800",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "4 999 \u20bd"
+    },
+    {
+        "name": "AeroCool KCAS PLUS 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 099 \u20bd"
+    },
+    {
+        "name": "Formula AP-750\u041c\u041c",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 099 \u20bd"
+    },
+    {
+        "name": "Formula APMM-600BD",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "5 099 \u20bd"
+    },
+    {
+        "name": "PCCooler KF550",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 199 \u20bd"
+    },
+    {
+        "name": "Chieftec Volta VPS-600S",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 199 \u20bd"
+    },
+    {
+        "name": "Formula KCAS PLUS 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 199 \u20bd"
+    },
+    {
+        "name": "GameMax VP-500 Modular RGB",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "6+2",
+        "price": "5 199 \u20bd"
+    },
+    {
+        "name": "Cougar Atlas 750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 299 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BX1 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 299 \u20bd"
+    },
+    {
+        "name": "Thermaltake TR2 S 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 299 \u20bd"
+    },
+    {
+        "name": "Cougar STX750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 299 \u20bd"
+    },
+    {
+        "name": "Thermaltake TR2 S 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 299 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PK600D",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 299 \u20bd"
+    },
+    {
+        "name": "ExeGate 900PPE",
+        "power": "900 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "5 299 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GP-P550B",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PL550D",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "Cougar Atlas 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 700PPH OEM",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK600D",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK550D",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "GameMax VP-700 Modular RGB",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK500D",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 399 \u20bd"
+    },
+    {
+        "name": "ZALMAN GigaMax (GVII) 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 499 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PK650D",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 499 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PL650D",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "5 499 \u20bd"
+    },
+    {
+        "name": "PowerCase PB700",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 499 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Delta P650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4 x 4+4",
+        "pin_gpu": "3 x 6+2",
+        "price": "5 499 \u20bd"
+    },
+    {
+        "name": "Formula APMM-700BD",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "5 499 \u20bd"
+    },
+    {
+        "name": "Cougar VTX 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 499 \u20bd"
+    },
+    {
+        "name": "Xilence Gaming series XN220 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 599 \u20bd"
+    },
+    {
+        "name": "Formula AP-700\u041c\u041c",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 599 \u20bd"
+    },
+    {
+        "name": "Formula KCAS PLUS 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 599 \u20bd"
+    },
+    {
+        "name": "Cougar STX 750W V2",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 699 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 700PPH",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 699 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart RGB 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 699 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BX1 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 699 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK750D",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BX1 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "ADATA XPG PROBE 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "MONTECH GAMMA II 550",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "Xilence Gaming series XN235 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "3 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "ZALMAN MegaMax 800W",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "MSI MAG A650BN",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK700D",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 799 \u20bd"
+    },
+    {
+        "name": "FSP Hydro K PRO 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 899 \u20bd"
+    },
+    {
+        "name": "HIPER HPB-550D",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 899 \u20bd"
+    },
+    {
+        "name": "GameMax VP-600 Modular RGB",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 899 \u20bd"
+    },
+    {
+        "name": "ZALMAN GigaMax (GVII) 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "5 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake TR2 S 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 999 \u20bd"
+    },
+    {
+        "name": "AeroCool AERO BRONZE 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "5 999 \u20bd"
+    },
+    {
+        "name": "AeroCool KCAS PLUS 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 099 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 800PPH",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 199 \u20bd"
+    },
+    {
+        "name": "ZALMAN GigaMax III 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "6 299 \u20bd"
+    },
+    {
+        "name": "PCCooler YK850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "6 299 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK750D",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "6 299 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK650D",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 299 \u20bd"
+    },
+    {
+        "name": "PHANTEKS AMP BH 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "6 299 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Delta P750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "6 399 \u20bd"
+    },
+    {
+        "name": "Xilence Performance A+ III Series XN084",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "6 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PL750D",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "6 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PL750D",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "6 399 \u20bd"
+    },
+    {
+        "name": "Chieftec CORE 500W BULK",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "6+2",
+        "price": "6 399 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart RGB 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "6 399 \u20bd"
+    },
+    {
+        "name": "ADATA XPG PYLON BRONZE 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 499 \u20bd"
+    },
+    {
+        "name": "ADATA XPG PYLON BRONZE 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 499 \u20bd"
+    },
+    {
+        "name": "PCCooler YK650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "6 499 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 900PPH OEM",
+        "power": "900 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "6 499 \u20bd"
+    },
+    {
+        "name": "Cougar BXM 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 499 \u20bd"
+    },
+    {
+        "name": "Chieftec Vita 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 499 \u20bd"
+    },
+    {
+        "name": "ADATA XPG PYLON BRONZE 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "6 699 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BX3 Bronze 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "6+2",
+        "price": "6 799 \u20bd"
+    },
+    {
+        "name": "ZALMAN GigaMax III 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "6 799 \u20bd"
+    },
+    {
+        "name": "Xilence Gaming series XN240",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 799 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Delta P850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "6 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BM3 Bronze 550W - TT Premium Edition",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "6 999 \u20bd"
+    },
+    {
+        "name": "Cougar GST 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "6 999 \u20bd"
+    },
+    {
+        "name": "Cougar BXM 600",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "3 x 6+2",
+        "price": "6 999 \u20bd"
+    },
+    {
+        "name": "MONTECH GAMMA II 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "6 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK800D",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "6 999 \u20bd"
+    },
+    {
+        "name": "GiNZZU MC800",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 099 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BM2 550W - TT Premium Edition",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 199 \u20bd"
+    },
+    {
+        "name": "ZALMAN GigaMax III 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "7 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BX1 RGB 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 399 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BX3 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 399 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 900PPH OEM",
+        "power": "900 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "7 399 \u20bd"
+    },
+    {
+        "name": "Chieftec Task TPS-700S",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 499 \u20bd"
+    },
+    {
+        "name": "Chieftec CORE 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "6+2",
+        "price": "7 499 \u20bd"
+    },
+    {
+        "name": "Cougar GX-S750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 499 \u20bd"
+    },
+    {
+        "name": "Chieftec CORE 600W BULK",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 499 \u20bd"
+    },
+    {
+        "name": "Cougar GEC 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BM2 650W - TT Premium Edition",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 499 \u20bd"
+    },
+    {
+        "name": "Cougar GX 800W",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 499 \u20bd"
+    },
+    {
+        "name": "PHANTEKS AMP BH 750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "7 699 \u20bd"
+    },
+    {
+        "name": "ADATA XPG KYBER 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 799 \u20bd"
+    },
+    {
+        "name": "Xilence Gaming series XN330 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "3 x 6+2",
+        "price": "7 799 \u20bd"
+    },
+    {
+        "name": "HIPER HPB-750D",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 799 \u20bd"
+    },
+    {
+        "name": "ExeGate 1200PPX",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "7 799 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 1000PPH OEM",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "7 799 \u20bd"
+    },
+    {
+        "name": "PCCooler YK1000",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "7 899 \u20bd"
+    },
+    {
+        "name": "Formula KCAS PLUS GOLD 750W RGB",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "7 899 \u20bd"
+    },
+    {
+        "name": "Chieftec CORE 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK850D",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "Cougar GST 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "FSP Hydro K PRO 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "Cougar Auric 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "Cougar GEC 750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "Xilence Gaming Gold Series XN335",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(2 x 4+4) + (8)",
+        "pin_gpu": "3 x 6+2",
+        "price": "8 099 \u20bd"
+    },
+    {
+        "name": "Xilence Gaming series XN340 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "3 x 6+2",
+        "price": "8 099 \u20bd"
+    },
+    {
+        "name": "Xilence Performance X XN072 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "2 x 6+2",
+        "price": "8 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BM3 Bronze 650W - TT Premium Edition",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "8 299 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GP-P650G",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "8 399 \u20bd"
+    },
+    {
+        "name": "Redragon RGPS-650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "8 399 \u20bd"
+    },
+    {
+        "name": "Cougar BXM 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "8 499 \u20bd"
+    },
+    {
+        "name": "MONTECH CENTURY 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "8 499 \u20bd"
+    },
+    {
+        "name": "Cougar GST 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "8 799 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PK850D",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "8 799 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BM3 750W - TT Premium Edition",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "8 799 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PN850D",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "8 999 \u20bd"
+    },
+    {
+        "name": "Cougar GEX650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "8 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GX1 RGB 600W",
+        "power": "600 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "8 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart BM3 850W - TT Premium Edition",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "8 999 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR II VE 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "8 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GX1 RGB 500W",
+        "power": "500 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "8 999 \u20bd"
+    },
+    {
+        "name": "Formula KCAS PLUS GOLD 650W RGB",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "9 099 \u20bd"
+    },
+    {
+        "name": "AeroCool KCAS PLUS GOLD 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "3 x 6+2",
+        "price": "9 199 \u20bd"
+    },
+    {
+        "name": "Formula KCAS PLUS GOLD 850W RGB",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "9 299 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Iota P750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "9 299 \u20bd"
+    },
+    {
+        "name": "Sharkoon WPM Gold ZERO 550W",
+        "power": "550 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "9 299 \u20bd"
+    },
+    {
+        "name": "Cougar GEX750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "9 399 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "9 399 \u20bd"
+    },
+    {
+        "name": "Chieftec PowerUP 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "9 399 \u20bd"
+    },
+    {
+        "name": "ExeGate 80 PLUS Bronze 1200PPH OEM",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "9 399 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "9 399 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GT 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "9 799 \u20bd"
+    },
+    {
+        "name": "ADATA XPG KYBER 850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "9 799 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN750D",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "9 799 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN750M WH",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "9 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN650M",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "9 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "9 999 \u20bd"
+    },
+    {
+        "name": "Cougar GEX850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "10 199 \u20bd"
+    },
+    {
+        "name": "Redragon RGPS-750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "10 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart PRO RGB 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "10 399 \u20bd"
+    },
+    {
+        "name": "ADATA XPG KYBER 750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "10 399 \u20bd"
+    },
+    {
+        "name": "Xilence Performance X XN074 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "10 399 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GT 750W Snow",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "10 399 \u20bd"
+    },
+    {
+        "name": "FSP HYDRO GSM LITE PRO 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "10 499 \u20bd"
+    },
+    {
+        "name": "PCCooler YN750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "10 699 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Iota P850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "10 699 \u20bd"
+    },
+    {
+        "name": "Formula GSFX-700",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "10 699 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PN850M",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "10 799 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN850M",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "10 799 \u20bd"
+    },
+    {
+        "name": "GameMax GX-750 PRO 3.0",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "10 799 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR II VE 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "10 899 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN850D",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "10 899 \u20bd"
+    },
+    {
+        "name": "Cougar GEX X2 850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "10 999 \u20bd"
+    },
+    {
+        "name": "Cougar GX 1050W",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "10 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GT 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "10 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "11 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake TOUGHPOWER GF A3 Gold 650W - TT Premium Edition",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "11 199 \u20bd"
+    },
+    {
+        "name": "Formula GSFX-800",
+        "power": "800 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "11 199 \u20bd"
+    },
+    {
+        "name": "MONTECH TITAN GOLD 750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "11 299 \u20bd"
+    },
+    {
+        "name": "ZALMAN TeraMax II 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "11 399 \u20bd"
+    },
+    {
+        "name": "Lian Li SP750",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "3 x 6+2",
+        "price": "11 499 \u20bd"
+    },
+    {
+        "name": "GameMax RGB 850 PRO WH",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "11 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GX1 RGB 700W",
+        "power": "700 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "11 499 \u20bd"
+    },
+    {
+        "name": "Cougar BXM 1200",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "8 x 6+2",
+        "price": "11 499 \u20bd"
+    },
+    {
+        "name": "ZALMAN TeraMax II 750W WHITE",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "11 699 \u20bd"
+    },
+    {
+        "name": "Lian Li SP750 White",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "3 x 6+2",
+        "price": "11 799 \u20bd"
+    },
+    {
+        "name": "XPG CORE REACTOR II VE",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "11 899 \u20bd"
+    },
+    {
+        "name": "Redragon RGPS-850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "2 x 6+2",
+        "price": "11 899 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN850M WH",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "11 999 \u20bd"
+    },
+    {
+        "name": "Xilence Performance X+ XN173",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "11 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "11 999 \u20bd"
+    },
+    {
+        "name": "Chieftec POLARIS 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "12 199 \u20bd"
+    },
+    {
+        "name": "Formula KCAS PLUS 1000GM",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "12 199 \u20bd"
+    },
+    {
+        "name": "PCCooler YS850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "12 299 \u20bd"
+    },
+    {
+        "name": "PCCooler YN850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "12 299 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN750M",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "12 299 \u20bd"
+    },
+    {
+        "name": "FSP HYDRO GSM LITE PRO 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "12 599 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Iota P1000",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "12 699 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR II 650 GOLD",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "12 799 \u20bd"
+    },
+    {
+        "name": "Formula KCAS PLUS 1200GM",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "12 799 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF2 ARGB 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "12 799 \u20bd"
+    },
+    {
+        "name": "ZALMAN TeraMax II 850W WHITE",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "12 899 \u20bd"
+    },
+    {
+        "name": "Cougar GEX X2 1000 1000W",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "12 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 ARGB 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "12 999 \u20bd"
+    },
+    {
+        "name": "Cougar GLE 1000",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "12 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower Grand RGB 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "12 999 \u20bd"
+    },
+    {
+        "name": "Aerocool KCAS 1000GM",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "13 499 \u20bd"
+    },
+    {
+        "name": "1STPLAYER NGDP GOLD 850W White",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "13 699 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR II 750 GOLD",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "13 799 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF A3 1050W",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (5 x 6+2)",
+        "price": "13 899 \u20bd"
+    },
+    {
+        "name": "ZALMAN ARX 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "13 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF2 ARGB 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "13 999 \u20bd"
+    },
+    {
+        "name": "Lian Li SP850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "14 199 \u20bd"
+    },
+    {
+        "name": "Lian Li SP850 White",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "14 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Smart PRO RGB 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "14 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower SFX 750W Platinum",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "14 299 \u20bd"
+    },
+    {
+        "name": "O\u0441ypus Iota P1200",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "14 299 \u20bd"
+    },
+    {
+        "name": "Super Flower Leadex III Gold 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "14 299 \u20bd"
+    },
+    {
+        "name": "Lian Li EDGE 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "14 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 ARGB 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "14 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake TOUGHPOWER GF A3 Gold 850W - TT Premium Edition",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "14 599 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower PF1 650",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "14 599 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR II 850 GOLD",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "14 599 \u20bd"
+    },
+    {
+        "name": "MSI MAG A850GL PCIE5",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "14 699 \u20bd"
+    },
+    {
+        "name": "Cougar GLE 1200",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "14 799 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 Snow 650W",
+        "power": "650 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "14 799 \u20bd"
+    },
+    {
+        "name": "Chieftec POLARIS 1050W",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "Formula V Line VL-1000G5 MOD",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR II 850 White",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "ZALMAN TeraMax II 1000W",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "Chieftec Silicon 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Bronze",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "Lian Li EDGE 850W White",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "15 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF3 ARGB 750W Gold - TT Premium Edition",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "15 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF A3 Snow 850W - TT Premium Edition",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (5 x 6+2)",
+        "price": "15 299 \u20bd"
+    },
+    {
+        "name": "ZALMAN TeraMax II 1000W WHITE",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "15 399 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower PF1 850",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "15 499 \u20bd"
+    },
+    {
+        "name": "Cougar GEX1050",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "8 x 6+2",
+        "price": "15 699 \u20bd"
+    },
+    {
+        "name": "PCCooler YN1000",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "15 799 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower iRGB PLUS 750W Digital",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "4+4",
+        "pin_gpu": "4 x 6+2",
+        "price": "15 799 \u20bd"
+    },
+    {
+        "name": "ZALMAN ARX 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "15 999 \u20bd"
+    },
+    {
+        "name": "FSP DAGGER PRO ATX3.0(PCIe5.0) 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "15 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF3 750W",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "15 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF A3 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (5 x 6+2)",
+        "price": "15 999 \u20bd"
+    },
+    {
+        "name": "Formula V Line VL-1200G5 MOD",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "16 199 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN1200M",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "16 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 ARGB 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "16 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower PF3 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "16 299 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower SFX 850W Platinum",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "16 399 \u20bd"
+    },
+    {
+        "name": "Chieftec POLARIS 1250W",
+        "power": "1250 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "16 699 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 850W - TT Premium Edition",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "16 899 \u20bd"
+    },
+    {
+        "name": "ZALMAN TeraMax II 1200W WHITE",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "16 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN1000M",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "16 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF3 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "16 999 \u20bd"
+    },
+    {
+        "name": "SilverStone DA1000R Gold",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "17 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN1000M WH",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "17 399 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF3 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "17 399 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL GamerStorm PN1200M WH",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "17 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF3 ARGB 850W Gold - TT Premium Edition",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "17 599 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF2 ARGB 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "17 799 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF A3 Snow 1050W - TT Premium Edition",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (5 x 6+2)",
+        "price": "17 899 \u20bd"
+    },
+    {
+        "name": "MSI MPG A1000G PCIE5",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "MSI MPG A850G PCIE5",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "Chieftec Polaris 3.0 PPS-1050FC-A3",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "18 499 \u20bd"
+    },
+    {
+        "name": "Cooler Master MWE GOLD V2 Full Modular 1050W",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "18 599 \u20bd"
+    },
+    {
+        "name": "GIGABYTE UD750GM PG5",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "18 599 \u20bd"
+    },
+    {
+        "name": "Xilence Performance X+ XN178 1250W",
+        "power": "1250 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "18 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower SFX 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (2 x 6+2)",
+        "price": "18 999 \u20bd"
+    },
+    {
+        "name": "ZALMAN ARX 1000W",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "18 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 1200W - TT Premium Edition",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "19 799 \u20bd"
+    },
+    {
+        "name": "Enermax REVOLUTION D.F. X 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (5 x 6+2)",
+        "price": "19 799 \u20bd"
+    },
+    {
+        "name": "GIGABYTE P1000GM",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "19 899 \u20bd"
+    },
+    {
+        "name": "GIGABYTE UD1000GM",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "Super Flower Leadex VII",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "20 199 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower SFX 1000W",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (4 x 6+2)",
+        "price": "20 499 \u20bd"
+    },
+    {
+        "name": "FSP Hydro G PRO ATX3.0(PCIe5.0) 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (3 x 6+2)",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "Cougar POLAR 1050",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "9 x 6+2",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower PF1 1050W",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "8 x 6+2",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower Grand RGB Sync Edition 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "21 199 \u20bd"
+    },
+    {
+        "name": "Super Flower Leadex VI Platinum PRO 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "21 699 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower PF1 ARGB 850W",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "6 x 6+2",
+        "price": "21 999 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CORE REACTOR II 1200 GOLD",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (8 x 6+2)",
+        "price": "22 199 \u20bd"
+    },
+    {
+        "name": "ZALMAN ARX 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "8 x 6+2",
+        "price": "22 499 \u20bd"
+    },
+    {
+        "name": "Cooler Master MWE GOLD V2 Full Modular 1050W",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "23 499 \u20bd"
+    },
+    {
+        "name": "Cooler Master XG850 PLUS PLATINUM",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "23 599 \u20bd"
+    },
+    {
+        "name": "SilverStone ST1000-PTS",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "8 x 6+2",
+        "price": "23 899 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower PF1 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "8 x 6+2",
+        "price": "23 999 \u20bd"
+    },
+    {
+        "name": "FSP Hydro PTM PRO ATX3.0(PCIe5.0) 1000W",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "3 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "23 999 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CYBER CORE II 1000W",
+        "power": "1000 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "24 899 \u20bd"
+    },
+    {
+        "name": "SilverStone SX750-Platinum",
+        "power": "750 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(2 x 4+4) + (8)",
+        "pin_gpu": "4 x 6+2",
+        "price": "24 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower GF3 1350W",
+        "power": "1350 \u0412\u0442",
+        "certificate": "80+ Gold",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "(16) + (6 x 6+2)",
+        "price": "25 199 \u20bd"
+    },
+    {
+        "name": "ADATA XPG CYBER CORE II 1300W",
+        "power": "1300 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(10 x 6+2) + (16)",
+        "price": "26 499 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower PF1 ARGB 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "8 x 6+2",
+        "price": "26 999 \u20bd"
+    },
+    {
+        "name": "Cooler Master V850 Platinum",
+        "power": "850 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "(4+4) + (8)",
+        "pin_gpu": "6 x 6+2",
+        "price": "27 299 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower iRGB PLUS 1050W",
+        "power": "1050 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "8 x 6+2",
+        "price": "27 999 \u20bd"
+    },
+    {
+        "name": "Thermaltake Toughpower iRGB PLUS 1200W",
+        "power": "1200 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "8 x 6+2",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "DEEPCOOL PX1300P",
+        "power": "1300 \u0412\u0442",
+        "certificate": "80+ Platinum",
+        "pin_cpu": "2 x 4+4",
+        "pin_gpu": "(16) + (5 x 6+2)",
+        "price": "30 999 \u20bd"
+    }
+]

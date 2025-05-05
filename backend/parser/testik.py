@@ -2,8 +2,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from undetected_chromedriver import ChromeOptions
-from utils.custom_driver import our_driver
-from utils.main_parser_utils import get_text_card, next_page
+from backend.parser.utils.custom_driver import our_driver
+from backend.parser.utils.main_parser_utils import get_text_card, next_page
 import time, re
 from typing import List
 
@@ -48,7 +48,7 @@ def parse_processors(driver) -> List[dict]:
                         ddr5=None,
                         RAM_frequency=specs_product[4][10:],
                         TDP=specs_product[5][5:],
-                        price=price
+                        price=price,
                     )
                 )
 
@@ -65,7 +65,7 @@ def parse_processors(driver) -> List[dict]:
                         ddr5="DDR5",
                         RAM_frequency=specs_product[-2][6:],
                         TDP=specs_product[-1][5:],
-                        price=price
+                        price=price,
                     )
                 )
 
@@ -73,6 +73,7 @@ def parse_processors(driver) -> List[dict]:
             break
 
     return result
+
 
 def parse_videocards(driver) -> List[dict]:
     url = "https://www.dns-shop.ru/catalog/17a89aab16404e77/videokarty/?order=6&stock=now-today-tomorrow-later&f[1a]=cv-d1-cw-be4-d2-cx-be1-aqo-1qx-5q5a&f[1b]=73b6-48og-d3-mkl0"
@@ -107,7 +108,7 @@ def parse_videocards(driver) -> List[dict]:
                     type_VRAM=specs_product[0][14:],
                     MIW=specs_product[1][1:],
                     GPU_frequency=specs_product[-1][5:],
-                    price=price
+                    price=price,
                 )
             )
 
@@ -115,6 +116,7 @@ def parse_videocards(driver) -> List[dict]:
             break
 
     return result
+
 
 def parse_motherboards(driver) -> List[dict]:
     url = "https://www.dns-shop.ru/catalog/17a89a0416404e77/materinskie-platy/?stock=now-today-tomorrow-later&brand=asrock-asus-gigabyte-msi&f[1zs]=cln9-1p2j-gfw3-agnc-68te&f[59]=6-2ld-1zy&f[765]=bp-bm-24f-bn-1oy-bo-1p2"
@@ -149,7 +151,7 @@ def parse_motherboards(driver) -> List[dict]:
                     RAM=specs_product[2][3:7],
                     RAM_frequency=specs_product[2][8:],
                     form_factor=specs_product[-1][1:],
-                    price=price
+                    price=price,
                 )
             )
 
@@ -157,6 +159,7 @@ def parse_motherboards(driver) -> List[dict]:
             break
 
     return result
+
 
 def parse_ram(driver) -> List[dict]:
     url = "https://www.dns-shop.ru/catalog/17a89a3916404e77/operativnaya-pamyat-dimm/?stock=now-today-tomorrow-later&brand=apacer-gskill-kingston-kingstonfury-patriotmemory-teamgroup-xpgadata-acer-adata-agi-ardorgaming-basetech-corsair-crucial-netac-samsung&f[7l4]=cw-cx-aqo-1qx-5q5a-1qw-bvzp-1qz&f[1b]=d4w-68vs&f[478]=20j-20d-20e&f[j]=kc4"
@@ -188,11 +191,12 @@ def parse_ram(driver) -> List[dict]:
                     dict(
                         name=name_product,
                         type=specs_product[0],
-                        volume=re.search(r"(\d+)\s*ГБ", specs_product[1]).group(1)+" ГБ",
+                        volume=re.search(r"(\d+)\s*ГБ", specs_product[1]).group(1)
+                        + " ГБ",
                         quantity=specs_product[1][6:],
                         frequency=specs_product[2][1:],
                         cl=specs_product[3][1:3],
-                        price=price
+                        price=price,
                     )
                 )
 
@@ -200,6 +204,7 @@ def parse_ram(driver) -> List[dict]:
             break
 
     return result
+
 
 def parse_power_units(driver) -> List[dict]:
     url = "https://www.dns-shop.ru/catalog/17a89c2216404e77/bloki-pitaniya/?stock=now-today-tomorrow-later&fr[89h]=500-1550&f[5w]=240-4y-241-4v-117p-242&f[5a6]=i0bi-cfsb-bait-7la-f7ta-k9tt-k9tr-k9tq-k9u4-k9u3-k9tw-k9u1-k9tu-k9tz&f[5g]=20v"
@@ -227,23 +232,39 @@ def parse_power_units(driver) -> List[dict]:
             specs_product = match.group(2).split(",")
 
             result_slov = dict(
-                        name=name_product,
-                        power=specs_product[0],
-                        certificate=specs_product[1][1:],
-                        pin_cpu=re.search(r"^(.*?)\spin", specs_product[4][1:]).group(1),
-                        pin_gpu=re.search(r"^(.*?)\spin", specs_product[-1][1:]).group(1),
-                        price=price
-                    )
+                name=name_product,
+                power=specs_product[0],
+                certificate=specs_product[1][1:],
+                pin_cpu=re.search(r"^(.*?)\spin", specs_product[4][1:]).group(1),
+                pin_gpu=re.search(r"^(.*?)\spin", specs_product[-1][1:]).group(1),
+                price=price,
+            )
 
             if len(specs_product) == 9:
-                result_slov["pin_gpu"] = f"({re.search(r"^(.*?)\spin", specs_product[-2][1:]).group(1)})" + " + " + f"({re.search(r"^(.*?)\spin", specs_product[-1][1:]).group(1)})"
-                result_slov["pin_cpu"] = f"({re.search(r"^(.*?)\spin", specs_product[4][1:]).group(1)})" + " + " + f"({re.search(r"^(.*?)\spin", specs_product[5][1:]).group(1)})"
+                result_slov["pin_gpu"] = (
+                    f"({re.search(r"^(.*?)\spin", specs_product[-2][1:]).group(1)})"
+                    + " + "
+                    + f"({re.search(r"^(.*?)\spin", specs_product[-1][1:]).group(1)})"
+                )
+                result_slov["pin_cpu"] = (
+                    f"({re.search(r"^(.*?)\spin", specs_product[4][1:]).group(1)})"
+                    + " + "
+                    + f"({re.search(r"^(.*?)\spin", specs_product[5][1:]).group(1)})"
+                )
 
             if "16 pin" in match.group(2) and len(specs_product) == 8:
-                result_slov["pin_gpu"] = f"({re.search(r"^(.*?)\spin", specs_product[-2][1:]).group(1)})" + " + " + f"({re.search(r"^(.*?)\spin", specs_product[-1][1:]).group(1)})"
+                result_slov["pin_gpu"] = (
+                    f"({re.search(r"^(.*?)\spin", specs_product[-2][1:]).group(1)})"
+                    + " + "
+                    + f"({re.search(r"^(.*?)\spin", specs_product[-1][1:]).group(1)})"
+                )
 
             elif "16 pin" not in match.group(2) and len(specs_product) == 8:
-                result_slov["pin_cpu"] = f"({re.search(r"^(.*?)\spin", specs_product[4][1:]).group(1)})" + " + " + f"({re.search(r"^(.*?)\spin", specs_product[5][1:]).group(1)})"
+                result_slov["pin_cpu"] = (
+                    f"({re.search(r"^(.*?)\spin", specs_product[4][1:]).group(1)})"
+                    + " + "
+                    + f"({re.search(r"^(.*?)\spin", specs_product[5][1:]).group(1)})"
+                )
 
             result.append(result_slov)
 
@@ -251,6 +272,7 @@ def parse_power_units(driver) -> List[dict]:
             break
 
     return result
+
 
 def parse_ssd(driver) -> List[dict]:
     url = "https://www.dns-shop.ru/catalog/dd58148920724e77/ssd-m2-nakopiteli/?stock=now-today-tomorrow-later&brand=adata-apacer-ardorgaming-kingston-msi-samsung-xpgadata-acer-corsair-crucial-gigabyte-kingspec-patriotmemory-westerndigital&fr[1h7]=239-8000"
@@ -276,7 +298,7 @@ def parse_ssd(driver) -> List[dict]:
 
             name_product = match.group(2)
             specs_product = match.group(3).split(",")
-
+            print(name_product)
             result.append(
                 dict(
                     name=name_product,
@@ -287,7 +309,7 @@ def parse_ssd(driver) -> List[dict]:
                     sread=specs_product[1][10:],
                     swrite=specs_product[2][10:],
                     tbw=specs_product[-1][7:],
-                    price=price
+                    price=price,
                 )
             )
 
@@ -299,13 +321,15 @@ def parse_ssd(driver) -> List[dict]:
 
 if __name__ == "__main__":
     options = ChromeOptions()
-    options.add_argument('--headless')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--remote-debugging-port=9222')
-    options.add_argument('--enable-javascript')
-    options.add_argument("--user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0'")
-    options.add_argument('--no-sandbox')
-    options.add_argument('--ignore-certificate-errors')
-    options.add_argument('--allow-insecure-localhost')
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--enable-javascript")
+    options.add_argument(
+        "--user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0'"
+    )
+    options.add_argument("--no-sandbox")
+    options.add_argument("--ignore-certificate-errors")
+    options.add_argument("--allow-insecure-localhost")
     driver = our_driver(options=options)
     parse_ssd(driver)

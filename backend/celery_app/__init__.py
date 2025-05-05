@@ -9,9 +9,9 @@ app = Celery(
 from backend.celery_app import tasks
 
 app.conf.beat_schedule = {
-    # Executes every Monday morning at 7:30 a.m.
+
     "geg": {
-        "task": "celery_app.tasks.hello",
+        "task": "backend.celery_app.tasks.parser",
         "schedule": timedelta(seconds=10),
     },
 }

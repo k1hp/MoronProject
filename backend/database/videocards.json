@@ -1,0 +1,2495 @@
+[
+    {
+        "name": "KFA2 GeForce RTX 4060 CORE Black",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "31 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Infinity 2",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "31 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Ti GamingPro",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "96 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Dual",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5080 GamingPro",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "129 499 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 VENTUS 2X BLACK OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "33 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5080 GameRock",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "154 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5090 GameRock",
+        "PCIe": "5.0",
+        "VRAM": "32 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "512 \u0431\u0438\u0442",
+        "GPU_frequency": "2017 \u041c\u0413\u0446",
+        "price": "299 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 VENTUS 2X WHITE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "33 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5090 GameRock OC",
+        "PCIe": "5.0",
+        "VRAM": "32 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "512 \u0431\u0438\u0442",
+        "GPU_frequency": "2017 \u041c\u0413\u0446",
+        "price": "337 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 Ti VENTUS 2X BLACK OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "49 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 EAGLE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "35 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Ti Dual",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "40 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3060 Dual (LHR)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 Ti GAMING TRIO OC PLUS",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "119 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 GamingPro",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "70 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Infinity 3",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "60 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 4060 X Black",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 Ti WINDFORCE OC SFF",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "99 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 Ti VENTUS 3X OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "104 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 7600 PULSE GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1875 \u041c\u0413\u0446",
+        "price": "26 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Infinity 2 OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "31 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 3050 VENTUS 2X XS OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "23 499 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 VENTUS 3X OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "36 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Dual OC V1",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 3060 CORE (LHR)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "27 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 GAMING TRIO OC WHITE",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "174 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 7800 XT PULSE",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "HDMI",
+        "price": "53 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3060 WINDFORCE OC (rev. 2.0)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "30 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4070 VENTUS 3X E OC",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6X",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1920 \u041c\u0413\u0446",
+        "price": "69 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 4060 X White",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "33 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 Ti VENTUS 2X BLACK OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "40 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 VANGUARD SOC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "163 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5080 CORE OC 3FAN RGB Black",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "139 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon 9070 XT GAMING OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "HDMI",
+        "price": "91 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Ti GameRock",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "102 499 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 VENTUS 3X OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "76 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 GAMING TRIO OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "174 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 Ti GAMING OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "109 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 6600 PULSE",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1626 \u041c\u0413\u0446",
+        "price": "24 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 WINDFORCE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 Ti WINDFORCE OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "49 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 7800 XT PURE OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "HDMI",
+        "price": "59 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 VENTUS 3X OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "139 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 Ti VANGUARD SOC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "125 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 3050 VENTUS 2X E OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Ti Dual V1",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "39 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 VENTUS 3X OC PLUS",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "144 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 3050 X Black",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "21 499 \u20bd"
+    },
+    {
+        "name": "INNO3D GeForce RTX 4060 TWIN X2",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Ti White",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "43 499 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 WINDFORCE OC SFF",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "71 999 \u20bd"
+    },
+    {
+        "name": "PowerColor AMD Radeon RX 6600 Fighter",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1626 \u041c\u0413\u0446",
+        "price": "22 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 Ti AERO OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "114 999 \u20bd"
+    },
+    {
+        "name": "MSI Geforce RTX 3050 VENTUS 2X XS WHITE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "22 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 Ti GAMING X",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "45 499 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3060 GAMING OC (LHR)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "34 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "35 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 7600 XT PULSE GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "33 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 6600 Challenger White",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1626 \u041c\u0413\u0446",
+        "price": "23 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 Ti SHADOW 3X OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "96 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 3060 X Black (LHR)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "27 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 Ti VANGUARD SOC LAUNCH EDITION",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "128 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 DUAL EVO OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "34 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 3050 X White",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "21 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce GTX 1650 X Black",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1410 \u041c\u0413\u0446",
+        "price": "15 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 VENTUS 3X WHITE OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "149 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce GTX 1650 D6 VENTUS XS OCV3",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1485 \u041c\u0413\u0446",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 3050 X Black",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1040 \u041c\u0413\u0446",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 GAMING TRIO OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "79 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 3060 VENTUS 2X OC (LHR)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "31 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 GAMING X",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "35 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 5080 TUF Gaming OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "159 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 Ti EAGLE OC ICE",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "44 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 INSPIRE 3X OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "144 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 7900 XT PULSE OC",
+        "PCIe": "4.0",
+        "VRAM": "20 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "320 \u0431\u0438\u0442",
+        "GPU_frequency": "1500 \u041c\u0413\u0446",
+        "price": "81 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon 9070 XT AORUS ELITE",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "HDMI",
+        "price": "99 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 AERO OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "37 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 7700 XT PURE",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "HDMI",
+        "price": "49 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 Ti EAGLE OC ICE SFF",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "106 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon 9070 GAMING OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "",
+        "price": "77 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 6600 Challenger D",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1626 \u041c\u0413\u0446",
+        "price": "23 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3060 Dual OC (LHR)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "30 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 Ti VENTUS 3X E OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "44 499 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 7800 XT Steel Legend OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "",
+        "price": "57 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5080 CORE OC 3FAN RGB White",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "144 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 4060 Ti X Black",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "39 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 7700 XT PULSE",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "HDMI",
+        "price": "44 299 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Ti Dual OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "42 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4070 WINDFORCE 2X OC",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6X",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1920 \u041c\u0413\u0446",
+        "price": "63 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 VENTUS 2X BLACK",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 Ti JetStream OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "49 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 Dual EVO White OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "34 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 4060 StormX",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX\u00ad\u00ad 4060 Ti GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "45 499 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 SHADOW 3X OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "136 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 7700 XT Challenger OC",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1900 \u041c\u0413\u0446",
+        "price": "44 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon RX 7600 XT GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2470 \u041c\u0413\u0446",
+        "price": "34 499 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 7600 Challenger OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1770 \u041c\u0413\u0446",
+        "price": "26 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 DUAL V2 OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 EAGLE OC SFF",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "74 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 Dual",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 SUPRIM LIQUID SOC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "199 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 EAGLE OC ICE SFF",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "76 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 Ti EAGLE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "43 499 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 VENTUS 2X WHITE",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Ti GameRock OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "114 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 4060 Ti X White",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "41 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 3060 X White",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "ASRock Intel Arc A580 Challenger OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1700 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "INNO3D GeForce RTX 3050 TWIN X2",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "21 499 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 EAGLE OC ICE",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "36 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5080 GamingPro OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "134 999 \u20bd"
+    },
+    {
+        "name": "MSI Geforce RTX 3050 VENTUS 2X XS",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "22 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 Ti Dual EVO OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "49 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 VENTUS 2X OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "66 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Ti GamingPro OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "99 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 Ti WINDFORCE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "40 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 5070 Ti TUF Gaming OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "123 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 5080 PRIME OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "154 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 3050 VENTUS 2X OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 GAMING OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "79 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 6750 GRE Challenger OC",
+        "PCIe": "4.0",
+        "VRAM": "10 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "160 \u0431\u0438\u0442",
+        "GPU_frequency": "1941 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3060 GAMING OC (rev. 2.0)",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "28 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 5080 ROG Astral OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "229 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 550 Phantom Gaming",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR5",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1100 \u041c\u0413\u0446",
+        "price": "9 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 Ti WINDFORCE OC V2",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "39 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 VANGUARD SOC LAUNCH EDITION",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "86 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 Ti EAGLE OC SFF",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "104 499 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 GAMING TRIO WHITE OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "79 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 Dual OC V1",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "21 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5080 AERO OC SFF",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "199 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5080 GAMING OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "189 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 7600 XT Steel Legend OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "39 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 7600 XT Challenger OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "34 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 Ti GAMING",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "45 499 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5060 Ti VENTUS 2X OC PLUS",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "54 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 Dual White OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "33 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 6500 XT Phantom Gaming D OC",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2365 \u041c\u0413\u0446",
+        "price": "13 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 9070 XT NITRO+ GAMING OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2400 \u041c\u0413\u0446",
+        "price": "89 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5070Ti ROCK(X) 3FAN RGB WHITE",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "104 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 3050 VENTUS 2X E",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "18 999 \u20bd"
+    },
+    {
+        "name": "INNO3D GeForce RTX 3060 TWIN X2 (LHR)",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "26 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon RX 7600 GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "28 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5060 Ti VANGUARD SOC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "64 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 550 PULSE OC",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR5",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1100 \u041c\u0413\u0446",
+        "price": "11 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 GAMING",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "34 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 6500 XT Phantom Gaming",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2420 \u041c\u0413\u0446",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 GAMING X MLG",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "37 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Infinity 3 OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "63 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 Ti Dual EVO OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "42 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 ProArt OC edition",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "39 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 GamingPro OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "70 999 \u20bd"
+    },
+    {
+        "name": "PowerColor AMD Radeon RX 7600 Fighter",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "24 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 550 Low Profile",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR5",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1100 \u041c\u0413\u0446",
+        "price": "8 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 AERO OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "81 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon 9070 XT PRIME OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2400 \u041c\u0413\u0446",
+        "price": "99 999 \u20bd"
+    },
+    {
+        "name": "MSI Geforce RTX 3050 LP",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "18 999 \u20bd"
+    },
+    {
+        "name": "Powercolor AMD Radeon RX 7800 XT Hellhound Spectral White",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1800 \u041c\u0413\u0446",
+        "price": "61 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 VANGUARD SOC LAUNCH EDITION",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "176 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 3050 GAMING X",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "ASRock Intel Arc A380 Challenger ITX OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "2000 \u041c\u0413\u0446",
+        "price": "12 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE Intel Arc A310 WINDFORCE",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2000 \u041c\u0413\u0446",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 6500 XT PULSE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 5070 PRIME OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "71 999 \u20bd"
+    },
+    {
+        "name": "ASRock Radeon RX 6400 Challenger ITX",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "1923 \u041c\u0413\u0446",
+        "price": "13 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 D6",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "31 999 \u20bd"
+    },
+    {
+        "name": "PowerColor AMD Radeon RX 6650 XT Fighter",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2055 \u041c\u0413\u0446",
+        "price": "26 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5060 Ti EAGLE OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "59 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 StormX V1",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3050 WINDFORCE OC V2",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "24 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 7600 Steel Legend OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "30 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5060 Ti Dual",
+        "PCIe": "5.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "46 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 4060 GAMING MLG",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "36 999 \u20bd"
+    },
+    {
+        "name": "MSI Geforce RTX 3050 LP OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "18 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 StormX",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "INNO3D GeForce RTX 3050 TWIN X2 OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "21 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Ti GamingPro V1",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "89 999 \u20bd"
+    },
+    {
+        "name": "ASRock Intel Arc A380 Low Profile",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "2000 \u041c\u0413\u0446",
+        "price": "13 999 \u20bd"
+    },
+    {
+        "name": "INNO3D GeForce RTX 4060 COMPACT",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3050 WINDFORCE OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 4060 Ti EAGLE",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "42 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 StormX",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon RX 7800 XT Dual OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1800 \u041c\u0413\u0446",
+        "price": "56 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5070Ti ROCK(X) 3FAN RGB BLACK",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "99 999 \u20bd"
+    },
+    {
+        "name": "INNO3D GEFORCE RTX 4060 TWIN X2 OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "33 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 6500 XT PULSE GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5060 Ti CORE OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "54 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 3050 Dual V2 OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "23 199 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 Ti INSPIRE 3X OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "109 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 6400 PULSE",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "1923 \u041c\u0413\u0446",
+        "price": "12 999 \u20bd"
+    },
+    {
+        "name": "Acer AMD Radeon RX 7600 Predator BiFrost OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2320 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon RX 7600 XT Dual OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "35 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 GAMING TRIO",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "169 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3050 OC Low Profile",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 399 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon RX 7600 DUAL OC V2",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "PowerColor AMD Radeon RX 6500 XT Fighter",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "ASRock Intel Arc A310 Low Profile",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2000 \u041c\u0413\u0446",
+        "price": "10 799 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5070 CORE OC White",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "69 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5070 CORE OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "64 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 5070 TUF Gaming OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "84 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon RX 7700 XT Dual OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1900 \u041c\u0413\u0446",
+        "price": "52 499 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5070 ROCK(X) OC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "74 999 \u20bd"
+    },
+    {
+        "name": "PNY RTX 2000 Ada Generation",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1620 \u041c\u0413\u0446",
+        "price": "89 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon RX 7900 GRE Dual OC",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1270 \u041c\u0413\u0446",
+        "price": "69 999 \u20bd"
+    },
+    {
+        "name": "ZOTAC GeForce RTX 4070 Ti SUPER Trinity Black Edition",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6X",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2340 \u041c\u0413\u0446",
+        "price": "89 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3050 WINDFORCE V2 OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "PNY Quadro RTX A2000",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "562 \u041c\u0413\u0446",
+        "price": "69 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 3050 Dual OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "18 799 \u20bd"
+    },
+    {
+        "name": "NVIDIA Quadro T1000",
+        "PCIe": "3.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1065 \u041c\u0413\u0446",
+        "price": "41 999 \u20bd"
+    },
+    {
+        "name": "KFA2 GeForce RTX 5070 ROCK(X) OC White",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2325 \u041c\u0413\u0446",
+        "price": "74 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5060 Ti GAMING TRIO OC",
+        "PCIe": "5.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "51 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 7900 XTX AQUA OC",
+        "PCIe": "4.0",
+        "VRAM": "24 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "384 \u0431\u0438\u0442",
+        "GPU_frequency": "1900 \u041c\u0413\u0446",
+        "price": "126 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 6500 XT ITX PULSE PURE GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "Colorful GeForce RTX 4060 NB DUO",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "32 999 \u20bd"
+    },
+    {
+        "name": "Sapphire AMD Radeon RX 6500 XT PULSE OC",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "14 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 KalmX",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 GAMING TRIO",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "79 999 \u20bd"
+    },
+    {
+        "name": "Gainward GeForce RTX3060 Ghost",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "PNY Quadro RTX 5000 Ada Generation",
+        "PCIe": "4.0",
+        "VRAM": "32 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1155 \u041c\u0413\u0446",
+        "price": "599 999 \u20bd"
+    },
+    {
+        "name": "ASRock Intel Arc B570 Challenger 10GB OC",
+        "PCIe": "4.0",
+        "VRAM": "10 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "160 \u0431\u0438\u0442",
+        "GPU_frequency": "2600 \u041c\u0413\u0446",
+        "price": "28 199 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 WINDFORCE SFF",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "68 299 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 5070 AORUS MASTER",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "84 999 \u20bd"
+    },
+    {
+        "name": "ASRock Intel Arc A750 Challenger SE OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2200 \u041c\u0413\u0446",
+        "price": "22 299 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 4060 LP BRK OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1830 \u041c\u0413\u0446",
+        "price": "34 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE GeForce RTX 3060 WINDFORCE",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1320 \u041c\u0413\u0446",
+        "price": "31 999 \u20bd"
+    },
+    {
+        "name": "PNY Quadro T1000",
+        "PCIe": "3.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1065 \u041c\u0413\u0446",
+        "price": "45 799 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5070 VANGUARD SOC",
+        "PCIe": "5.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2330 \u041c\u0413\u0446",
+        "price": "86 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon 9070 PRIME OC Edition",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2070 \u041c\u0413\u0446",
+        "price": "81 999 \u20bd"
+    },
+    {
+        "name": "Gainward GeForce RTX 5080 Phoenix",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "129 999 \u20bd"
+    },
+    {
+        "name": "PNY Quadro T1000",
+        "PCIe": "3.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1065 \u041c\u0413\u0446",
+        "price": "49 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 StormX OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "18 899 \u20bd"
+    },
+    {
+        "name": "PNY GeForce RTX 4070 VERTO Dual Fan",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6X",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "1920 \u041c\u0413\u0446",
+        "price": "66 799 \u20bd"
+    },
+    {
+        "name": "PNY Quadro RTX A5000",
+        "PCIe": "4.0",
+        "VRAM": "24 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "384 \u0431\u0438\u0442",
+        "GPU_frequency": "1170 \u041c\u0413\u0446",
+        "price": "301 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 3050 Phoenix",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "22 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 VENTUS 3X PLUS",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "149 999 \u20bd"
+    },
+    {
+        "name": "PNY Quadro RTX A5000",
+        "PCIe": "4.0",
+        "VRAM": "24 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "384 \u0431\u0438\u0442",
+        "GPU_frequency": "1170 \u041c\u0413\u0446",
+        "price": "290 999 \u20bd"
+    },
+    {
+        "name": "ASRock AMD Radeon RX 6500 XT Challenger ITX",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "13 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE Intel Arc A380 GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "2000 \u041c\u0413\u0446",
+        "price": "16 999 \u20bd"
+    },
+    {
+        "name": "PNY Quadro T1000",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1065 \u041c\u0413\u0446",
+        "price": "41 999 \u20bd"
+    },
+    {
+        "name": "ASUS GeForce RTX 3050 LP BRK OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "PNY GeForce RTX 4060 Ti XLR8 Gaming VERTO EPIC-X RGB Triple Fan",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "51 999 \u20bd"
+    },
+    {
+        "name": "PowerColor AMD Radeon RX 6800 Fighter",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1700 \u041c\u0413\u0446",
+        "price": "199 999 \u20bd"
+    },
+    {
+        "name": "Zotac GeForce RTX 3050 LP",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "PNY GeForce RTX 4060 Ti VERTO Dual Fan",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "47 999 \u20bd"
+    },
+    {
+        "name": "Powercolor AMD Radeon RX 7600 Hellhound",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1720 \u041c\u0413\u0446",
+        "price": "28 599 \u20bd"
+    },
+    {
+        "name": "Gainward GeForce RTX 4060 Ti Ghost OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "41 999 \u20bd"
+    },
+    {
+        "name": "NVIDIA Quadro RTX 4000",
+        "PCIe": "4.0",
+        "VRAM": "20 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "160 \u0431\u0438\u0442",
+        "GPU_frequency": "1500 \u041c\u0413\u0446",
+        "price": "193 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon RX 6500 XT GAMING OC",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "17 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon RX 7600 XT TUF Gaming OC Edition",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "",
+        "price": "58 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5080 VANGUARD OC",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2300 \u041c\u0413\u0446",
+        "price": "174 999 \u20bd"
+    },
+    {
+        "name": "PNY RTX A1000",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "727 \u041c\u0413\u0446",
+        "price": "53 999 \u20bd"
+    },
+    {
+        "name": "Gainward GeForce RTX 3050 Pegasus",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "MSI GeForce RTX 5060 Ti VENTUS 2X PLUS OC",
+        "PCIe": "5.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "",
+        "price": "46 999 \u20bd"
+    },
+    {
+        "name": "XFX AMD Radeon RX 6700 XT Speedster SWFT 309 CORE",
+        "PCIe": "4.0",
+        "VRAM": "12 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "192 \u0431\u0438\u0442",
+        "GPU_frequency": "2321 \u041c\u0413\u0446",
+        "price": "111 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5060 Ti Infinity 3",
+        "PCIe": "5.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "48 999 \u20bd"
+    },
+    {
+        "name": "PowerColor AMD Radeon RX 550 Red Dragon LP",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR5",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1071 \u041c\u0413\u0446",
+        "price": "7 999 \u20bd"
+    },
+    {
+        "name": "ZOTAC GeForce RTX 4060 Ti Twin Edge OC",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "44 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5070 Ti GamingPro OC V1",
+        "PCIe": "5.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR7",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "2295 \u041c\u0413\u0446",
+        "price": "94 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon RX 6500 XT EAGLE",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "20 999 \u20bd"
+    },
+    {
+        "name": "PowerColor AMD Radeon RX 6500 XT ITX",
+        "PCIe": "4.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "15 399 \u20bd"
+    },
+    {
+        "name": "Gainward GeForce RTX 4060 Ti Pegasus",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "39 999 \u20bd"
+    },
+    {
+        "name": "NVIDIA Quadro T400",
+        "PCIe": "3.0",
+        "VRAM": "4 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "64 \u0431\u0438\u0442",
+        "GPU_frequency": "420 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 3050 StormX OC",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "19 999 \u20bd"
+    },
+    {
+        "name": "ZOTAC GeForce RTX 3050 ECO",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "23 999 \u20bd"
+    },
+    {
+        "name": "ZOTAC GeForce RTX 3050 ECO SOLO",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "24 999 \u20bd"
+    },
+    {
+        "name": "ZOTAC GeForce RTX 4060 Ti Twin Edge",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2310 \u041c\u0413\u0446",
+        "price": "46 999 \u20bd"
+    },
+    {
+        "name": "Zotac GeForce RTX 3050 SOLO",
+        "PCIe": "4.0",
+        "VRAM": "6 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "96 \u0431\u0438\u0442",
+        "GPU_frequency": "1042 \u041c\u0413\u0446",
+        "price": "21 399 \u20bd"
+    },
+    {
+        "name": "Gainward GeForce RTX 3050 Ghost",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1552 \u041c\u0413\u0446",
+        "price": "22 999 \u20bd"
+    },
+    {
+        "name": "PNY Tesla T4",
+        "PCIe": "3.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "585 \u041c\u0413\u0446",
+        "price": "193 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon PRO W7800 AI TOP",
+        "PCIe": "4.0",
+        "VRAM": "32 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1855 \u041c\u0413\u0446",
+        "price": "226 999 \u20bd"
+    },
+    {
+        "name": "GIGABYTE AMD Radeon PRO W7900 AI TOP",
+        "PCIe": "4.0",
+        "VRAM": "48 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "384 \u0431\u0438\u0442",
+        "GPU_frequency": "1855 \u041c\u0413\u0446",
+        "price": "390 999 \u20bd"
+    },
+    {
+        "name": "PNY Tesla A2",
+        "PCIe": "4.0",
+        "VRAM": "16 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1440 \u041c\u0413\u0446",
+        "price": "151 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5060 Ti Dual OC",
+        "PCIe": "5.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "47 999 \u20bd"
+    },
+    {
+        "name": "ASUS AMD Radeon RX 6600 Dual V2",
+        "PCIe": "4.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR6",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "1626 \u041c\u0413\u0446",
+        "price": "29 999 \u20bd"
+    },
+    {
+        "name": "PNY Quadro RTX 5000 Ada Generation",
+        "PCIe": "4.0",
+        "VRAM": "32 \u0413",
+        "type_VRAM": " GDDR6",
+        "MIW": "256 \u0431\u0438\u0442",
+        "GPU_frequency": "1155 \u041c\u0413\u0446",
+        "price": "599 999 \u20bd"
+    },
+    {
+        "name": "Palit GeForce RTX 5060 Ti Infinity 3 OC",
+        "PCIe": "5.0",
+        "VRAM": "8 \u0413\u0411",
+        "type_VRAM": "GDDR7",
+        "MIW": "128 \u0431\u0438\u0442",
+        "GPU_frequency": "2407 \u041c\u0413\u0446",
+        "price": "49 999 \u20bd"
+    }
+]

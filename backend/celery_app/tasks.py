@@ -2,9 +2,11 @@ from backend.celery_app import app
 from backend.parser.parser_dns import parse_processors, parse_videocards, parse_ssd
 from backend.parser.utils.custom_driver import our_driver
 from undetected_chromedriver import ChromeOptions
+from backend.database.managers import clear_components
 
 @app.task
 def parser():
+    # clear_components()
     options = ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--disable-gpu")

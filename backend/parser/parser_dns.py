@@ -92,7 +92,7 @@ def parse_processors(driver) -> List[dict]:
             break
 
     JsonManager().file_write_components("processors", result)
-    add_components(data=result, table=COMPONENTS["processors"])
+    # add_components(data=result, table=COMPONENTS["processors"])
 
     return result
 
@@ -226,7 +226,7 @@ def parse_ram(driver) -> List[dict]:
                         type=specs_product[0].strip(),
                         volume=re.search(r"(\d+)\s*ГБ", specs_product[1]).group(1).strip()
                                + " ГБ",
-                        quantity=specs_product[1][6:].strip(),
+                        quantity=specs_product[1].split("x")[1].strip(),
                         frequency=specs_product[2][1:].strip(),
                         cl=specs_product[3][1:3].strip(),
                         price=price,
@@ -379,4 +379,4 @@ if __name__ == "__main__":
     # parse_motherboards(driver)
     # parse_power_units(driver)
     # parse_videocards(driver)
-    # parse_ram(driver)
+    parse_ram(driver)

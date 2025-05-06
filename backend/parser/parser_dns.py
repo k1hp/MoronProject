@@ -31,7 +31,7 @@ def parse_processors(driver) -> List[dict]:
             if text_card == False:
                 continue
             else:
-                match, price = text_card
+                match, price, image = text_card
 
             name_product = match.group(1)
             specs_product = match.group(2).split(",")
@@ -51,6 +51,7 @@ def parse_processors(driver) -> List[dict]:
                         RAM_frequency=specs_product[-2][10:].strip(),
                         TDP=specs_product[-1][5:].strip(),
                         price=price,
+                        image=image,
                     )
                 )
 
@@ -68,6 +69,7 @@ def parse_processors(driver) -> List[dict]:
                         RAM_frequency=specs_product[-2][-1:-9:-1][::-1].strip(),
                         TDP=specs_product[-1][5:].strip(),
                         price=price,
+                        image=image,
                     )
                 )
 
@@ -85,6 +87,7 @@ def parse_processors(driver) -> List[dict]:
                         RAM_frequency=specs_product[-2][-1:-9:-1][::-1].strip(),
                         TDP=specs_product[-1][5:].strip(),
                         price=price,
+                        image=image,
                     )
                 )
 
@@ -92,7 +95,7 @@ def parse_processors(driver) -> List[dict]:
             break
 
     JsonManager().file_write_components("processors", result)
-    # add_components(data=result, table=COMPONENTS["processors"])
+    add_components(data=result, table=COMPONENTS["processors"])
 
     return result
 
@@ -117,7 +120,7 @@ def parse_videocards(driver) -> List[dict]:
             if text_card == False:
                 continue
             else:
-                match, price = text_card
+                match, price, image = text_card
 
             name_product = match.group(1)
             specs_product = match.group(2).split(",")
@@ -133,6 +136,7 @@ def parse_videocards(driver) -> List[dict]:
                         MIW=specs_product[1][1:].strip(),
                         GPU_frequency=gpu_prev.group(1) + " МГц",
                         price=price,
+                        image=image,
                     )
                 )
 
@@ -168,7 +172,7 @@ def parse_motherboards(driver) -> List[dict]:
             if text_card == False:
                 continue
             else:
-                match, price = text_card
+                match, price, image = text_card
 
             name_product = match.group(1)
             specs_product = match.group(2).split(",")
@@ -182,6 +186,7 @@ def parse_motherboards(driver) -> List[dict]:
                     RAM_frequency=specs_product[2][8:].strip(),
                     form_factor=specs_product[-1][1:].strip(),
                     price=price,
+                    image=image,
                 )
             )
 
@@ -214,7 +219,7 @@ def parse_ram(driver) -> List[dict]:
             if text_card == False:
                 continue
             else:
-                match, price = text_card
+                match, price, image = text_card
 
             name_product = match.group(1)
             specs_product = match.group(2).split(",")
@@ -230,6 +235,7 @@ def parse_ram(driver) -> List[dict]:
                         frequency=specs_product[2][1:].strip(),
                         cl=specs_product[3][1:3].strip(),
                         price=price,
+                        image=image,
                     )
                 )
 
@@ -262,7 +268,7 @@ def parse_power_units(driver) -> List[dict]:
             if text_card == False:
                 continue
             else:
-                match, price = text_card
+                match, price, image = text_card
 
             name_product = match.group(1)
             specs_product = match.group(2).split(",")
@@ -274,6 +280,7 @@ def parse_power_units(driver) -> List[dict]:
                 pin_cpu=re.search(r"^(.*?)\spin", specs_product[4][1:]).group(1),
                 pin_gpu=re.search(r"^(.*?)\spin", specs_product[-1][1:]).group(1),
                 price=price,
+                image=image,
             )
 
             if len(specs_product) == 9:
@@ -333,7 +340,7 @@ def parse_ssd(driver) -> List[dict]:
             if text_card == False:
                 continue
             else:
-                match, price = text_card
+                match, price, image = text_card
 
             name_product = match.group(2)
             specs_product = match.group(3).split(",")
@@ -349,6 +356,7 @@ def parse_ssd(driver) -> List[dict]:
                     swrite=specs_product[2][10:].strip(),
                     tbw=specs_product[-1][7:].strip(),
                     price=price,
+                    image=image,
                 )
             )
 

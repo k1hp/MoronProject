@@ -7,12 +7,16 @@ def get_text_card(product,re_shablon):
         # Находим название и цену товара внутри текущей карточки
         name_element = product.find_element(By.CLASS_NAME, "catalog-product__name-wrapper")
         price_element = product.find_element(By.CLASS_NAME, "product-buy__price")
+        image_link_element = product.find_element(By.CLASS_NAME, "catalog-product__image-link")
+        source_element = image_link_element.find_element(By.TAG_NAME, "source")
+        image_url = source_element.get_attribute("data-srcset")
     # Ловим ошибку, если вдруг не находим карточку, название или цену
     except NoSuchElementException:
         return False
     # Передаем в переменную text название товара и извлекаем нужное с помощью шаблона
     text = name_element.text
     match = re.fullmatch(re_shablon, text)
+    image = image_url
     # Проверяем есть ли вторая цена у товара (В днс бывает две цены, одна со скидкой, другая без)
     if "\n" in price_element.text:
         price = price_element.text.split("\n")[0]
@@ -21,7 +25,8 @@ def get_text_card(product,re_shablon):
     # Проверям получили ли название карточки, и соответствует ли оно шаблону
     if match is None:
         return False
-    return match,price
+
+    return match, price, image
 
 
 def next_page(driver):

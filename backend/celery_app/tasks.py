@@ -11,11 +11,11 @@ from backend.parser.testik import parse_processors, parse_videocards, parse_moth
 @app.task
 def parser():
 
-    time.sleep(1)
 
-    # driver = our_driver(options=options_add())
-    #
-    # parse_processors(driver)
+
+    driver = our_driver(options=options_add())
+
+    parse_processors(driver)
     # parse_videocards(driver)
     #     # parse_motherboards(driver)
     #

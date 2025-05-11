@@ -18,7 +18,7 @@ services:
       - CELERY_BROKER_URL=redis://redis:6379/0
       - CELERY_RESULT_BACKEND=redis://redis:6379/0
     volumes:
-      - .:/usr/src/app
+      - celery_data:/usr/src/app
 
   beat:
     build:
@@ -30,7 +30,7 @@ services:
       - CELERY_BROKER_URL=redis://redis:6379/0
       - CELERY_RESULT_BACKEND=redis://redis:6379/0
     volumes:
-      - .:/usr/src/app
+      - celery_data:/usr/src/app
 
 #  python_selenium:
 #    build:
@@ -93,3 +93,5 @@ services:
 #    restart: unless-stopped
 #    tty: true
 #    stdin_open: true
+volumes:
+  celery_data:

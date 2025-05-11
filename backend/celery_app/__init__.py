@@ -2,8 +2,7 @@ from datetime import timedelta
 
 from celery import Celery
 
-app = Celery("parser", broker="redis:6379", backend="redis:6379")
-
+app = Celery("parser", broker="redis://localhost:6379", backend="redis://localhost:6379")
 
 app.conf.timezone = 'Europe/Moscow'
 
@@ -13,7 +12,7 @@ app.conf.beat_schedule = {
 
     "parser": {
         "task": "backend.celery_app.tasks.parser",
-        "schedule": timedelta(minutes=10)
+        "schedule": timedelta(minutes=2)
     }
 
 }

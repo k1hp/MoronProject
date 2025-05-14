@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MRN — Сборка ПК</title>
+    <link rel="icon" href="/images/pc-display.svg" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 CSS (Dark theme) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <!-- Подлючение файлика со стилями -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Стили -->
+    <style>
+      .selection-dot {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ff3333;
+        transition: background-color 0.3s;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+
+      .nav-link.selected .selection-dot {
+        background-color: #00ff00;
+      }
+
+      .nav-link.selected {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body class="bg-dark text-light">
+    <!-- Шапка сайта -->
+    <header class="bg-black py-3 shadow">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand text-primary fw-bold fs-4" href="#">
+              <i class="bi bi-pc-display-horizontal me-2"></i>MoRoN
+            </a>
+          </div>
+          <nav class="d-none d-md-block">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active text-light" href="#">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Сборки пользователей</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/website pages/cpu.html"
+                  >Конфигуратор</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <button class="btn btn-outline-primary me-2">
+              <a class="bi bi-person" href="/website pages/profile/login.html">
+              </a>
+            </button>
+            <button class="btn btn-outline-primary">
+              <i class="bi bi-cart"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Левая панель с категориями комплектующих -->
+        <aside class="col-md-3 col-lg-2 d-md-block bg-black sidebar p-1">
+          <div class="p-3">
+            <h5 class="text-primary mb-3">Комплектующие</h5>
+            <ul class="nav flex-column" id="componentsMenu">
+              <li class="nav-item mb-2">
+                <!-- Кнопка пролистывания -->
+                <button
+                  class="nav-link text-light"
+                  href=""
+                  onclick="scrollByPixels(500)"
+                >
+                  Кнопка пролистывания
+                </button>
+                <a
+                  class="nav-link text-light component-link"
+                  href="/website pages/cpu.html"
+                >
+                  <i class="bi bi-cpu me-2"></i>Процессоры
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  class="nav-link text-light component-link"
+                  href="/website pages/motherboard.html"
+                >
+                  <i class="bi bi-motherboard me-2"></i>Материнские платы
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a
+                  class="nav-link text-light component-link"
+                  href="/website pages/gpu.html"
+                >
+                  <i class="bi bi-gpu-card me-2"></i>Видеокарты
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light component-link" href="#">
+                  <i class="bi bi-memory me-2"></i>Оперативная память
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light component-link" href="#">
+                  <i class="bi bi-hdd me-2"></i>Накопители
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light component-link" href="#">
+                  <i class="bi bi-plug me-2"></i>Блоки питания
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light component-link" href="#">
+                  <i class="bi bi-pc me-2"></i>Корпуса
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-light component-link" href="#">
+                  <i class="bi bi-fan me-2"></i>Охлаждение
+                  <span class="selection-dot"></span>
+                </a>
+              </li>
+            </ul>
+            <button
+              id="saveSelectionBtn"
+              class="btn btn-sm btn-outline-success mt-3 d-none"
+            >
+              Сохранить выбор
+            </button>
+          </div>
+        </aside>
+
+        <!-- Основная область контента -->
+        <main class="col-md-9 col-lg-10 py-4 px-md-4">
+          <!-- Остальное содержимое без изменений -->
+          <!-- ... -->
+        </main>
+      </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="bg-black text-light py-4 mt-5">
+      <div class="text-center">
+        <p class="mb-0">© 2025 MNR. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const componentLinks = document.querySelectorAll(".component-link");
+        const saveSelectionBtn = document.getElementById("saveSelectionBtn");
+        let selectedComponent = null;
+
+        // Функция для сброса выбора
+        function resetSelection() {
+          componentLinks.forEach((link) => {
+            link.classList.remove("selected");
+          });
+        }
+
+        // Обработчик клика по пунктам меню
+        componentLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            // Если уже выбран этот же пункт - ничего не делаем
+            if (this === selectedComponent) return;
+
+            // Сбрасываем предыдущий выбор
+            resetSelection();
+
+            // Устанавливаем новый выбор
+            this.classList.add("selected");
+            selectedComponent = this;
+            saveSelectionBtn.classList.remove("d-none");
+
+            // Можно добавить здесь переход по ссылке
+            // window.location.href = this.href;
+          });
+        });
+
+        // Обработчик кнопки сохранения
+        saveSelectionBtn.addEventListener("click", function () {
+          if (selectedComponent) {
+            alert("Выбрано: " + selectedComponent.textContent.trim());
+            // Здесь можно добавить логику сохранения выбора
+            // Например, через localStorage или отправку на сервер
+          }
+        });
+
+        // Восстановление выбора при загрузке страницы
+        function restoreSelection() {
+          // Здесь можно добавить логику восстановления выбора из localStorage
+          // Например:
+          // const savedSelection = localStorage.getItem('selectedComponent');
+          // if (savedSelection) {
+          //   const link = document.querySelector(`[data-component="${savedSelection}"]`);
+          //   if (link) {
+          //     link.classList.add('selected');
+          //     selectedComponent = link;
+          //     saveSelectionBtn.classList.remove('d-none');
+          //   }
+          // }
+        }
+
+        restoreSelection();
+      });
+    </script>
+  </body>
+</html>
